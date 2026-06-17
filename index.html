@@ -3,451 +3,723 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Vita Andreuskov — Веб-разработчик</title>
-<meta name="description" content="Портфолио веб-разработчика. 5 коммерческих сайтов." />
+<title>WEB.STUDIO — Сайты, боты, магазины под ключ</title>
+<meta name="description" content="Делаю Telegram-ботов, сайты с админками, лендинги и интернет-магазины. Портфолио из 5+ проектов." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #FAFAFA;
-  --surface: #FFFFFF;
-  --border: #EAEAEA;
-  --border-strong: #D4D4D4;
-  --ink: #0A0A0A;
-  --ink-2: #404040;
-  --ink-3: #737373;
-  --ink-4: #A3A3A3;
-  --accent: #0070F3;
+  --bg: #0E0A08;
+  --bg-2: #15100D;
+  --surface: #1A1411;
+  --surface-2: #221A16;
+  --border: #2A211C;
+  --border-2: #3D2F26;
+  --ink: #FAFAFA;
+  --ink-2: #B8AFA8;
+  --ink-3: #7A6F66;
+  --ink-4: #4A413A;
+  --orange: #FF6B1A;
+  --orange-soft: #FF6B1A20;
+  --orange-2: #FF8845;
+  --green: #4ADE80;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Manrope', -apple-system, sans-serif;
   background: var(--bg);
   color: var(--ink);
   line-height: 1.5;
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(ellipse 800px 600px at 20% -10%, rgba(255, 107, 26, 0.08), transparent 60%),
+    radial-gradient(ellipse 600px 400px at 80% 10%, rgba(255, 107, 26, 0.04), transparent 60%);
+  background-attachment: fixed;
 }
-::selection { background: var(--ink); color: var(--bg); }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+::selection { background: var(--orange); color: white; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
 
+/* Grid overlay */
+.grid-bg {
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background-image:
+    linear-gradient(rgba(255, 107, 26, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 107, 26, 0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at top, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at top, black 30%, transparent 80%);
+}
+
+/* NAV */
 nav.top {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(250, 250, 250, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(14, 10, 8, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
 }
 nav.top .inner {
-  max-width: 1100px; margin: 0 auto; padding: 14px 24px;
+  max-width: 1240px; margin: 0 auto; padding: 18px 32px;
   display: flex; justify-content: space-between; align-items: center;
 }
-nav.top .logo {
-  font-weight: 600; font-size: 14px; letter-spacing: -0.01em;
-  display: flex; align-items: center; gap: 8px;
-  text-decoration: none; color: inherit;
+.logo {
+  font-weight: 800; font-size: 16px; letter-spacing: 0.02em;
+  text-decoration: none; color: var(--ink);
+  display: flex; align-items: center; gap: 10px;
 }
-nav.top .logo .avatar {
-  width: 24px; height: 24px;
-  background: var(--ink); color: var(--bg);
-  border-radius: 50%;
+.logo-mark {
+  width: 28px; height: 28px;
+  background: var(--orange);
+  border-radius: 7px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 11px; font-weight: 600;
+  font-size: 14px; color: white; font-weight: 800;
+  box-shadow: 0 0 20px rgba(255, 107, 26, 0.4);
 }
 nav.top .links { display: flex; gap: 4px; align-items: center; }
 nav.top .links a {
-  font-size: 13px; color: var(--ink-2);
-  text-decoration: none; padding: 6px 12px;
-  border-radius: 6px;
-  transition: background 0.15s, color 0.15s;
+  font-size: 14px; font-weight: 500; color: var(--ink-2);
+  text-decoration: none; padding: 8px 14px;
+  border-radius: 8px;
+  transition: color 0.15s, background 0.15s;
 }
-nav.top .links a:hover { background: var(--border); color: var(--ink); }
+nav.top .links a:hover { color: var(--ink); background: var(--surface); }
 nav.top .links a.cta {
-  background: var(--ink); color: var(--bg);
+  background: var(--orange); color: white; font-weight: 600;
   display: inline-flex; align-items: center; gap: 6px;
+  padding: 10px 16px;
 }
-nav.top .links a.cta:hover { background: var(--ink-2); color: white; }
+nav.top .links a.cta:hover { background: var(--orange-2); color: white; }
 
-.hero { padding: 80px 0 60px; }
-.hero .status {
+/* HERO */
+.hero {
+  position: relative; z-index: 1;
+  padding: 80px 0 100px;
+  display: grid; grid-template-columns: 1.1fr 1fr;
+  gap: 60px; align-items: center;
+}
+.badge {
   display: inline-flex; align-items: center; gap: 8px;
-  background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid var(--orange);
+  background: var(--orange-soft);
   border-radius: 100px;
-  padding: 6px 12px 6px 10px;
-  font-size: 12px; color: var(--ink-2);
+  padding: 8px 16px;
+  font-size: 12px; font-weight: 700; color: var(--orange);
+  letter-spacing: 0.08em; text-transform: uppercase;
   margin-bottom: 32px;
 }
-.hero .status .dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: #22C55E;
-  box-shadow: 0 0 0 3px #22C55E25;
-  animation: pulse 2s infinite;
-}
-@keyframes pulse { 50% { box-shadow: 0 0 0 6px #22C55E15; } }
-
+.badge svg { width: 14px; height: 14px; }
 .hero h1 {
-  font-size: 48px; font-weight: 600; line-height: 1.05;
-  letter-spacing: -0.035em; margin-bottom: 20px; max-width: 760px;
+  font-size: 64px; font-weight: 800; line-height: 1.05;
+  letter-spacing: -0.03em; margin-bottom: 28px;
 }
-.hero h1 .accent { color: var(--ink-3); }
+.hero h1 .accent { color: var(--orange); }
 .hero p.lead {
-  font-size: 17px; color: var(--ink-2); max-width: 580px;
-  line-height: 1.55; margin-bottom: 32px;
+  font-size: 17px; color: var(--ink-2); line-height: 1.6;
+  max-width: 520px; margin-bottom: 36px;
 }
-.hero .actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .btn {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-size: 14px; font-weight: 500;
-  padding: 9px 14px;
-  border-radius: 8px;
-  text-decoration: none;
-  border: 1px solid var(--border-strong);
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 15px; font-weight: 600;
+  padding: 14px 22px;
+  border-radius: 12px;
+  text-decoration: none; cursor: pointer;
+  border: 1px solid var(--border-2);
   background: var(--surface);
-  color: var(--ink); cursor: pointer;
+  color: var(--ink);
   transition: all 0.15s;
 }
-.btn:hover { border-color: var(--ink); }
-.btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-.btn.primary:hover { background: var(--ink-2); }
-.btn svg { width: 14px; height: 14px; }
+.btn:hover { background: var(--surface-2); border-color: var(--ink-3); }
+.btn.primary {
+  background: var(--orange); color: white; border-color: var(--orange);
+  box-shadow: 0 8px 24px rgba(255, 107, 26, 0.25);
+}
+.btn.primary:hover { background: var(--orange-2); border-color: var(--orange-2); }
+.btn svg { width: 16px; height: 16px; transition: transform 0.15s; }
+.btn:hover svg { transform: translateX(3px); }
 
-.stats {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  border: 1px solid var(--border); border-radius: 12px;
-  background: var(--surface); overflow: hidden; margin-top: 48px;
+/* Hero terminal */
+.terminal {
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 40px 80px -20px rgba(0,0,0,0.5);
 }
-.stats .cell { padding: 20px; border-right: 1px solid var(--border); }
-.stats .cell:last-child { border-right: none; }
-.stats .cell .num { font-size: 28px; font-weight: 600; letter-spacing: -0.03em; margin-bottom: 4px; }
-.stats .cell .lbl { font-size: 12px; color: var(--ink-3); font-family: 'Geist Mono', monospace; }
+.terminal::before {
+  content: ''; position: absolute; inset: -1px;
+  background: linear-gradient(135deg, transparent 30%, rgba(255, 107, 26, 0.3), transparent 70%);
+  border-radius: 16px; z-index: -1; opacity: 0.6;
+}
+.terminal-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+}
+.terminal-dots { display: flex; gap: 8px; }
+.terminal-dots span {
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--ink-4);
+}
+.terminal-dots span:first-child { background: var(--orange); }
+.terminal-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.12em;
+}
+.terminal-body {
+  padding: 22px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13.5px;
+  line-height: 1.8;
+}
+.terminal-body .prompt { color: var(--orange); }
+.terminal-body .cmd { color: var(--ink); }
+.terminal-body .out-ok { color: var(--green); }
+.terminal-body .out-info { color: var(--ink-2); }
+.terminal-body .cursor {
+  display: inline-block;
+  width: 8px; height: 14px; background: var(--orange);
+  vertical-align: middle;
+  animation: blink 1s infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
 
-section.block { padding: 60px 0; }
-.section-head {
-  display: flex; justify-content: space-between; align-items: end;
-  margin-bottom: 32px; flex-wrap: wrap; gap: 16px;
+/* SERVICES */
+section.block { padding: 80px 0; position: relative; z-index: 1; }
+.section-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; color: var(--orange);
+  text-transform: uppercase; letter-spacing: 0.15em; font-weight: 500;
+  margin-bottom: 16px;
 }
-.section-head .left .eyebrow {
-  font-size: 12px; color: var(--ink-3);
-  font-family: 'Geist Mono', monospace;
-  margin-bottom: 6px;
-  display: flex; align-items: center; gap: 6px;
+.section-eyebrow::before {
+  content: ''; width: 24px; height: 1px; background: var(--orange);
 }
-.section-head .left .eyebrow::before {
-  content: ''; width: 6px; height: 6px; background: var(--accent); border-radius: 50%;
+.section-title {
+  font-size: 40px; font-weight: 800; letter-spacing: -0.025em;
+  line-height: 1.1; margin-bottom: 16px; max-width: 800px;
 }
-.section-head h2 { font-size: 28px; font-weight: 600; letter-spacing: -0.025em; }
-.section-head .right { font-size: 13px; color: var(--ink-3); }
+.section-title .accent { color: var(--orange); }
+.section-sub {
+  font-size: 16px; color: var(--ink-2); max-width: 580px; margin-bottom: 48px;
+}
 
-.projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.services-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+}
+.service-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  position: relative;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.service-card:hover {
+  border-color: var(--orange);
+  transform: translateY(-3px);
+}
+.service-card .num {
+  position: absolute; top: 20px; right: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--orange);
+  border: 1px solid var(--orange);
+  padding: 3px 8px; border-radius: 100px;
+}
+.service-icon {
+  width: 44px; height: 44px;
+  background: var(--orange-soft);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+}
+.service-icon svg { width: 22px; height: 22px; color: var(--orange); }
+.service-card h3 {
+  font-size: 18px; font-weight: 700; margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+.service-card p {
+  font-size: 13.5px; color: var(--ink-2); line-height: 1.55;
+  margin-bottom: 16px;
+}
+.service-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.service-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  padding: 4px 9px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--ink-2);
+}
+
+/* PROJECTS */
+.projects {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+}
 .project-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 16px; overflow: hidden;
-  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
-  display: flex; flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
   text-decoration: none; color: inherit;
+  display: flex; flex-direction: column;
 }
 .project-card:hover {
-  border-color: var(--border-strong);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px -8px rgba(0,0,0,0.08);
+  border-color: var(--orange);
+  transform: translateY(-3px);
 }
 .project-card.large { grid-column: span 2; }
-
 .preview {
-  background: linear-gradient(135deg, #F5F5F5, #EAEAEA);
-  position: relative; overflow: hidden;
-  aspect-ratio: 16 / 10;
+  background: var(--bg-2);
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/10;
   border-bottom: 1px solid var(--border);
 }
 .preview iframe {
   width: 200%; height: 200%; border: 0;
   transform: scale(0.5); transform-origin: top left;
   pointer-events: none;
+  filter: brightness(0.95);
 }
-.preview .open-overlay {
-  position: absolute; top: 12px; right: 12px;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--border);
-  padding: 6px 10px; border-radius: 100px;
-  font-size: 11px; font-weight: 500; color: var(--ink);
-  display: flex; align-items: center; gap: 4px;
+.preview-badge {
+  position: absolute; top: 16px; left: 16px;
+  background: rgba(14, 10, 8, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-2);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px; color: var(--orange);
+  padding: 5px 10px; border-radius: 6px;
+  letter-spacing: 0.05em;
+}
+.preview-overlay {
+  position: absolute; top: 16px; right: 16px;
+  background: rgba(255, 107, 26, 0.95);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 100px;
+  font-size: 12px; font-weight: 600;
+  display: flex; align-items: center; gap: 6px;
   opacity: 0; transform: translateY(-4px);
   transition: opacity 0.2s, transform 0.2s;
 }
-.project-card:hover .open-overlay { opacity: 1; transform: translateY(0); }
+.project-card:hover .preview-overlay { opacity: 1; transform: translateY(0); }
+.preview-overlay svg { width: 12px; height: 12px; }
 
-.card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
-.card-row { display: flex; justify-content: space-between; align-items: start; gap: 16px; margin-bottom: 8px; }
-.card-title { font-size: 17px; font-weight: 600; letter-spacing: -0.015em; }
-.card-num { font-size: 11px; color: var(--ink-4); font-family: 'Geist Mono', monospace; padding-top: 4px; }
-.card-desc { font-size: 14px; color: var(--ink-2); line-height: 1.5; margin-bottom: 16px; flex: 1; }
+.card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.card-row {
+  display: flex; justify-content: space-between; align-items: start;
+  gap: 16px; margin-bottom: 10px;
+}
+.card-title { font-size: 20px; font-weight: 700; letter-spacing: -0.015em; }
+.card-cat {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--ink-3);
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  padding: 4px 10px; border-radius: 6px;
+  white-space: nowrap;
+}
+.card-desc { font-size: 14px; color: var(--ink-2); line-height: 1.55; margin-bottom: 18px; flex: 1; }
 .card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.tag {
-  font-size: 11px; padding: 4px 8px;
-  background: var(--bg); border: 1px solid var(--border);
-  border-radius: 6px; color: var(--ink-2);
-  font-family: 'Geist Mono', monospace;
+
+/* STATS */
+.stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.stats .cell {
+  padding: 28px;
+  border-right: 1px solid var(--border);
+}
+.stats .cell:last-child { border-right: none; }
+.stats .cell .num {
+  font-size: 36px; font-weight: 800; letter-spacing: -0.03em;
+  color: var(--orange); margin-bottom: 4px; line-height: 1;
+}
+.stats .cell .lbl {
+  font-size: 13px; color: var(--ink-2);
 }
 
-.services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.service-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 14px; padding: 24px;
-}
-.service-card .icon {
-  width: 36px; height: 36px; border-radius: 8px;
-  background: var(--bg);
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 14px;
-}
-.service-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
-.service-card p { font-size: 13px; color: var(--ink-3); line-height: 1.5; }
-
+/* CONTACT */
 .contact-block {
-  background: var(--ink); color: var(--bg);
-  border-radius: 20px; padding: 48px;
-  display: grid; grid-template-columns: 1.2fr 1fr;
-  gap: 40px; align-items: center;
+  background: linear-gradient(135deg, var(--surface), var(--bg-2));
+  border: 1px solid var(--border-2);
+  border-radius: 24px;
+  padding: 56px;
+  display: grid; grid-template-columns: 1.3fr 1fr;
+  gap: 48px; align-items: center;
+  position: relative; overflow: hidden;
+}
+.contact-block::before {
+  content: ''; position: absolute;
+  top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(255, 107, 26, 0.15), transparent 70%);
+  pointer-events: none;
 }
 .contact-block h2 {
-  font-size: 32px; font-weight: 600;
-  letter-spacing: -0.025em; margin-bottom: 12px; line-height: 1.1;
+  font-size: 44px; font-weight: 800;
+  letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 18px;
+  position: relative;
 }
-.contact-block h2 .accent { color: var(--ink-4); }
-.contact-block p { color: var(--ink-4); font-size: 15px; line-height: 1.55; max-width: 380px; }
+.contact-block h2 .accent { color: var(--orange); }
+.contact-block p {
+  color: var(--ink-2); font-size: 16px; line-height: 1.6;
+  max-width: 460px; position: relative;
+}
 
 .tg-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 14px; padding: 24px;
-  text-decoration: none; color: var(--bg); display: block;
-  transition: background 0.15s, border-color 0.15s;
+  background: var(--bg);
+  border: 1px solid var(--border-2);
+  border-radius: 18px;
+  padding: 28px;
+  text-decoration: none; color: var(--ink);
+  display: block; position: relative;
+  transition: border-color 0.2s, transform 0.2s;
 }
-.tg-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.2); }
-.tg-card .head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-.tg-card .head .label {
-  font-size: 11px; font-family: 'Geist Mono', monospace; color: var(--ink-4);
-  text-transform: uppercase; letter-spacing: 0.05em;
+.tg-card:hover { border-color: var(--orange); transform: translateY(-3px); }
+.tg-card .head {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 22px;
 }
-.tg-card .tg-icon {
-  width: 32px; height: 32px; border-radius: 50%;
+.tg-card .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--ink-3);
+  text-transform: uppercase; letter-spacing: 0.1em;
+}
+.tg-icon {
+  width: 36px; height: 36px; border-radius: 10px;
   background: #229ED9;
   display: flex; align-items: center; justify-content: center;
 }
-.tg-card .handle { font-size: 24px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 4px; }
-.tg-card .handle .at { color: var(--ink-4); }
-.tg-card .sub { font-size: 13px; color: var(--ink-4); }
-.tg-card .arrow {
-  margin-top: 16px; padding-top: 16px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  font-size: 12px; color: var(--ink-4);
-  display: flex; justify-content: space-between; align-items: center;
+.handle {
+  font-size: 30px; font-weight: 800;
+  letter-spacing: -0.025em; margin-bottom: 6px;
 }
-.tg-card .arrow svg { transition: transform 0.2s; }
-.tg-card:hover .arrow svg { transform: translateX(4px); }
-
-footer {
+.handle .at { color: var(--orange); }
+.sub { font-size: 13px; color: var(--ink-3); }
+.tg-arrow {
+  margin-top: 22px; padding-top: 22px;
   border-top: 1px solid var(--border);
-  padding: 24px 0 32px;
   display: flex; justify-content: space-between; align-items: center;
-  font-size: 12px; color: var(--ink-3);
+  font-size: 13px; font-weight: 600; color: var(--orange);
+}
+.tg-arrow svg { width: 14px; height: 14px; transition: transform 0.2s; }
+.tg-card:hover .tg-arrow svg { transform: translateX(4px); }
+
+/* FOOTER */
+footer {
+  position: relative; z-index: 1;
+  border-top: 1px solid var(--border);
+  padding: 32px 0;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 13px; color: var(--ink-3);
   flex-wrap: wrap; gap: 12px;
 }
-footer .right { display: flex; gap: 16px; }
-footer .right a { color: var(--ink-2); text-decoration: none; }
+footer .right { display: flex; gap: 20px; }
+footer a { color: var(--ink-2); text-decoration: none; }
+footer a:hover { color: var(--orange); }
 
-.reveal { opacity: 0; transform: translateY(12px); transition: opacity 0.5s, transform 0.5s; }
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s, transform 0.6s; }
 .reveal.in { opacity: 1; transform: translateY(0); }
 
+/* MOBILE */
+@media (max-width: 900px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 768px) {
-  .container { padding: 0 16px; }
-  nav.top .inner { padding: 12px 16px; }
+  .container { padding: 0 20px; }
+  nav.top .inner { padding: 14px 20px; }
   nav.top .links a:not(.cta) { display: none; }
-  .hero { padding: 48px 0 40px; }
-  .hero h1 { font-size: 32px; }
+  .hero { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 60px; }
+  .hero h1 { font-size: 38px; }
   .hero p.lead { font-size: 15px; }
-  .stats { grid-template-columns: repeat(2, 1fr); margin-top: 32px; }
+  section.block { padding: 50px 0; }
+  .section-title { font-size: 28px; }
+  .services-grid { grid-template-columns: 1fr; gap: 12px; }
+  .service-card { padding: 22px; }
+  .projects { grid-template-columns: 1fr; gap: 16px; }
+  .project-card.large { grid-column: span 1; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
   .stats .cell { border-right: none; border-bottom: 1px solid var(--border); }
   .stats .cell:nth-child(odd) { border-right: 1px solid var(--border); }
   .stats .cell:nth-last-child(-n+2) { border-bottom: none; }
-  .stats .cell .num { font-size: 22px; }
-  section.block { padding: 40px 0; }
-  .section-head h2 { font-size: 22px; }
-  .projects { grid-template-columns: 1fr; gap: 16px; }
-  .project-card.large { grid-column: span 1; }
-  .services { grid-template-columns: 1fr; }
-  .contact-block { grid-template-columns: 1fr; padding: 32px 24px; gap: 28px; }
-  .contact-block h2 { font-size: 24px; }
+  .stats .cell .num { font-size: 28px; }
+  .contact-block { grid-template-columns: 1fr; padding: 32px; gap: 32px; }
+  .contact-block h2 { font-size: 30px; }
+  .handle { font-size: 24px; }
 }
 </style>
 </head>
 <body>
 
+<div class="grid-bg"></div>
+
 <nav class="top">
   <div class="inner">
     <a href="#" class="logo">
-      <span class="avatar">V</span>
-      <span>Vita Andreuskov</span>
+      <span class="logo-mark">W</span>
+      <span>WEB.STUDIO</span>
     </a>
     <div class="links">
+      <a href="#services">Услуги</a>
       <a href="#work">Работы</a>
-      <a href="#about">О себе</a>
       <a href="https://t.me/Flukkyyyy" target="_blank" class="cta">
-        Написать
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        Связаться
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
       </a>
     </div>
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero container">
   <div class="reveal">
-    <div class="status">
-      <span class="dot"></span>
-      Открыт для проектов
+    <div class="badge">
+      <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>
+      Принимаю заказы
     </div>
     <h1>
-      Веб-разработчик.<br>
-      <span class="accent">Делаю сайты, которые продают.</span>
+      Сайты, <span class="accent">боты</span><br>
+      и магазины<br>
+      <span class="accent">под ключ</span>
     </h1>
     <p class="lead">
-      Лендинги, корпоративные сайты, сервисы с калькуляторами и конструкторами. От идеи до домена — собираю руками без шаблонов.
+      Разрабатываю Telegram-ботов, сайты с админками, лендинги и интернет-магазины. От первого экрана до запуска — без шаблонов и конструкторов.
     </p>
-    <div class="actions">
-      <a href="#work" class="btn primary">
-        Смотреть работы
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+    <div class="hero-actions">
+      <a href="https://t.me/Flukkyyyy" target="_blank" class="btn primary">
+        Обсудить проект
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="https://t.me/Flukkyyyy" target="_blank" class="btn">Связаться</a>
+      <a href="#work" class="btn">
+        Посмотреть работы
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+      </a>
     </div>
   </div>
 
-  <div class="stats reveal">
-    <div class="cell"><div class="num">5</div><div class="lbl">Проектов</div></div>
-    <div class="cell"><div class="num">100%</div><div class="lbl">Адаптивно</div></div>
-    <div class="cell"><div class="num">∼7</div><div class="lbl">Дней на лендинг</div></div>
-    <div class="cell"><div class="num">24/7</div><div class="lbl">На связи</div></div>
+  <div class="terminal reveal">
+    <div class="terminal-head">
+      <div class="terminal-dots"><span></span><span></span><span></span></div>
+      <div class="terminal-label">portfolio.exe</div>
+    </div>
+    <div class="terminal-body">
+      <span class="prompt">$</span> <span class="cmd">deploy --type=landing</span><br>
+      <span class="out-ok">✓</span> <span class="out-info">Дизайн собран за 2 дня</span><br>
+      <span class="out-ok">✓</span> <span class="out-info">Калькулятор работает</span><br>
+      <span class="out-ok">✓</span> <span class="out-info">Адаптив проверен</span><br>
+      <br>
+      <span class="prompt">$</span> <span class="cmd">build --type=tg-bot</span><br>
+      <span class="out-ok">✓</span> <span class="out-info">Бот принимает заявки</span><br>
+      <span class="out-ok">✓</span> <span class="out-info">Платежи подключены</span><br>
+      <br>
+      <span class="prompt">$</span> <span class="cmd">_</span><span class="cursor"></span>
+    </div>
   </div>
 </section>
 
-<section class="block container" id="work">
-  <div class="section-head reveal">
-    <div class="left">
-      <div class="eyebrow">Портфолио</div>
-      <h2>Избранные проекты</h2>
+<!-- SERVICES -->
+<section class="block container" id="services">
+  <div class="reveal">
+    <div class="section-eyebrow">Услуги</div>
+    <h2 class="section-title">Что я делаю <span class="accent">для бизнеса</span></h2>
+    <p class="section-sub">
+      Четыре направления — каждое доведено до результата. Беру задачу, обсуждаем детали, согласуем срок и фикс-цену.
+    </p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="num">/01</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 4.5L2.5 12.5l7 2 2 7 10-17z"/></svg>
+      </div>
+      <h3>Telegram-боты</h3>
+      <p>Принимают заказы, обрабатывают заявки, отправляют уведомления и связаны с CRM.</p>
+      <div class="service-tags">
+        <span class="service-tag">aiogram</span>
+        <span class="service-tag">платежи</span>
+        <span class="service-tag">CRM</span>
+      </div>
     </div>
-    <div class="right">5 коммерческих сайтов</div>
+
+    <div class="service-card reveal">
+      <div class="num">/02</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      </div>
+      <h3>Сайты с админкой</h3>
+      <p>Корпоративные сайты с панелью управления — сам редактируешь контент без программиста.</p>
+      <div class="service-tags">
+        <span class="service-tag">CMS</span>
+        <span class="service-tag">SEO</span>
+        <span class="service-tag">SSR</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="num">/03</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20v14H2zM8 21h8M12 17v4"/></svg>
+      </div>
+      <h3>Лендинги</h3>
+      <p>Одностраничники под рекламу с фокусом на конверсию: квизы, калькуляторы, формы.</p>
+      <div class="service-tags">
+        <span class="service-tag">конверсия</span>
+        <span class="service-tag">квиз</span>
+        <span class="service-tag">A/B</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="num">/04</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 002 1.6h9.7a2 2 0 002-1.6L23 6H6"/></svg>
+      </div>
+      <h3>Интернет-магазины</h3>
+      <p>Каталог, корзина, оплата, доставка, личный кабинет — полноценный e-com под ключ.</p>
+      <div class="service-tags">
+        <span class="service-tag">каталог</span>
+        <span class="service-tag">оплата</span>
+        <span class="service-tag">CRM</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="block container" id="work">
+  <div class="reveal">
+    <div class="section-eyebrow">Портфолио</div>
+    <h2 class="section-title">Избранные <span class="accent">работы</span></h2>
+    <p class="section-sub">
+      5 коммерческих сайтов из разных ниш. Кликни на любую карточку, чтобы открыть проект.
+    </p>
   </div>
 
   <div class="projects">
 
     <a href="projects/architecture/" target="_blank" class="project-card large reveal">
       <div class="preview">
+        <div class="preview-badge">/01 — АРХИТЕКТУРА</div>
         <iframe src="projects/architecture/" loading="lazy" title="ФОРМА"></iframe>
-        <div class="open-overlay">
+        <div class="preview-overlay">
           Открыть
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
         </div>
       </div>
       <div class="card-body">
         <div class="card-row">
           <div class="card-title">ФОРМА</div>
-          <div class="card-num">/01</div>
+          <div class="card-cat">Корпоративный</div>
         </div>
-        <p class="card-desc">Архитектурное бюро. Проектирование частных домов, калькулятор стоимости, каталог типовых и индивидуальных проектов.</p>
+        <p class="card-desc">Сайт архитектурного бюро. Каталог проектов, калькулятор стоимости проектирования, состав рабочей документации.</p>
         <div class="card-tags">
-          <span class="tag">Архитектура</span>
-          <span class="tag">Калькулятор</span>
-          <span class="tag">B2C</span>
+          <span class="service-tag">калькулятор</span>
+          <span class="service-tag">каталог</span>
+          <span class="service-tag">B2C</span>
         </div>
       </div>
     </a>
 
     <a href="projects/beach-rental/" target="_blank" class="project-card reveal">
       <div class="preview">
+        <div class="preview-badge">/02 — ПРОКАТ</div>
         <iframe src="projects/beach-rental/" loading="lazy" title="WAVE"></iframe>
-        <div class="open-overlay">
+        <div class="preview-overlay">
           Открыть
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
         </div>
       </div>
       <div class="card-body">
         <div class="card-row">
           <div class="card-title">WAVE</div>
-          <div class="card-num">/02</div>
+          <div class="card-cat">Бронирование</div>
         </div>
-        <p class="card-desc">Прокат пляжного снаряжения на Бали — сёрфы, гидроциклы, SUP, кайты. Бронирование за минуту.</p>
+        <p class="card-desc">Прокат пляжного снаряжения на Бали. Бронирование за минуту, карта точек выдачи, каталог снаряжения.</p>
         <div class="card-tags">
-          <span class="tag">Прокат</span>
-          <span class="tag">Бронирование</span>
+          <span class="service-tag">прокат</span>
+          <span class="service-tag">бронь</span>
         </div>
       </div>
     </a>
 
     <a href="projects/meal-delivery/" target="_blank" class="project-card reveal">
       <div class="preview">
+        <div class="preview-badge">/03 — ДОСТАВКА</div>
         <iframe src="projects/meal-delivery/" loading="lazy" title="ЕМ."></iframe>
-        <div class="open-overlay">
+        <div class="preview-overlay">
           Открыть
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
         </div>
       </div>
       <div class="card-body">
         <div class="card-row">
           <div class="card-title">ЕМ.</div>
-          <div class="card-num">/03</div>
+          <div class="card-cat">Подписка</div>
         </div>
-        <p class="card-desc">Доставка готового питания по подписке. Конструктор рациона с расчётом КБЖУ под цель.</p>
+        <p class="card-desc">Готовое питание по подписке. Конструктор рациона с расчётом КБЖУ, гибкий календарь доставок.</p>
         <div class="card-tags">
-          <span class="tag">Подписка</span>
-          <span class="tag">Конструктор</span>
+          <span class="service-tag">подписка</span>
+          <span class="service-tag">конструктор</span>
         </div>
       </div>
     </a>
 
     <a href="projects/mellow/" target="_blank" class="project-card reveal">
       <div class="preview">
+        <div class="preview-badge">/04 — БРЕНД</div>
         <iframe src="projects/mellow/" loading="lazy" title="MELLOW"></iframe>
-        <div class="open-overlay">
+        <div class="preview-overlay">
           Открыть
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
         </div>
       </div>
       <div class="card-body">
         <div class="card-row">
           <div class="card-title">MELLOW</div>
-          <div class="card-num">/04</div>
+          <div class="card-cat">Кофейня</div>
         </div>
-        <p class="card-desc">Кофейня и собственная обжарка. Спешелти, винил по вечерам, доставка зерна.</p>
+        <p class="card-desc">Сайт-витрина кофейни с обжаркой. Каталог зёрен с доставкой, расписание событий, история места.</p>
         <div class="card-tags">
-          <span class="tag">Бренд</span>
-          <span class="tag">Витрина</span>
+          <span class="service-tag">витрина</span>
+          <span class="service-tag">бренд</span>
         </div>
       </div>
     </a>
 
     <a href="projects/moving-service/" target="_blank" class="project-card reveal">
       <div class="preview">
+        <div class="preview-badge">/05 — УСЛУГИ</div>
         <iframe src="projects/moving-service/" loading="lazy" title="ТОЧКА Б"></iframe>
-        <div class="open-overlay">
+        <div class="preview-overlay">
           Открыть
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
         </div>
       </div>
       <div class="card-body">
         <div class="card-row">
           <div class="card-title">ТОЧКА Б</div>
-          <div class="card-num">/05</div>
+          <div class="card-cat">Услуги</div>
         </div>
-        <p class="card-desc">Служба переездов под ключ. Квиз-калькулятор стоимости, фиксированная цена в договоре.</p>
+        <p class="card-desc">Служба переездов под ключ. Квиз-калькулятор стоимости, прозрачное ценообразование, фиксированная цена.</p>
         <div class="card-tags">
-          <span class="tag">Услуги</span>
-          <span class="tag">Квиз</span>
+          <span class="service-tag">квиз</span>
+          <span class="service-tag">калькулятор</span>
         </div>
       </div>
     </a>
@@ -455,65 +727,59 @@ footer .right a { color: var(--ink-2); text-decoration: none; }
   </div>
 </section>
 
-<section class="block container" id="about">
-  <div class="section-head reveal">
-    <div class="left">
-      <div class="eyebrow">О себе</div>
-      <h2>Что и как делаю</h2>
-    </div>
+<!-- STATS -->
+<section class="block container">
+  <div class="reveal">
+    <div class="section-eyebrow">Цифры</div>
+    <h2 class="section-title">Коротко о <span class="accent">работе</span></h2>
   </div>
-  <div class="services reveal">
-    <div class="service-card">
-      <div class="icon">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20v14H2zM8 21h8M12 17v4"/></svg>
-      </div>
-      <h3>Лендинги</h3>
-      <p>Одностраничники с фокусом на конверсию: квизы, калькуляторы, формы.</p>
+  <div class="stats reveal">
+    <div class="cell">
+      <div class="num">5+</div>
+      <div class="lbl">Проектов в работе</div>
     </div>
-    <div class="service-card">
-      <div class="icon">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-      </div>
-      <h3>Корпоративные сайты</h3>
-      <p>Многостраничные сайты для услуг и бизнеса — структура, контент, CMS по необходимости.</p>
+    <div class="cell">
+      <div class="num">~7</div>
+      <div class="lbl">Дней на лендинг</div>
     </div>
-    <div class="service-card">
-      <div class="icon">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18h1a3 3 0 003-3v-2a3 3 0 00-3-3h-1M7 6H6a3 3 0 00-3 3v2a3 3 0 003 3h1M12 22V2"/></svg>
-      </div>
-      <h3>Telegram Mini Apps</h3>
-      <p>Веб-приложения внутри Telegram с React, авторизацией и интерактивом.</p>
+    <div class="cell">
+      <div class="num">100%</div>
+      <div class="lbl">Без шаблонов</div>
+    </div>
+    <div class="cell">
+      <div class="num">24/7</div>
+      <div class="lbl">На связи</div>
     </div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="block container">
   <div class="contact-block reveal">
     <div>
-      <h2>Есть идея?<br><span class="accent">Давай обсудим.</span></h2>
-      <p>Расскажи задачу — пришлю похожие работы из портфолио, оценю сроки и стоимость. Без воды и быстро.</p>
+      <h2>Готов начать <span class="accent">проект?</span></h2>
+      <p>Напиши в Telegram — обсудим задачу, пришлю похожие работы из портфолио, оценю сроки и стоимость. Без воды и за один разговор.</p>
     </div>
     <a href="https://t.me/Flukkyyyy" target="_blank" class="tg-card">
       <div class="head">
         <span class="label">Telegram</span>
         <div class="tg-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M9.04 15.72L8.72 19.66C9.18 19.66 9.39 19.46 9.63 19.22L11.5 17.43L15.4 20.27C16.11 20.67 16.62 20.46 16.81 19.62L19.84 5.43C20.08 4.4 19.41 3.95 18.72 4.24L1.84 10.92C0.71 11.37 0.72 12.02 1.65 12.31L5.94 13.65L15.92 7.39C16.39 7.09 16.82 7.26 16.46 7.57L9.04 15.72Z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M9.04 15.72L8.72 19.66C9.18 19.66 9.39 19.46 9.63 19.22L11.5 17.43L15.4 20.27C16.11 20.67 16.62 20.46 16.81 19.62L19.84 5.43C20.08 4.4 19.41 3.95 18.72 4.24L1.84 10.92C0.71 11.37 0.72 12.02 1.65 12.31L5.94 13.65L15.92 7.39C16.39 7.09 16.82 7.26 16.46 7.57L9.04 15.72Z"/></svg>
         </div>
       </div>
       <div class="handle"><span class="at">@</span>Flukkyyyy</div>
       <div class="sub">Отвечаю в течение дня</div>
-      <div class="arrow">
-        <span>Открыть чат</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      <div class="tg-arrow">
+        <span>Написать сообщение</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </div>
     </a>
   </div>
 </section>
 
 <footer class="container">
-  <div>© 2026 Vita Andreuskov</div>
+  <div>© 2026 WEB.STUDIO. Все права защищены.</div>
   <div class="right">
-    <span>Сделано вручную</span>
     <a href="https://t.me/Flukkyyyy" target="_blank">@Flukkyyyy</a>
   </div>
 </footer>
