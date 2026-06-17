@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>WEB.STUDIO — Сайты, боты, магазины под ключ</title>
-<meta name="description" content="Делаю Telegram-ботов, сайты с админками, лендинги и интернет-магазины. Портфолио из 5+ проектов." />
+<meta name="description" content="Делаю Telegram-ботов, сайты с админками, лендинги и интернет-магазины. Портфолио из 6 проектов." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -41,7 +41,7 @@ body {
 }
 ::selection { background: var(--orange); color: white; }
 .mono { font-family: 'JetBrains Mono', monospace; }
-.container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+.container { max-width: 1440px; margin: 0 auto; padding: 0 48px; }
 
 /* Grid overlay */
 .grid-bg {
@@ -63,7 +63,7 @@ nav.top {
   border-bottom: 1px solid var(--border);
 }
 nav.top .inner {
-  max-width: 1240px; margin: 0 auto; padding: 18px 32px;
+  max-width: 1440px; margin: 0 auto; padding: 18px 48px;
   display: flex; justify-content: space-between; align-items: center;
 }
 .logo {
@@ -97,9 +97,9 @@ nav.top .links a.cta:hover { background: var(--orange-2); color: white; }
 /* HERO */
 .hero {
   position: relative; z-index: 1;
-  padding: 80px 0 100px;
+  padding: 100px 0 120px;
   display: grid; grid-template-columns: 1.1fr 1fr;
-  gap: 60px; align-items: center;
+  gap: 80px; align-items: center;
 }
 .badge {
   display: inline-flex; align-items: center; gap: 8px;
@@ -113,8 +113,8 @@ nav.top .links a.cta:hover { background: var(--orange-2); color: white; }
 }
 .badge svg { width: 14px; height: 14px; }
 .hero h1 {
-  font-size: 64px; font-weight: 800; line-height: 1.05;
-  letter-spacing: -0.03em; margin-bottom: 28px;
+  font-size: 80px; font-weight: 800; line-height: 1.02;
+  letter-spacing: -0.035em; margin-bottom: 32px;
 }
 .hero h1 .accent { color: var(--orange); }
 .hero p.lead {
@@ -202,22 +202,22 @@ section.block { padding: 80px 0; position: relative; z-index: 1; }
   content: ''; width: 24px; height: 1px; background: var(--orange);
 }
 .section-title {
-  font-size: 40px; font-weight: 800; letter-spacing: -0.025em;
-  line-height: 1.1; margin-bottom: 16px; max-width: 800px;
+  font-size: 52px; font-weight: 800; letter-spacing: -0.03em;
+  line-height: 1.05; margin-bottom: 20px; max-width: 900px;
 }
 .section-title .accent { color: var(--orange); }
 .section-sub {
-  font-size: 16px; color: var(--ink-2); max-width: 580px; margin-bottom: 48px;
+  font-size: 17px; color: var(--ink-2); max-width: 620px; margin-bottom: 56px;
 }
 
 .services-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
 }
 .service-card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 28px;
+  border-radius: 20px;
+  padding: 32px;
   position: relative;
   transition: border-color 0.2s, transform 0.2s;
 }
@@ -261,7 +261,7 @@ section.block { padding: 80px 0; position: relative; z-index: 1; }
 
 /* PROJECTS */
 .projects {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
 }
 .project-card {
   background: var(--surface);
@@ -437,18 +437,19 @@ footer a:hover { color: var(--orange); }
 .reveal.in { opacity: 1; transform: translateY(0); }
 
 /* MOBILE */
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .projects { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
   .container { padding: 0 20px; }
   nav.top .inner { padding: 14px 20px; }
   nav.top .links a:not(.cta) { display: none; }
   .hero { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 60px; }
-  .hero h1 { font-size: 38px; }
+  .hero h1 { font-size: 42px; }
   .hero p.lead { font-size: 15px; }
   section.block { padding: 50px 0; }
-  .section-title { font-size: 28px; }
+  .section-title { font-size: 32px; }
   .services-grid { grid-template-columns: 1fr; gap: 12px; }
   .service-card { padding: 22px; }
   .projects { grid-template-columns: 1fr; gap: 16px; }
@@ -607,15 +608,38 @@ footer a:hover { color: var(--orange); }
     <div class="section-eyebrow">Портфолио</div>
     <h2 class="section-title">Избранные <span class="accent">работы</span></h2>
     <p class="section-sub">
-      5 коммерческих сайтов из разных ниш. Кликни на любую карточку, чтобы открыть проект.
+      6 коммерческих сайтов из разных ниш. Кликни на любую карточку, чтобы открыть проект.
     </p>
   </div>
 
   <div class="projects">
 
-    <a href="projects/architecture/" target="_blank" class="project-card large reveal">
+    <a href="projects/kedr/" target="_blank" class="project-card large reveal">
       <div class="preview">
-        <div class="preview-badge">/01 — АРХИТЕКТУРА</div>
+        <div class="preview-badge">/01 — СТРОИТЕЛЬСТВО</div>
+        <iframe src="projects/kedr/" loading="lazy" title="КЕДР"></iframe>
+        <div class="preview-overlay">
+          Открыть
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-row">
+          <div class="card-title">КЕДР</div>
+          <div class="card-cat">Строительство</div>
+        </div>
+        <p class="card-desc">Строительное бюро — дома и бани под ключ из северного леса. Каталог проектов, онлайн-расчёт сметы по площади, этапы стройки и видео объектов.</p>
+        <div class="card-tags">
+          <span class="service-tag">калькулятор</span>
+          <span class="service-tag">каталог</span>
+          <span class="service-tag">видео</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="projects/architecture/" target="_blank" class="project-card reveal">
+      <div class="preview">
+        <div class="preview-badge">/02 — АРХИТЕКТУРА</div>
         <iframe src="projects/architecture/" loading="lazy" title="ФОРМА"></iframe>
         <div class="preview-overlay">
           Открыть
@@ -627,10 +651,9 @@ footer a:hover { color: var(--orange); }
           <div class="card-title">ФОРМА</div>
           <div class="card-cat">Корпоративный</div>
         </div>
-        <p class="card-desc">Сайт архитектурного бюро. Каталог проектов, калькулятор стоимости проектирования, состав рабочей документации.</p>
+        <p class="card-desc">Сайт архитектурного бюро. Каталог проектов, калькулятор стоимости проектирования.</p>
         <div class="card-tags">
           <span class="service-tag">калькулятор</span>
-          <span class="service-tag">каталог</span>
           <span class="service-tag">B2C</span>
         </div>
       </div>
@@ -638,7 +661,7 @@ footer a:hover { color: var(--orange); }
 
     <a href="projects/beach-rental/" target="_blank" class="project-card reveal">
       <div class="preview">
-        <div class="preview-badge">/02 — ПРОКАТ</div>
+        <div class="preview-badge">/03 — ПРОКАТ</div>
         <iframe src="projects/beach-rental/" loading="lazy" title="WAVE"></iframe>
         <div class="preview-overlay">
           Открыть
@@ -660,7 +683,7 @@ footer a:hover { color: var(--orange); }
 
     <a href="projects/meal-delivery/" target="_blank" class="project-card reveal">
       <div class="preview">
-        <div class="preview-badge">/03 — ДОСТАВКА</div>
+        <div class="preview-badge">/04 — ДОСТАВКА</div>
         <iframe src="projects/meal-delivery/" loading="lazy" title="ЕМ."></iframe>
         <div class="preview-overlay">
           Открыть
@@ -682,7 +705,7 @@ footer a:hover { color: var(--orange); }
 
     <a href="projects/mellow/" target="_blank" class="project-card reveal">
       <div class="preview">
-        <div class="preview-badge">/04 — БРЕНД</div>
+        <div class="preview-badge">/05 — БРЕНД</div>
         <iframe src="projects/mellow/" loading="lazy" title="MELLOW"></iframe>
         <div class="preview-overlay">
           Открыть
@@ -704,7 +727,7 @@ footer a:hover { color: var(--orange); }
 
     <a href="projects/moving-service/" target="_blank" class="project-card reveal">
       <div class="preview">
-        <div class="preview-badge">/05 — УСЛУГИ</div>
+        <div class="preview-badge">/06 — УСЛУГИ</div>
         <iframe src="projects/moving-service/" loading="lazy" title="ТОЧКА Б"></iframe>
         <div class="preview-overlay">
           Открыть
@@ -735,7 +758,7 @@ footer a:hover { color: var(--orange); }
   </div>
   <div class="stats reveal">
     <div class="cell">
-      <div class="num">5+</div>
+      <div class="num">6+</div>
       <div class="lbl">Проектов в работе</div>
     </div>
     <div class="cell">

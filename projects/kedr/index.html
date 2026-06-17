@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>КЕДР — дома и бани под ключ из северного леса</title>
+<meta name="description" content="Строительное бюро КЕДР: дома и бани под ключ. Каталог проектов, комплектации, онлайн-расчёт сметы по площади, этапы стройки, видео объектов и гарантия фиксированной цены." />
+<meta property="og:title" content="КЕДР — дома и бани под ключ" />
+<meta property="og:description" content="Каталог проектов, расчёт сметы по площади, фиксированная цена в договоре, гарантия на конструкцию до 25 лет." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body id="top">
+
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ░░ NAV ░░ -->
+<header class="nav" id="nav">
+  <a href="#top" class="brand" aria-label="КЕДР — на главную">
+    <span class="brand__mark">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path d="M12 2 L20 20 L4 20 Z M12 7 L16.5 17 L7.5 17 Z" fill="currentColor"/>
+        <rect x="11" y="20" width="2" height="2.5" fill="currentColor"/>
+      </svg>
+      КЕДР
+    </span>
+    <span class="brand__sub">строительное бюро</span>
+  </a>
+  <nav class="nav__links" aria-label="Навигация">
+    <a href="#catalog">Каталог</a>
+    <a href="#packages">Комплектации</a>
+    <a href="#calc">Расчёт</a>
+    <a href="#stages">Этапы</a>
+    <a href="#video">Объекты</a>
+    <a href="#warranty">Гарантии</a>
+  </nav>
+  <a href="#lead" class="btn btn--solid nav__cta">Рассчитать смету</a>
+  <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#catalog">Каталог проектов</a>
+  <a href="#packages">Комплектации</a>
+  <a href="#calc">Расчёт стоимости</a>
+  <a href="#stages">Этапы стройки</a>
+  <a href="#video">Объекты на видео</a>
+  <a href="#warranty">Гарантии</a>
+  <a href="#lead" class="btn btn--solid">Рассчитать смету</a>
+</div>
+
+<main>
+
+<!-- ░░ HERO ░░ -->
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__text reveal">
+      <p class="eyebrow"><span class="eyebrow__dot"></span> Проектируем · строим · сдаём под ключ · с 2009</p>
+      <h1 class="hero__title">
+        Дома и бани,<br />
+        в которых <em>тепло</em><br />
+        остаётся надолго.
+      </h1>
+      <p class="hero__lead">
+        Строим из северного леса: профилированный и клееный брус,
+        оцилиндрованное бревно, тёплый каркас. Фиксированная цена в договоре,
+        собственная бригада и технадзор на каждом этапе.
+      </p>
+      <div class="hero__actions">
+        <a href="#calc" class="btn btn--solid">Рассчитать стоимость</a>
+        <a href="#catalog" class="btn btn--ghost">
+          Смотреть проекты
+          <span class="btn__arrow">→</span>
+        </a>
+      </div>
+      <ul class="hero__stats">
+        <li><strong data-count="640" data-suffix="+">0</strong><span>сданных объектов</span></li>
+        <li><strong data-count="16">0</strong><span>лет на рынке</span></li>
+        <li><strong data-count="25">0</strong><span>лет гарантии</span></li>
+      </ul>
+    </div>
+
+    <div class="hero__media reveal">
+      <div class="hero__frame">
+        <img src="https://loremflickr.com/1000/1200/cottage,wooden?lock=201" alt="Загородный дом из клееного бруса, построенный бюро КЕДР" loading="eager" />
+        <div class="hero__badge">
+          <span class="hero__badge-num">от 20 000 ₽</span>
+          <span class="hero__badge-cap">за м² · тёплый контур</span>
+        </div>
+      </div>
+      <div class="hero__chip hero__chip--1">
+        <span class="dotpulse"></span> Стройка по графику
+      </div>
+      <div class="hero__chip hero__chip--2">
+        ★ 4.9 · 318 отзывов
+      </div>
+    </div>
+  </div>
+
+  <!-- marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Клееный брус</span><span class="marquee__dot">✶</span>
+      <span>Профилированный брус</span><span class="marquee__dot">✶</span>
+      <span>Оцилиндрованное бревно</span><span class="marquee__dot">✶</span>
+      <span>Тёплый каркас</span><span class="marquee__dot">✶</span>
+      <span>Газобетон</span><span class="marquee__dot">✶</span>
+      <span>Дома под ключ</span><span class="marquee__dot">✶</span>
+      <span>Бани и СПА</span><span class="marquee__dot">✶</span>
+      <span>Фиксированная смета</span><span class="marquee__dot">✶</span>
+      <span>Клееный брус</span><span class="marquee__dot">✶</span>
+      <span>Профилированный брус</span><span class="marquee__dot">✶</span>
+      <span>Оцилиндрованное бревно</span><span class="marquee__dot">✶</span>
+      <span>Тёплый каркас</span><span class="marquee__dot">✶</span>
+      <span>Газобетон</span><span class="marquee__dot">✶</span>
+      <span>Дома под ключ</span><span class="marquee__dot">✶</span>
+      <span>Бани и СПА</span><span class="marquee__dot">✶</span>
+      <span>Фиксированная смета</span><span class="marquee__dot">✶</span>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ CATALOG ░░ -->
+<section class="section" id="catalog">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <p class="kicker"><span class="kicker__idx">01</span> Каталог проектов</p>
+        <h2 class="sec-title">Готовые проекты —<br />можно адаптировать под участок</h2>
+      </div>
+      <p class="sec-note">Более 80 типовых проектов домов и бань. Любой меняем по планировке, материалу и комплектации — смета пересчитывается прозрачно.</p>
+    </div>
+
+    <div class="filters reveal" role="tablist" aria-label="Фильтр каталога">
+      <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Все <span>12</span></button>
+      <button class="filter" data-filter="house" role="tab" aria-selected="false">Дома <span>6</span></button>
+      <button class="filter" data-filter="bath" role="tab" aria-selected="false">Бани <span>6</span></button>
+    </div>
+
+    <div class="catalog-grid" id="catalogGrid">
+      <!-- HOUSES -->
+      <article class="proj reveal" data-cat="house">
+        <div class="proj__media">
+          <img src="https://loremflickr.com/900/650/cottage,scandinavian?lock=202" alt="Проект дома Сканди 120" loading="lazy" />
+          <span class="proj__tag">Каркас</span>
+        </div>
+        <div class="proj__body">
+          <div class="proj__top">
+            <h3 class="proj__name">Сканди&nbsp;120</h3>
+            <span class="proj__price">от 3,6 млн ₽</span>
+          </div>
+          <ul class="proj__specs">
+            <li><span>Площадь</span><b>120 м²</b></li>
+            <li><span>Этажи</span><b>2</b></li>
+            <li><span>Спальни</span><b>3</b></li>
+          </ul>
+          <a href="#lead" class="proj__cta">Запросить планировку →</a>
+        </div>
+      </article>
+
+      <article class="proj reveal" data-cat="house">
+        <div class="proj__media">
+          <img src="https://loremflickr.com/900/650/house,modern?lock=203" alt="Проект дома Норд 160" loading="lazy" />
+          <span class="proj__tag">Клееный брус</span>
+        </div>
+        <div class="proj__body">
+          <div class="proj__top">
+            <h3 class="proj__name">Норд&nbsp;160</h3>
+            <span class="proj__price">от 6,9 млн ₽</span>
+          </div>
+          <ul class="proj__specs">
+            <li><span>Площадь</span><b>160 м²</b></li>
+            <li><span>Этажи</span><b>2</b></li>
+            <li><span>Спальни</span><b>4</b></li>
+          </ul>
+          <a href="#lead" class="proj__cta">Запросить планировку →</a>
+        </div>
+      </article>
+
+      <article class="proj reveal" data-cat="house">
+        <div class="proj__media">
+          <img src="https://loremflickr.com/900/650/cabin,forest?lock=204" alt="Проект дома Лесная 96" loading="lazy" />
+          <span class="proj__tag">Газобетон</span>
+        </div>
+        <div class="proj__body">
+          <div class="proj__top">
+            <h3 class="proj__name">Лесная&nbsp;96</h3>
+            <span class="proj__price">от 3,1 млн ₽</span>
+          </div>
+          <ul class="proj__specs">
+            <li><span>Площадь</span><b>96 м²</b></li>
+            <li><span>Этажи</span><b>1</b></li>
+            <li><span>Спальни</span><b>2</b></li>
+          </ul>
+          <a href="#lead" class="proj__cta">Запросить планировку →</a>
+        </div>
+      </article>
+
+      <!-- BATHS -->
+      <article class="proj reveal" data-cat="bath">
+        <div class="proj__media">
+          <img src="https://loremflickr.com/900/650/sauna?lock=205" alt="Проект бани 5 на 6" loading="lazy" />
+          <span class="proj__tag">Бревно</span>
+        </div>
+        <div class="proj__body">
+          <div class="proj__top">
+            <h3 class="proj__name">Баня&nbsp;5×6</h3>
+            <span class="proj__price">от 980 тыс ₽</span>
+          </div>
+          <ul class="proj__specs">
+            <li><span>Площадь</span><b>36 м²</b></li>
+            <li><span>Парная</span><b>есть</b></li>
+            <li><span>Терраса</span><b>6 м²</b></li>
+          </ul>
+          <a href="#lead" class="proj__cta">Запросить планировку →</a>
+        </div>
+      </article>
+
+      <article class="proj reveal" data-cat="bath">
+        <div class="proj__media">
+          <img src="https://loremflickr.com/900/650/sauna,wooden?lock=206" alt="Проект бани с террасой 6 на 8" loading="lazy" />
+          <span class="proj__tag">Брус</span>
+        </div>
+        <div class="proj__body">
+          <div class="proj__top">
+            <h3 class="proj__name">Баня с террасой 6×8</h3>
+            <span class="proj__price">от 1,6 млн ₽</span>
+          </div>
+          <ul class="proj__specs">
+            <li><span>Площадь</span><b>64 м²</b></li>
+            <li><span>Комната отдыха</span><b>есть</b></li>
+            <li><span>Терраса</span><b>14 м²</b></li>
+          </ul>
+          <a href="#lead" class="proj__cta">Запросить планировку →</a>
+        </div>
+      </article>
+
+      <article class="proj reveal" data-cat="bath">
+        <div class="proj__media">
+          <img src="https://loremflickr.com/900/650/sauna,bath?lock=207" alt="Проект бани-барнхаус 7 на 9" loading="lazy" />
+          <span class="proj__tag">Каркас · барн</span>
+        </div>
+        <div class="proj__body">
+          <div class="proj__top">
+            <h3 class="proj__name">Баня-барн 7×9</h3>
+            <span class="proj__price">от 2,3 млн ₽</span>
+          </div>
+          <ul class="proj__specs">
+            <li><span>Площадь</span><b>84 м²</b></li>
+            <li><span>СПА-зона</span><b>купель</b></li>
+            <li><span>Панорама</span><b>есть</b></li>
+          </ul>
+          <a href="#lead" class="proj__cta">Запросить планировку →</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="catalog-foot reveal">
+      <a href="#lead" class="btn btn--outline">Прислать весь каталог в PDF</a>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ PACKAGES ░░ -->
+<section class="section section--dark" id="packages">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <p class="kicker kicker--light"><span class="kicker__idx">02</span> Комплектации</p>
+        <h2 class="sec-title">Три уровня —<br />от тёплого контура до «заезжай и живи»</h2>
+      </div>
+      <p class="sec-note sec-note--light">Каждая комплектация — это закрытый список работ и материалов в договоре. Ничего «вдруг понадобится» по ходу стройки.</p>
+    </div>
+
+    <div class="pkg-grid">
+      <article class="pkg reveal">
+        <div class="pkg__head">
+          <h3 class="pkg__name">Тёплый контур</h3>
+          <p class="pkg__sub">под усадку / черновой</p>
+        </div>
+        <div class="pkg__price"><span>от</span> 20 000 <i>₽/м²</i></div>
+        <ul class="pkg__list">
+          <li>Фундамент свайно-винтовой или лента</li>
+          <li>Сруб / коробка из выбранного материала</li>
+          <li>Межэтажные перекрытия и лаги</li>
+          <li>Кровля: стропила, обрешётка, металлочерепица</li>
+          <li>Тёплый контур: окна, входная дверь</li>
+          <li class="is-off">Утепление и инженерные сети</li>
+          <li class="is-off">Отделка</li>
+        </ul>
+        <a href="#calc" class="btn btn--outline btn--full">Рассчитать в этой комплектации</a>
+      </article>
+
+      <article class="pkg pkg--featured reveal">
+        <span class="pkg__badge">Выбирают чаще всего</span>
+        <div class="pkg__head">
+          <h3 class="pkg__name">Под ключ</h3>
+          <p class="pkg__sub">черновая отделка + инженерия</p>
+        </div>
+        <div class="pkg__price"><span>от</span> 30 000 <i>₽/м²</i></div>
+        <ul class="pkg__list">
+          <li>Всё из «Тёплого контура»</li>
+          <li>Утепление стен, пола, кровли</li>
+          <li>Электрика с щитом и разводкой</li>
+          <li>Отопление, водоснабжение, канализация</li>
+          <li>Черновая отделка стен и стяжка пола</li>
+          <li>Разводка под сантехнику</li>
+          <li class="is-off">Чистовая отделка и фасад</li>
+        </ul>
+        <a href="#calc" class="btn btn--solid btn--full">Рассчитать в этой комплектации</a>
+      </article>
+
+      <article class="pkg reveal">
+        <div class="pkg__head">
+          <h3 class="pkg__name">Премиум</h3>
+          <p class="pkg__sub">заезжай и живи</p>
+        </div>
+        <div class="pkg__price"><span>от</span> 45 000 <i>₽/м²</i></div>
+        <ul class="pkg__list">
+          <li>Всё из комплектации «Под ключ»</li>
+          <li>Чистовая отделка по дизайн-проекту</li>
+          <li>Фасадные работы и террасная доска</li>
+          <li>Сантехника и радиаторы установлены</li>
+          <li>Тёплые полы, межкомнатные двери</li>
+          <li>Дизайн-проект интерьера в подарок</li>
+          <li>Ландшафт у входной группы</li>
+        </ul>
+        <a href="#calc" class="btn btn--outline btn--full">Рассчитать в этой комплектации</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ CALCULATOR ░░ -->
+<section class="section" id="calc">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <p class="kicker"><span class="kicker__idx">03</span> Расчёт стоимости</p>
+        <h2 class="sec-title">Калькулятор сметы<br />по площади — за минуту</h2>
+      </div>
+      <p class="sec-note">Соберите свой объект: тип, материал, площадь и комплектацию. Цена считается мгновенно, а точную смету пришлём после звонка инженера.</p>
+    </div>
+
+    <div class="calc reveal">
+      <div class="calc__controls">
+
+        <div class="calc__row">
+          <span class="calc__label">Что строим</span>
+          <div class="seg" id="calcType" role="group" aria-label="Тип объекта">
+            <button class="seg__btn is-active" data-val="house">Дом</button>
+            <button class="seg__btn" data-val="bath">Баня</button>
+          </div>
+        </div>
+
+        <div class="calc__row">
+          <span class="calc__label">Материал стен</span>
+          <div class="chips-select" id="calcMaterial" role="group" aria-label="Материал">
+            <button class="cs is-active" data-val="frame" data-rate="30000">Тёплый каркас</button>
+            <button class="cs" data-val="profbrus" data-rate="38000">Профилированный брус</button>
+            <button class="cs" data-val="glued" data-rate="58000">Клееный брус</button>
+            <button class="cs" data-val="log" data-rate="46000">Оцилиндр. бревно</button>
+            <button class="cs" data-val="aerated" data-rate="40000">Газобетон</button>
+          </div>
+        </div>
+
+        <div class="calc__row">
+          <div class="calc__label-line">
+            <span class="calc__label">Площадь</span>
+            <span class="calc__area" id="calcAreaOut">120 м²</span>
+          </div>
+          <input type="range" id="calcArea" class="range" min="24" max="400" step="2" value="120" aria-label="Площадь, м²" />
+          <div class="range__scale"><span>24 м²</span><span>400 м²</span></div>
+        </div>
+
+        <div class="calc__row">
+          <span class="calc__label">Комплектация</span>
+          <div class="seg seg--3" id="calcPackage" role="group" aria-label="Комплектация">
+            <button class="seg__btn" data-val="0.65" data-name="Тёплый контур">Тёплый контур</button>
+            <button class="seg__btn is-active" data-val="1" data-name="Под ключ">Под ключ</button>
+            <button class="seg__btn" data-val="1.5" data-name="Премиум">Премиум</button>
+          </div>
+        </div>
+
+        <div class="calc__row">
+          <span class="calc__label">Дополнительно</span>
+          <div class="opts" id="calcOpts">
+            <label class="opt"><input type="checkbox" data-add="380000" /><span>Терраса / веранда</span><i>+380 тыс</i></label>
+            <label class="opt"><input type="checkbox" data-add="290000" /><span>Второй свет</span><i>+290 тыс</i></label>
+            <label class="opt"><input type="checkbox" data-rate-add="3500" /><span>Тёплый пол по всей площади</span><i>+3,5 тыс/м²</i></label>
+            <label class="opt"><input type="checkbox" data-add="240000" /><span>Монолитная плита (фундамент)</span><i>+240 тыс</i></label>
+          </div>
+        </div>
+      </div>
+
+      <aside class="calc__result" id="calcResult">
+        <p class="calc__result-label">Ориентировочная стоимость</p>
+        <div class="calc__total"><span id="calcTotal">5 040 000</span> ₽</div>
+        <p class="calc__perm">≈ <b id="calcPerM">42 000</b> ₽ за м²</p>
+
+        <ul class="calc__breakdown" id="calcBreakdown"></ul>
+
+        <div class="calc__meta">
+          <div class="calc__meta-item">
+            <span>Срок строительства</span>
+            <b id="calcTerm">4–5 мес</b>
+          </div>
+          <div class="calc__meta-item">
+            <span>Рассрочка от</span>
+            <b id="calcMonthly">210 000 ₽/мес</b>
+          </div>
+        </div>
+
+        <a href="#lead" class="btn btn--solid btn--full" id="calcToLead">Зафиксировать цену в смете</a>
+        <p class="calc__disclaimer">Предварительный расчёт. Точная смета — после выезда инженера и замеров. Цена в договоре фиксируется и не меняется.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ STAGES ░░ -->
+<section class="section section--soft" id="stages">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <p class="kicker"><span class="kicker__idx">04</span> Этапы стройки</p>
+        <h2 class="sec-title">От заявки до ключей —<br />прозрачно по шагам</h2>
+      </div>
+      <p class="sec-note">Каждый этап вы принимаете лично или по видеоотчёту. Оплата — частями, за уже сделанную работу.</p>
+    </div>
+
+    <ol class="timeline">
+      <li class="tl reveal">
+        <span class="tl__num">01</span>
+        <div class="tl__body">
+          <h3>Заявка и расчёт сметы</h3>
+          <p>Обсуждаем участок и бюджет, считаем смету и подбираем проект.</p>
+          <span class="tl__time">1 день</span>
+        </div>
+      </li>
+      <li class="tl reveal">
+        <span class="tl__num">02</span>
+        <div class="tl__body">
+          <h3>Договор с фиксированной ценой</h3>
+          <p>Сметы, сроки и материалы фиксируются. Подписываем договор и график.</p>
+          <span class="tl__time">2–3 дня</span>
+        </div>
+      </li>
+      <li class="tl reveal">
+        <span class="tl__num">03</span>
+        <div class="tl__body">
+          <h3>Проект и инженерия</h3>
+          <p>Архитектурный и инженерный проект, привязка к участку, геология.</p>
+          <span class="tl__time">5–10 дней</span>
+        </div>
+      </li>
+      <li class="tl reveal">
+        <span class="tl__num">04</span>
+        <div class="tl__body">
+          <h3>Фундамент</h3>
+          <p>Свайно-винтовой, ленточный или монолитная плита под нагрузку дома.</p>
+          <span class="tl__time">7–14 дней</span>
+        </div>
+      </li>
+      <li class="tl reveal">
+        <span class="tl__num">05</span>
+        <div class="tl__body">
+          <h3>Коробка и сборка сруба</h3>
+          <p>Стены, перекрытия, стропильная система. Контроль геометрии и влажности.</p>
+          <span class="tl__time">20–40 дней</span>
+        </div>
+      </li>
+      <li class="tl reveal">
+        <span class="tl__num">06</span>
+        <div class="tl__body">
+          <h3>Кровля и тёплый контур</h3>
+          <p>Кровельный пирог, окна, двери, утепление. Дом закрыт от погоды.</p>
+          <span class="tl__time">10–15 дней</span>
+        </div>
+      </li>
+      <li class="tl reveal">
+        <span class="tl__num">07</span>
+        <div class="tl__body">
+          <h3>Отделка и сдача</h3>
+          <p>Инженерные сети, отделка, уборка. Сдаём объект и пакет документов.</p>
+          <span class="tl__time">20–45 дней</span>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ░░ VIDEO ░░ -->
+<section class="section" id="video">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <p class="kicker"><span class="kicker__idx">05</span> Объекты на видео</p>
+        <h2 class="sec-title">Не рендеры —<br />реальные сданные дома</h2>
+      </div>
+      <p class="sec-note">Снимаем каждый объект: обзор готового дома, интерьеры и честные отзывы владельцев.</p>
+    </div>
+
+    <div class="video-grid">
+      <button class="vid vid--feature reveal" data-video data-title="Дом из клееного бруса, 184 м²" data-poster="https://loremflickr.com/1400/900/cottage,wooden?lock=208">
+        <img src="https://loremflickr.com/1400/900/cottage,wooden?lock=208" alt="Видеообзор дома из клееного бруса" loading="lazy" />
+        <span class="vid__play"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+        <span class="vid__meta"><b>Дом из клееного бруса · 184 м²</b><i>Обзор готового объекта · 6:12</i></span>
+      </button>
+
+      <button class="vid reveal" data-video data-title="Баня-барнхаус с купелью" data-poster="https://loremflickr.com/1000/700/sauna?lock=209">
+        <img src="https://loremflickr.com/1000/700/sauna?lock=209" alt="Видео бани-барнхаус" loading="lazy" />
+        <span class="vid__play"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+        <span class="vid__meta"><b>Баня-барн с купелью</b><i>3:40</i></span>
+      </button>
+
+      <button class="vid reveal" data-video data-title="Интерьер дома — тёплый минимализм" data-poster="https://loremflickr.com/1000/700/interior,wood?lock=210">
+        <img src="https://loremflickr.com/1000/700/interior,wood?lock=210" alt="Интерьер готового дома" loading="lazy" />
+        <span class="vid__play"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+        <span class="vid__meta"><b>Интерьер — тёплый минимализм</b><i>2:05</i></span>
+      </button>
+
+      <button class="vid reveal" data-video data-title="Отзыв семьи Кузнецовых" data-poster="https://loremflickr.com/1000/700/cottage,house?lock=211">
+        <img src="https://loremflickr.com/1000/700/cottage,house?lock=211" alt="Видеоотзыв клиента" loading="lazy" />
+        <span class="vid__play"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+        <span class="vid__meta"><b>Отзыв владельцев</b><i>4:28</i></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ WARRANTY ░░ -->
+<section class="section section--dark" id="warranty">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <p class="kicker kicker--light"><span class="kicker__idx">06</span> Гарантии</p>
+        <h2 class="sec-title">Отвечаем за результат<br />договором, а не словами</h2>
+      </div>
+      <p class="sec-note sec-note--light">Прозрачная смета, поэтапная оплата и долгая гарантия — чтобы стройка не превратилась в лотерею.</p>
+    </div>
+
+    <div class="warranty-grid">
+      <article class="war reveal">
+        <span class="war__big">25 <i>лет</i></span>
+        <h3>Гарантия на фундамент</h3>
+        <p>И до 5 лет на конструкцию дома. Гарантийные обязательства закреплены в договоре.</p>
+      </article>
+      <article class="war reveal">
+        <span class="war__icon">₽</span>
+        <h3>Фиксированная цена</h3>
+        <p>Стоимость в договоре не меняется. Никаких доплат «вдруг подорожали материалы».</p>
+      </article>
+      <article class="war reveal">
+        <span class="war__icon">▤</span>
+        <h3>Поэтапная оплата</h3>
+        <p>Платите частями за уже принятую работу. Аванс — только на закупку первой партии.</p>
+      </article>
+      <article class="war reveal">
+        <span class="war__icon">✓</span>
+        <h3>Технадзор на стройке</h3>
+        <p>Свой инженер контролирует геометрию, влажность бруса и качество узлов.</p>
+      </article>
+      <article class="war reveal">
+        <span class="war__icon">⏱</span>
+        <h3>Сроки с компенсацией</h3>
+        <p>Дата сдачи в договоре. За каждый день просрочки — компенсация по пене.</p>
+      </article>
+      <article class="war reveal">
+        <span class="war__icon">⛨</span>
+        <h3>Страхование стройки</h3>
+        <p>Объект застрахован на весь период работ. Закрытые акты и пакет документов.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ LEAD / FORM ░░ -->
+<section class="section section--lead" id="lead">
+  <div class="container">
+    <div class="lead">
+      <div class="lead__text reveal">
+        <p class="kicker"><span class="kicker__idx">07</span> Заявка на смету</p>
+        <h2 class="lead__title">Бесплатная смета<br />и проект за 1 день</h2>
+        <p class="lead__lead">Оставьте контакты — инженер посчитает стоимость по вашему участку, пришлёт смету и подборку проектов. Без навязывания и звонков «по 5 раз в день».</p>
+        <ul class="lead__bullets">
+          <li><span>✓</span> Расчёт сметы и подбор проекта — бесплатно</li>
+          <li><span>✓</span> Выезд инженера на участок</li>
+          <li><span>✓</span> Фиксируем цену и сроки в договоре</li>
+        </ul>
+        <div class="lead__contacts">
+          <a href="tel:+78001234567" class="lead__phone">+7 800 123-45-67</a>
+          <span class="lead__hours">Ежедневно 9:00–21:00 · выставочная площадка в Подмосковье</span>
+        </div>
+      </div>
+
+      <form class="form reveal" id="leadForm" novalidate>
+        <div class="field">
+          <label for="fName">Имя</label>
+          <input type="text" id="fName" name="name" placeholder="Как к вам обращаться" autocomplete="name" />
+          <span class="field__err" data-err="fName"></span>
+        </div>
+        <div class="field">
+          <label for="fPhone">Телефон</label>
+          <input type="tel" id="fPhone" name="phone" placeholder="+7 (___) ___-__-__" inputmode="tel" autocomplete="tel" />
+          <span class="field__err" data-err="fPhone"></span>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="fType">Объект</label>
+            <select id="fType" name="type">
+              <option value="Дом">Дом</option>
+              <option value="Баня">Баня</option>
+              <option value="Дом + баня">Дом + баня</option>
+              <option value="Ещё не решил">Ещё не решил</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fArea">Площадь, м²</label>
+            <input type="number" id="fArea" name="area" placeholder="напр. 120" min="10" max="2000" inputmode="numeric" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="fComment">Комментарий <em>(необязательно)</em></label>
+          <textarea id="fComment" name="comment" rows="2" placeholder="Участок, сроки, пожелания по проекту…"></textarea>
+        </div>
+        <label class="agree">
+          <input type="checkbox" id="fAgree" checked />
+          <span>Согласен на обработку персональных данных</span>
+        </label>
+        <button type="submit" class="btn btn--solid btn--full btn--lg">Получить смету</button>
+        <p class="form__note">Перезвоним в течение 15 минут в рабочее время</p>
+
+        <div class="form__success" id="formSuccess" hidden>
+          <div class="form__success-ic">✓</div>
+          <h3>Заявка отправлена!</h3>
+          <p>Инженер КЕДР перезвонит в ближайшее время и подготовит смету.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ░░ FOOTER ░░ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <span class="brand__mark brand__mark--lg">
+        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+          <path d="M12 2 L20 20 L4 20 Z M12 7 L16.5 17 L7.5 17 Z" fill="currentColor"/>
+          <rect x="11" y="20" width="2" height="2.5" fill="currentColor"/>
+        </svg>
+        КЕДР
+      </span>
+      <p>Строительное бюро полного цикла. Дома и бани под ключ из северного леса с 2009 года.</p>
+      <div class="footer__socials">
+        <a href="#" aria-label="Telegram">TG</a>
+        <a href="#" aria-label="ВКонтакте">VK</a>
+        <a href="#" aria-label="YouTube">YT</a>
+      </div>
+    </div>
+    <div class="footer__col">
+      <h4>Навигация</h4>
+      <a href="#catalog">Каталог проектов</a>
+      <a href="#packages">Комплектации</a>
+      <a href="#calc">Расчёт стоимости</a>
+      <a href="#stages">Этапы стройки</a>
+      <a href="#warranty">Гарантии</a>
+    </div>
+    <div class="footer__col">
+      <h4>Контакты</h4>
+      <a href="tel:+78001234567">+7 800 123-45-67</a>
+      <a href="mailto:build@kedr.ru">build@kedr.ru</a>
+      <span>Московская область,<br />Дмитровское ш., 42 км</span>
+      <span>Ежедневно 9:00–21:00</span>
+    </div>
+    <div class="footer__col">
+      <h4>Приезжайте</h4>
+      <span>Выставочная площадка:<br />6 готовых домов и 3 бани</span>
+      <a href="#lead" class="footer__cta">Записаться на просмотр →</a>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© 2026 КЕДР · Строительное бюро</span>
+    <span>Дизайн-концепт · лендинг №03</span>
+  </div>
+</footer>
+
+<!-- ░░ VIDEO MODAL ░░ -->
+<div class="vmodal" id="vmodal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Видео объекта">
+  <div class="vmodal__backdrop" data-close></div>
+  <div class="vmodal__inner">
+    <button class="vmodal__close" data-close aria-label="Закрыть">✕</button>
+    <div class="vmodal__stage">
+      <img id="vmodalImg" src="" alt="" />
+      <div class="vmodal__playbig"><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></div>
+      <div class="vmodal__shine"></div>
+    </div>
+    <div class="vmodal__cap">
+      <b id="vmodalTitle">Видео объекта</b>
+      <span>Демо-превью. В продакшене сюда подключается реальный ролик с YouTube/Vimeo.</span>
+    </div>
+  </div>
+</div>
+
+<a href="#lead" class="fab" id="fab" aria-label="Рассчитать смету">
+  <span class="fab__ic">₽</span>
+  <span class="fab__txt">Смета бесплатно</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
