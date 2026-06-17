@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MELLOW — кофейня и обжарка с 1974</title>
+<meta name="description" content="MELLOW — ламповая кофейня и собственная обжарка. Спешелти на медленном огне, винил по вечерам, тёплый свет и зёрна с доставкой. Заходите на чашку." />
+<meta property="og:title" content="MELLOW — кофейня и обжарка" />
+<meta property="og:description" content="Тёплый кофе, тёплый свет, тёплый винил. Кофейня и обжарка с 1974 года." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Space+Mono:wght@400;700&family=Yellowtail&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- paper grain -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ░░ NAV ░░ -->
+<header class="nav" id="nav">
+  <a href="#top" class="brand">
+    <span class="brand__bean" aria-hidden="true"></span>
+    <span class="brand__mark">MELLOW</span>
+    <span class="brand__sub">coffee&nbsp;·&nbsp;records</span>
+  </a>
+  <nav class="nav__links" aria-label="Основная навигация">
+    <a href="#menu">Меню</a>
+    <a href="#beans">Зёрна</a>
+    <a href="#vinyl">Винил</a>
+    <a href="#about">О нас</a>
+    <a href="#visit">Где мы</a>
+  </nav>
+  <a href="#reserve" class="btn btn--solid nav__cta">Забронировать столик</a>
+  <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- mobile menu -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#menu">Меню</a>
+  <a href="#beans">Зёрна</a>
+  <a href="#vinyl">Винил по вечерам</a>
+  <a href="#about">О нас</a>
+  <a href="#visit">Где мы</a>
+  <a href="#reserve" class="btn btn--solid">Забронировать столик</a>
+</div>
+
+<main id="top">
+
+<!-- ░░ HERO ░░ -->
+<section class="hero" id="hero">
+  <div class="hero__sun" aria-hidden="true"></div>
+
+  <div class="hero__text reveal">
+    <p class="eyebrow"><span class="eyebrow__star">✺</span> Кофейня · обжарка · с 1974</p>
+    <h1 class="hero__title">
+      Тёплый кофе,<br />
+      тёплый свет,<br />
+      <span class="script">тёплый</span> винил.
+    </h1>
+    <p class="hero__lead">
+      MELLOW — ламповая кофейня с собственной обжаркой. Спешелти на медленном
+      огне, пластинки по вечерам и ровно та атмосфера, ради которой хочется
+      остаться на вторую чашку.
+    </p>
+    <div class="hero__actions">
+      <a href="#menu" class="btn btn--solid">Смотреть меню</a>
+      <a href="#vinyl" class="btn btn--ghost">
+        <span class="play__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="13" height="13"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+        </span>
+        Вечера винила
+      </a>
+    </div>
+    <ul class="hero__stats">
+      <li><strong data-count="50" data-suffix="+">0</strong><span>сортов зерна</span></li>
+      <li><strong data-count="1974">0</strong><span>год основания</span></li>
+      <li><strong data-count="12" data-suffix="k">0</strong><span>чашек в месяц</span></li>
+    </ul>
+  </div>
+
+  <div class="hero__media reveal">
+    <div class="hero__frame">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=880&h=1080&fit=crop&crop=center" alt="Бариста готовит кофе в тёплом свете кофейни MELLOW" loading="eager" />
+      <div class="hero__seal" aria-hidden="true">
+        <svg viewBox="0 0 120 120" class="seal__spin">
+          <defs><path id="circ" d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0" /></defs>
+          <text class="seal__text"><textPath href="#circ" startOffset="0">FRESH ROAST · SLOW BREW · GOOD VINYL · </textPath></text>
+        </svg>
+        <span class="seal__core">✺</span>
+      </div>
+    </div>
+    <div class="hero__chip mono">сейчас в баре · House Blend No.7</div>
+  </div>
+</section>
+
+<!-- ░░ MARQUEE ░░ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Свежая обжарка</span><i>✺</i><span>Живой винил</span><i>✺</i><span>Спешелти кофе</span><i>✺</i><span>Домашняя выпечка</span><i>✺</i>
+    <span>Тёплый свет</span><i>✺</i><span>Зёрна с собой</span><i>✺</i>
+    <span>Свежая обжарка</span><i>✺</i><span>Живой винил</span><i>✺</i><span>Спешелти кофе</span><i>✺</i><span>Домашняя выпечка</span><i>✺</i>
+    <span>Тёплый свет</span><i>✺</i><span>Зёрна с собой</span><i>✺</i>
+  </div>
+</div>
+
+<!-- ░░ MENU ░░ -->
+<section class="section menu" id="menu">
+  <div class="section__head reveal">
+    <div>
+      <p class="label mono">01 — Меню</p>
+      <h2 class="section__title">Что налить?</h2>
+    </div>
+    <p class="section__note">Всё на молоке на выбор: цельное, овсяное, миндальное. Альтернатива — на воде или с авторским сиропом.</p>
+  </div>
+
+  <div class="menu-tabs reveal" id="menuTabs" role="tablist" aria-label="Категории меню">
+    <button class="menu-tab is-active" data-cat="coffee" role="tab">Кофе</button>
+    <button class="menu-tab" data-cat="not" role="tab">Не кофе</button>
+    <button class="menu-tab" data-cat="food" role="tab">К кофе</button>
+  </div>
+
+  <div class="menu-list reveal">
+    <!-- COFFEE -->
+    <div class="menu-pane" data-pane="coffee">
+      <div class="menu-row"><span class="menu-row__name">Эспрессо</span><span class="menu-row__dots"></span><span class="menu-row__note">двойной, классика дома</span><span class="menu-row__price">160 ₽</span></div>
+      <div class="menu-row"><span class="menu-row__name">Капучино</span><span class="menu-row__dots"></span><span class="menu-row__note">бархатная пенка, какао сверху</span><span class="menu-row__price">240 ₽</span></div>
+      <div class="menu-row menu-row--star"><span class="menu-row__name">Флэт уайт <i class="tag">хит</i></span><span class="menu-row__dots"></span><span class="menu-row__note">плотный, на ристретто</span><span class="menu-row__price">260 ₽</span></div>
+      <div class="menu-row"><span class="menu-row__name">Раф «карамель-соль»</span><span class="menu-row__dots"></span><span class="menu-row__note">сливочный, наш рецепт</span><span class="menu-row__price">320 ₽</span></div>
+      <div class="menu-row"><span class="menu-row__name">Фильтр V60</span><span class="menu-row__dots"></span><span class="menu-row__note">зерно дня, проливаем при вас</span><span class="menu-row__price">280 ₽</span></div>
+      <div class="menu-row"><span class="menu-row__name">Колд брю</span><span class="menu-row__dots"></span><span class="menu-row__note">14 часов на холоде</span><span class="menu-row__price">290 ₽</span></div>
+    </div>
+    <!-- NOT COFFEE -->
+    <div class="menu-pane" data-pane="not" hidden>
+      <div class="menu-row menu-row--star"><span class="menu-row__name">Какао на тёмном шоколаде <i class="tag">зима</i></span><span class="menu-row__dots"></span><span class="menu-row__note">с маршмеллоу</span><span class="menu-row__price">280 ₽</span></div>
+      <div class="menu-row"><span class="menu-row__name">Матча латте</span><span class="menu-row__dots"></span><span class="menu-row__note">церемониальная, Удзи</span><span class="menu-row__price">300 ₽</span></div>
+      <div class="menu-row"><span class="menu-row__name">Облепиховый чай</span><span class="menu-row__dots"></span><span class="menu-row__note">имбирь, мёд, чабрец</span><span class="menu-row__price">260 ₽</span></div>
+      <div class="menu-row"><span class="menu-row__name">Золотое молоко</span><span class="menu-row__dots"></span><span class="menu-row__note">куркума, кардамон</span><span class="menu-row__price">270 ₽</span></div>
+      <div class="menu-row"><span class="menu-row__name">Лимонад «груша-тимьян»</span><span class="menu-row__dots"></span><span class="menu-row__note">домашний, негазированный</span><span class="menu-row__price">240 ₽</span></div>
+    </div>
+    <!-- FOOD -->
+    <div class="menu-pane" data-pane="food" hidden>
+      <div class="menu-row menu-row--star"><span class="menu-row__name">Морковный торт <i class="tag">любимый</i></span><span class="menu-row__dots"></span><span class="menu-row__note">крем-чиз, грецкий орех</span><span class="menu-row__price">320 ₽</span></div>
+      <div class="menu-row"><span class="menu-row__name">Синнабон с корицей</span><span class="menu-row__dots"></span><span class="menu-row__note">тёплый, из печи</span><span class="menu-row__price">260 ₽</span></div>
+      <div class="menu-row"><span class="menu-row__name">Банановый хлеб</span><span class="menu-row__dots"></span><span class="menu-row__note">с шоколадом и пеканом</span><span class="menu-row__price">230 ₽</span></div>
+      <div class="menu-row"><span class="menu-row__name">Гранола с йогуртом</span><span class="menu-row__dots"></span><span class="menu-row__note">сезонные ягоды</span><span class="menu-row__price">290 ₽</span></div>
+      <div class="menu-row"><span class="menu-row__name">Сэндвич с лососем</span><span class="menu-row__dots"></span><span class="menu-row__note">на бриоши, крем-сыр</span><span class="menu-row__price">390 ₽</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ ABOUT ░░ -->
+<section class="section about" id="about">
+  <div class="about__media reveal">
+    <div class="about__frame">
+      <img src="https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=760&h=900&fit=crop&crop=center" alt="Интерьер кофейни MELLOW в тёплых тонах" loading="lazy" />
+    </div>
+    <span class="about__stamp" aria-hidden="true"><span>est.</span><strong>1974</strong></span>
+  </div>
+  <div class="about__text reveal">
+    <p class="label mono">02 — О нас</p>
+    <h2 class="section__title">Полвека варим <span class="script">не спеша</span></h2>
+    <p>
+      Всё началось с маленькой обжарки на углу, латунной кофемашины и стопки
+      пластинок. С тех пор поменялось почти всё — кроме главного: мы по-прежнему
+      жарим зерно сами, маленькими партиями, и наливаем так, будто наливаем себе.
+    </p>
+    <p>
+      Здесь не торопят. Можно сесть с книгой на полдня, прийти на чашку перед
+      работой или остаться вечером, когда мы ставим винил и приглушаем свет.
+    </p>
+    <ul class="about__pills">
+      <li>Своя обжарка</li>
+      <li>Спешелти зерно</li>
+      <li>Винил по четвергам</li>
+      <li>Тёплый приём</li>
+    </ul>
+    <div class="signature">— команда MELLOW</div>
+  </div>
+</section>
+
+<!-- ░░ BEANS ░░ -->
+<section class="section beans" id="beans">
+  <div class="section__head reveal">
+    <div>
+      <p class="label mono">03 — Обжарка</p>
+      <h2 class="section__title">Зёрна с собой</h2>
+    </div>
+    <div class="toggle" id="subToggle" role="tablist" aria-label="Способ покупки">
+      <button class="toggle__btn is-active" data-mode="once" role="tab">Разово</button>
+      <button class="toggle__btn" data-mode="sub" role="tab">Подписка <i>−15%</i></button>
+      <span class="toggle__pill" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <div class="beans-grid">
+    <article class="bean reveal">
+      <div class="bean__top">
+        <span class="bean__origin mono">Эфиопия · Иргачеффе</span>
+        <h3 class="bean__name">Утренний свет</h3>
+      </div>
+      <div class="bean__roast" aria-label="Светлая обжарка">
+        <span class="roast-dots"><i class="on"></i><i></i><i></i></span>
+        <span class="mono">светлая</span>
+      </div>
+      <p class="bean__notes">жасмин · персик · чёрный чай</p>
+      <p class="bean__price" data-base="890"><strong>890 ₽</strong> <span>/ 250&nbsp;г</span></p>
+      <a href="#reserve" class="btn btn--line" data-bean="Утренний свет">В заказ</a>
+    </article>
+
+    <article class="bean bean--feature reveal">
+      <span class="bean__flag mono">бестселлер</span>
+      <div class="bean__top">
+        <span class="bean__origin mono">Купаж дома · House No.7</span>
+        <h3 class="bean__name">House Blend №7</h3>
+      </div>
+      <div class="bean__roast" aria-label="Средняя обжарка">
+        <span class="roast-dots"><i class="on"></i><i class="on"></i><i></i></span>
+        <span class="mono">средняя</span>
+      </div>
+      <p class="bean__notes">молочный шоколад · фундук · карамель</p>
+      <p class="bean__price" data-base="790"><strong>790 ₽</strong> <span>/ 250&nbsp;г</span></p>
+      <a href="#reserve" class="btn btn--solid" data-bean="House Blend №7">В заказ</a>
+    </article>
+
+    <article class="bean reveal">
+      <div class="bean__top">
+        <span class="bean__origin mono">Колумбия · Уила</span>
+        <h3 class="bean__name">Вечерний джаз</h3>
+      </div>
+      <div class="bean__roast" aria-label="Тёмная обжарка">
+        <span class="roast-dots"><i class="on"></i><i class="on"></i><i class="on"></i></span>
+        <span class="mono">тёмная</span>
+      </div>
+      <p class="bean__notes">какао · чернослив · табак</p>
+      <p class="bean__price" data-base="850"><strong>850 ₽</strong> <span>/ 250&nbsp;г</span></p>
+      <a href="#reserve" class="btn btn--line" data-bean="Вечерний джаз">В заказ</a>
+    </article>
+  </div>
+
+  <p class="beans__sub-note reveal" id="subNote" hidden>
+    <span class="mono">✺ Подписка:</span> свежая обжарка приезжает к вам каждые 2 недели, отменить можно в любой момент. Цены уже со скидкой&nbsp;15%.
+  </p>
+</section>
+
+<!-- ░░ VINYL (dark) ░░ -->
+<section class="section vinyl" id="vinyl">
+  <div class="vinyl__inner">
+    <div class="section__head reveal">
+      <div>
+        <p class="label mono">04 — Вечера</p>
+        <h2 class="section__title">Винил по вечерам</h2>
+      </div>
+      <p class="section__note">После 19:00 свет приглушается, кофе сменяет натуральное вино, а на проигрыватель ложится пластинка. Вход свободный.</p>
+    </div>
+
+    <div class="vinyl__grid">
+      <div class="player reveal">
+        <div class="player__disc">
+          <div class="disc">
+            <span class="disc__label">M</span>
+          </div>
+          <div class="player__arm"></div>
+        </div>
+        <div class="player__now">
+          <span class="mono">сейчас играет</span>
+          <strong id="nowTitle">Bill Evans — Waltz for Debby</strong>
+          <span class="player__sub" id="nowSub">джаз-вечер · четверг</span>
+        </div>
+      </div>
+
+      <div class="schedule reveal">
+        <div class="schedule__days" id="schedDays" role="tablist" aria-label="Дни недели">
+          <button class="day-btn is-active" data-day="thu" role="tab">Чт</button>
+          <button class="day-btn" data-day="fri" role="tab">Пт</button>
+          <button class="day-btn" data-day="sat" role="tab">Сб</button>
+          <button class="day-btn" data-day="sun" role="tab">Вс</button>
+        </div>
+        <div class="schedule__body" id="schedBody"><!-- filled by JS --></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ REVIEWS ░░ -->
+<section class="section reviews" id="reviews">
+  <div class="section__head reveal">
+    <div>
+      <p class="label mono">05 — Отзывы</p>
+      <h2 class="section__title">Говорят гости</h2>
+    </div>
+    <div class="reviews__nav">
+      <button class="round-nav" id="revPrev" aria-label="Предыдущий отзыв">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="round-nav" id="revNext" aria-label="Следующий отзыв">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="reviews__viewport reveal">
+    <div class="reviews__track" id="revTrack">
+      <blockquote class="review">
+        <div class="stars" aria-label="5 из 5">★★★★★</div>
+        <p>«Захожу сюда пять лет. Это не „кофе на вынос“, это ритуал. Бариста помнят, что я беру, а флэт уайт — лучший в городе».</p>
+        <footer><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=faces" alt="" /><span><strong>Аня</strong><i class="mono">завсегдатай</i></span></footer>
+      </blockquote>
+      <blockquote class="review">
+        <div class="stars" aria-label="5 из 5">★★★★★</div>
+        <p>«Пришёл случайно на вечер винила — остался до закрытия. Натуральное вино, тёплый свет, Майлз Дэвис на пластинке. Атмосфера из другого времени».</p>
+        <footer><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=faces" alt="" /><span><strong>Дмитрий</strong><i class="mono">вечер винила</i></span></footer>
+      </blockquote>
+      <blockquote class="review">
+        <div class="stars" aria-label="5 из 5">★★★★★</div>
+        <p>«Беру их House №7 по подписке домой. Свежая обжарка приезжает раз в две недели — дома пахнет, как в кофейне».</p>
+        <footer><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=faces" alt="" /><span><strong>Марина</strong><i class="mono">подписка на зёрна</i></span></footer>
+      </blockquote>
+      <blockquote class="review">
+        <div class="stars" aria-label="5 из 5">★★★★★</div>
+        <p>«Работаю отсюда по средам. Розетки, медленный фильтр, морковный торт и никто не торопит. Идеальное место, чтобы выпасть из суеты».</p>
+        <footer><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=faces" alt="" /><span><strong>Костя</strong><i class="mono">удалёнка</i></span></footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ VISIT ░░ -->
+<section class="section visit" id="visit">
+  <div class="visit__card reveal">
+    <div class="visit__info">
+      <p class="label mono">06 — Где мы</p>
+      <h2 class="section__title">Заходите на чашку</h2>
+      <p class="visit__addr">ул. Тёплая, 7 · во дворе, синяя дверь<br/>2 минуты от метро «Парковая»</p>
+
+      <div class="visit__status" id="visitStatus">
+        <span class="dot"></span><span id="statusText">Проверяем часы…</span>
+      </div>
+
+      <ul class="hours mono" id="hoursList"><!-- filled by JS --></ul>
+
+      <ul class="visit__contacts">
+        <li><span class="mono">Телефон</span> <a href="tel:+70000000000">+7 900 000-00-00</a></li>
+        <li><span class="mono">Telegram</span> <a href="#">@mellow.coffee</a></li>
+        <li><span class="mono">Почта</span> <a href="#">hello@mellow.coffee</a></li>
+      </ul>
+    </div>
+    <div class="visit__map" aria-hidden="true">
+      <div class="map__pin"><span>✺</span></div>
+      <div class="map__roads"></div>
+      <span class="map__tag mono">ул. Тёплая, 7</span>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ RESERVE ░░ -->
+<section class="section reserve" id="reserve">
+  <div class="reserve__inner">
+    <div class="reserve__intro reveal">
+      <p class="label mono">07 — Бронь</p>
+      <h2 class="section__title">Забронировать столик</h2>
+      <p class="reserve__lead">Оставьте заявку — придержим место к вашему приходу. На большие компании и вечера винила бронируйте заранее.</p>
+      <ul class="reserve__perks">
+        <li><span aria-hidden="true">✺</span> Подтвердим в течение часа</li>
+        <li><span aria-hidden="true">✺</span> Первый кофе — за счёт заведения</li>
+        <li><span aria-hidden="true">✺</span> Можно с ноутбуком и с собакой</li>
+      </ul>
+    </div>
+
+    <form class="reserve__form reveal" id="reserveForm" novalidate>
+      <div class="field">
+        <label for="r-phone">Телефон</label>
+        <input type="tel" id="r-phone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" />
+        <small class="field__err" data-err="phone"></small>
+      </div>
+      <div class="field">
+        <label for="r-email">Почта</label>
+        <input type="email" id="r-email" name="email" placeholder="name@example.com" autocomplete="email" />
+        <small class="field__err" data-err="email"></small>
+      </div>
+      <div class="field">
+        <label for="r-time">Когда</label>
+        <div class="select-wrap">
+          <select id="r-time" name="time">
+            <option value="">Выберите время</option>
+            <option>Сегодня · утро</option>
+            <option>Сегодня · день</option>
+            <option>Сегодня · вечер</option>
+            <option>Завтра · утро</option>
+            <option>Завтра · вечер</option>
+            <option>Вечер винила (чт–вс)</option>
+          </select>
+          <svg class="select-wrap__chev" viewBox="0 0 24 24" width="16" height="16"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <small class="field__err" data-err="time"></small>
+      </div>
+      <div class="field">
+        <label for="r-table">Какой столик</label>
+        <div class="select-wrap">
+          <select id="r-table" name="table">
+            <option value="">Выберите столик</option>
+            <option>У окна</option>
+            <option>В углу — тихий</option>
+            <option>У барной стойки</option>
+            <option>Диван для компании</option>
+            <option>На веранде</option>
+            <option>Любой свободный</option>
+          </select>
+          <svg class="select-wrap__chev" viewBox="0 0 24 24" width="16" height="16"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <small class="field__err" data-err="table"></small>
+      </div>
+      <button type="submit" class="btn btn--solid btn--block">Забронировать</button>
+
+      <div class="reserve__success" id="reserveSuccess" hidden>
+        <div class="reserve__success-mark">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Столик за вами!</h3>
+        <p>Открыли вашу почту с готовым письмом на <b>hello@mellow.coffee</b> — отправьте его, и мы свяжемся в течение часа. Ставим чайник ✺</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ░░ FOOTER ░░ -->
+<footer class="footer">
+  <div class="footer__top">
+    <a href="#top" class="footer__brand">MELLOW</a>
+    <p>Тёплый кофе, тёплый свет, тёплый винил.</p>
+  </div>
+  <div class="footer__cols">
+    <div>
+      <span class="mono">Кофейня</span>
+      <a href="#menu">Меню</a>
+      <a href="#beans">Зёрна с собой</a>
+      <a href="#vinyl">Вечера винила</a>
+    </div>
+    <div>
+      <span class="mono">Контакты</span>
+      <a href="#">Telegram</a>
+      <a href="#">Instagram</a>
+      <a href="#">hello@mellow.coffee</a>
+    </div>
+    <div>
+      <span class="mono">Где мы</span>
+      <a href="#visit">ул. Тёплая, 7</a>
+      <a href="#visit">Часы работы</a>
+      <a href="#reserve">Бронь столика</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 1974–2026 MELLOW coffee &amp; records</span>
+    <a href="#top" class="footer__up">Наверх ↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

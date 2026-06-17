@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#ffffff" />
+<title>ТОЧКА Б — переезд из точки А в точку Б без стресса</title>
+<meta name="description" content="ТОЧКА Б — служба переездов под ключ. Онлайн-калькулятор стоимости, квиз по вещам, упаковка, сборка мебели, грузчики, страхование груза и фиксированная цена в договоре." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body id="top">
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<!-- PROMO BAR -->
+<div class="promobar">
+  <div class="promobar__track" aria-label="Акции">
+    <span><i class="pb-dot"></i> −15% на переезд в будни до 14:00</span><span class="pb-sep">·</span>
+    <span>Бесплатный замер и упаковочные материалы при заказе «под ключ»</span><span class="pb-sep">·</span>
+    <span>Фиксированная цена в договоре — без доплат на месте</span><span class="pb-sep">·</span>
+    <span><i class="pb-dot"></i> −15% на переезд в будни до 14:00</span><span class="pb-sep">·</span>
+    <span>Бесплатный замер и упаковочные материалы при заказе «под ключ»</span><span class="pb-sep">·</span>
+    <span>Фиксированная цена в договоре — без доплат на месте</span><span class="pb-sep">·</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="#top" class="brand" aria-label="ТОЧКА Б — на главную">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28">
+          <path d="M5 23 C 11 9, 21 9, 27 23" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="2.4 4.4"/>
+          <circle cx="5" cy="23" r="3.4" fill="currentColor"/>
+          <circle cx="27" cy="23" r="4.4" fill="var(--mint)"/>
+        </svg>
+      </span>
+      <span class="brand__name">ТОЧКА&nbsp;Б</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Основная навигация">
+      <a href="#calc">Калькулятор</a>
+      <a href="#quiz">Квиз</a>
+      <a href="#services">Услуги</a>
+      <a href="#pricing">Тарифы</a>
+      <a href="#how">Как это работает</a>
+    </nav>
+
+    <div class="nav__right">
+      <a href="tel:+74951234567" class="nav__phone">+7 495 123-45-67</a>
+      <button class="btn btn--primary btn--sm magnetic" data-order="Заявка из шапки">Заказать переезд</button>
+    </div>
+
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobilemenu" id="mobileMenu" aria-hidden="true">
+  <a href="#calc">Калькулятор</a>
+  <a href="#quiz">Квиз по вещам</a>
+  <a href="#services">Услуги</a>
+  <a href="#pricing">Тарифы</a>
+  <a href="#how">Как это работает</a>
+  <a href="#insurance">Страхование</a>
+  <a href="tel:+74951234567" class="mobilemenu__phone">+7 495 123-45-67</a>
+  <button class="btn btn--primary btn--block" data-order="Заявка из меню">Заказать переезд</button>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <div class="kicker"><span class="kicker__dot"></span> Служба переездов · Москва и область</div>
+      <h1 class="hero__title">
+        Переезд из точки&nbsp;А<br>
+        в <span class="hero__b">точку&nbsp;Б</span> —<br>
+        без стресса и переплат
+      </h1>
+      <p class="hero__lead">
+        Рассчитайте стоимость онлайн за минуту, соберём, упакуем, перевезём и
+        соберём мебель обратно. Фиксированная цена в договоре и страховка
+        каждого ящика.
+      </p>
+      <div class="hero__actions">
+        <a href="#calc" class="btn btn--primary btn--lg magnetic">Рассчитать стоимость</a>
+        <a href="#quiz" class="btn btn--ghost btn--lg">Пройти квиз по вещам →</a>
+      </div>
+      <ul class="hero__stats">
+        <li><strong data-count="12400" data-suffix="+">0</strong><span>переездов сделано</span></li>
+        <li><strong data-count="4.9" data-decimals="1">0</strong><span>рейтинг на картах</span></li>
+        <li><strong data-count="100" data-suffix="%">0</strong><span>под страховкой</span></li>
+      </ul>
+    </div>
+
+    <div class="hero__card tilt" aria-hidden="false">
+      <div class="routecard">
+        <div class="routecard__head">
+          <span class="routecard__tag">Маршрут</span>
+          <span class="routecard__live"><i></i> онлайн</span>
+        </div>
+
+        <svg class="routemap" viewBox="0 0 320 200" role="img" aria-label="Схема маршрута">
+          <defs>
+            <linearGradient id="rg" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="var(--brand)"/>
+              <stop offset="1" stop-color="var(--mint)"/>
+            </linearGradient>
+          </defs>
+          <path class="routemap__grid" d="M0 50 H320 M0 100 H320 M0 150 H320 M80 0 V200 M160 0 V200 M240 0 V200"/>
+          <path id="routePath" class="routemap__line" d="M34 158 C 90 70, 150 180, 200 90 S 270 30, 292 44"/>
+          <circle class="routemap__a" cx="34" cy="158" r="7"/>
+          <g class="routemap__b">
+            <circle cx="292" cy="44" r="9"/>
+            <text x="292" y="48" text-anchor="middle">Б</text>
+          </g>
+          <circle r="6" class="routemap__truck">
+            <animateMotion dur="5s" repeatCount="indefinite" rotate="auto" keyPoints="0;1" keyTimes="0;1" calcMode="linear">
+              <mpath href="#routePath"/>
+            </animateMotion>
+          </circle>
+          <text x="34" y="180" text-anchor="middle" class="routemap__label">А</text>
+          <text x="292" y="26" text-anchor="middle" class="routemap__label routemap__label--b">Б</text>
+        </svg>
+
+        <div class="routecard__row">
+          <div class="routecard__cell">
+            <span>Откуда</span>
+            <strong>Тверская, 12</strong>
+          </div>
+          <div class="routecard__arrow">→</div>
+          <div class="routecard__cell">
+            <span>Куда</span>
+            <strong>Новая Рига, 8 км</strong>
+          </div>
+        </div>
+        <div class="routecard__foot">
+          <div class="routecard__chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="6" width="15" height="12" rx="1"/><path d="M16 10h4l3 4v4h-7V10z"/><circle cx="7" cy="20" r="2"/><circle cx="20" cy="20" r="2"/></svg>
+            Грузовик 5 т
+          </div>
+          <div class="routecard__chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+            16 м³
+          </div>
+          <div class="routecard__price">от <strong>18 900 ₽</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Фиксированная цена</span><i>◆</i>
+      <span>Страхование груза</span><i>◆</i>
+      <span>Бережная упаковка</span><i>◆</i>
+      <span>Сборка мебели</span><i>◆</i>
+      <span>Трезвые грузчики в форме</span><i>◆</i>
+      <span>Чистые машины</span><i>◆</i>
+      <span>Фиксированная цена</span><i>◆</i>
+      <span>Страхование груза</span><i>◆</i>
+      <span>Бережная упаковка</span><i>◆</i>
+      <span>Сборка мебели</span><i>◆</i>
+      <span>Трезвые грузчики в форме</span><i>◆</i>
+      <span>Чистые машины</span><i>◆</i>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="section calc" id="calc">
+  <div class="container">
+    <div class="section__head reveal">
+      <div class="kicker"><span class="kicker__dot"></span> Калькулятор переезда</div>
+      <h2 class="section__title">Узнайте цену за минуту</h2>
+      <p class="section__sub">Двигайте ползунки и отмечайте опции — стоимость пересчитывается мгновенно. Это предварительный расчёт; точную цену зафиксируем в договоре после замера.</p>
+    </div>
+
+    <div class="calc__grid reveal">
+      <div class="calc__form">
+        <div class="field-block">
+          <label class="field-label"><b>01</b> Что перевозим</label>
+          <div class="segmented" data-calc="type">
+            <button type="button" class="seg is-active" data-val="apartment">Квартира</button>
+            <button type="button" class="seg" data-val="office">Офис</button>
+            <button type="button" class="seg" data-val="items">Отдельные вещи</button>
+          </div>
+        </div>
+
+        <div class="field-block" data-show="apartment">
+          <label class="field-label"><b>02</b> Размер квартиры</label>
+          <div class="segmented segmented--wrap" data-calc="rooms">
+            <button type="button" class="seg" data-val="studio" data-vol="6">Студия</button>
+            <button type="button" class="seg is-active" data-val="1" data-vol="10">1 комната</button>
+            <button type="button" class="seg" data-val="2" data-vol="16">2 комнаты</button>
+            <button type="button" class="seg" data-val="3" data-vol="24">3 комнаты</button>
+            <button type="button" class="seg" data-val="4" data-vol="32">4+ / дом</button>
+          </div>
+        </div>
+
+        <div class="field-block" data-show="office" hidden>
+          <label class="field-label"><b>02</b> Площадь офиса · <span data-out="area">60</span> м²</label>
+          <input type="range" class="range" id="areaRange" min="15" max="400" step="5" value="60" />
+          <div class="range__scale"><span>15 м²</span><span>400 м²</span></div>
+        </div>
+
+        <div class="field-block" data-show="items" hidden>
+          <label class="field-label"><b>02</b> Примерный объём · <span data-out="ivol">4</span> м³</label>
+          <input type="range" class="range" id="ivolRange" min="1" max="20" step="1" value="4" />
+          <div class="range__scale"><span>1 м³ (диван)</span><span>20 м³</span></div>
+        </div>
+
+        <div class="field-block">
+          <label class="field-label"><b>03</b> Маршрут</label>
+          <div class="segmented" data-calc="dist">
+            <button type="button" class="seg is-active" data-val="city">По городу</button>
+            <button type="button" class="seg" data-val="intercity">Межгород</button>
+          </div>
+          <div class="range-wrap">
+            <div class="range__top">Расстояние · <b><span data-out="km">12</span> км</b></div>
+            <input type="range" class="range" id="kmRange" min="1" max="80" step="1" value="12" />
+            <div class="range__scale"><span>1 км</span><span id="kmMax">80 км</span></div>
+          </div>
+        </div>
+
+        <div class="field-block">
+          <label class="field-label"><b>04</b> Этажи и лифт</label>
+          <div class="floors">
+            <div class="floorrow">
+              <div class="floorrow__pt"><span class="dot dot--a"></span> Откуда</div>
+              <div class="stepper" data-step="floorFrom" data-min="1" data-max="25">
+                <button type="button" data-dir="-1" aria-label="меньше">–</button>
+                <span class="stepper__val">3</span><em>этаж</em>
+                <button type="button" data-dir="1" aria-label="больше">+</button>
+              </div>
+              <label class="mini-check"><input type="checkbox" id="elevFrom" checked /> <span>лифт есть</span></label>
+            </div>
+            <div class="floorrow">
+              <div class="floorrow__pt"><span class="dot dot--b"></span> Куда</div>
+              <div class="stepper" data-step="floorTo" data-min="1" data-max="25">
+                <button type="button" data-dir="-1" aria-label="меньше">–</button>
+                <span class="stepper__val">5</span><em>этаж</em>
+                <button type="button" data-dir="1" aria-label="больше">+</button>
+              </div>
+              <label class="mini-check"><input type="checkbox" id="elevTo" /> <span>лифт есть</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-block">
+          <label class="field-label"><b>05</b> Грузчики</label>
+          <div class="stepper stepper--lg" data-step="loaders" data-min="0" data-max="6">
+            <button type="button" data-dir="-1" aria-label="меньше">–</button>
+            <span class="stepper__val">2</span><em>чел.</em>
+            <button type="button" data-dir="1" aria-label="больше">+</button>
+          </div>
+          <p class="field-hint">Рекомендуем минимум 2 человека на квартирный переезд.</p>
+        </div>
+
+        <div class="field-block">
+          <label class="field-label"><b>06</b> Дополнительно</label>
+          <div class="extras">
+            <label class="extra"><input type="checkbox" data-extra="packing"><span class="extra__box"></span><span class="extra__txt"><b>Упаковка материалами</b><em>коробки, плёнка, скотч + работа</em></span></label>
+            <label class="extra"><input type="checkbox" data-extra="assembly"><span class="extra__box"></span><span class="extra__txt"><b>Сборка / разборка мебели</b><em>шкафы, кровати, кухня</em></span></label>
+            <label class="extra"><input type="checkbox" data-extra="trash"><span class="extra__box"></span><span class="extra__txt"><b>Вывоз мусора</b><em>старая мебель и хлам</em></span></label>
+            <label class="extra"><input type="checkbox" data-extra="insurance" checked><span class="extra__box"></span><span class="extra__txt"><b>Страхование груза</b><em>базовое покрытие до 300 000 ₽</em></span></label>
+          </div>
+        </div>
+      </div>
+
+      <aside class="calc__summary">
+        <div class="summary__sticky">
+          <div class="summary__truck">
+            <div class="summary__truckicon" id="truckIcon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="6" width="15" height="12" rx="1"/><path d="M16 10h4l3 4v4h-7V10z"/><circle cx="7" cy="20" r="2"/><circle cx="20" cy="20" r="2"/></svg>
+            </div>
+            <div>
+              <span>Рекомендуем</span>
+              <strong id="truckName">Грузовик 5 т</strong>
+              <em id="truckVol">до 22 м³ · подходит для вашего объёма</em>
+            </div>
+          </div>
+
+          <ul class="summary__list" id="breakdown"></ul>
+
+          <div class="summary__total">
+            <span>Предварительно</span>
+            <div class="summary__price"><b id="totalPrice">0</b> ₽</div>
+          </div>
+
+          <button class="btn btn--primary btn--block btn--lg magnetic" id="calcOrder" data-order="Заказ из калькулятора">Оформить заказ</button>
+          <p class="summary__note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            Перезвоним за 15 минут · бесплатный выезд замерщика
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="section quiz" id="quiz">
+  <div class="container">
+    <div class="section__head reveal">
+      <div class="kicker"><span class="kicker__dot"></span> Квиз по вещам</div>
+      <h2 class="section__title">Не знаете объём? Соберём список вместе</h2>
+      <p class="section__sub">Отметьте, что везёте — мы посчитаем кубатуру, подберём машину и количество грузчиков. 3 шага, меньше минуты.</p>
+    </div>
+
+    <div class="quizcard reveal">
+      <div class="quiz__progress"><span id="quizBar"></span></div>
+      <div class="quiz__steplabel">
+        Шаг <b id="quizStepNum">1</b> из 3 · <span id="quizStepName">Тип жилья</span>
+      </div>
+      <div id="quizMount"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="section__head reveal">
+      <div class="kicker"><span class="kicker__dot"></span> Услуги</div>
+      <h2 class="section__title">Переезд под ключ — или только то, что нужно</h2>
+      <p class="section__sub">Соберите свой переезд из готовых блоков. Любую услугу можно заказать отдельно.</p>
+    </div>
+
+    <div class="svc-grid reveal">
+      <article class="svc svc--wide tilt">
+        <div class="svc__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg>
+        </div>
+        <h3>Упаковка вещей</h3>
+        <p>Профессиональные материалы и аккуратная упаковка хрупкого: посуда, техника, картины, зеркала. Маркируем коробки по комнатам — на новом месте всё на своих местах.</p>
+        <div class="svc__meta"><span>от 120 ₽/коробка</span><span>·</span><span>материалы включены</span></div>
+      </article>
+      <article class="svc tilt">
+        <div class="svc__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Сборка мебели</h3>
+        <p>Разберём на старом адресе и соберём на новом: шкафы-купе, кровати, кухни, стеллажи.</p>
+        <div class="svc__meta"><span>от 800 ₽/предмет</span></div>
+      </article>
+      <article class="svc tilt">
+        <div class="svc__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>Грузчики</h3>
+        <p>Опытные, трезвые, в форме. Аккуратно вынесут с любого этажа — с лифтом и без.</p>
+        <div class="svc__meta"><span>от 600 ₽/час</span></div>
+      </article>
+      <article class="svc tilt">
+        <div class="svc__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Страхование груза</h3>
+        <p>Каждая вещь под защитой. Базовое покрытие включено бесплатно, расширенное — на выбор.</p>
+        <div class="svc__meta"><span>до 1 500 000 ₽</span></div>
+      </article>
+      <article class="svc tilt">
+        <div class="svc__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/></svg>
+        </div>
+        <h3>Хранение</h3>
+        <p>Тёплый охраняемый склад, если новое жильё ещё не готово. Оплата по дням.</p>
+        <div class="svc__meta"><span>от 90 ₽/м³ в сутки</span></div>
+      </article>
+      <article class="svc svc--wide tilt">
+        <div class="svc__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="6" width="15" height="12" rx="1"/><path d="M16 10h4l3 4v4h-7V10z"/><circle cx="7" cy="20" r="2"/><circle cx="20" cy="20" r="2"/></svg>
+        </div>
+        <h3>Подача машины и логистика</h3>
+        <p>Чистые крытые фургоны от «Газели» до 10-тонной фуры с гидробортом. Диспетчер ведёт ваш переезд от точки А до точки Б и держит в курсе по статусу.</p>
+        <div class="svc__meta"><span>подача от 0 ₽</span><span>·</span><span>GPS-трекинг машины</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section how" id="how">
+  <div class="container">
+    <div class="section__head reveal">
+      <div class="kicker"><span class="kicker__dot"></span> Как это работает</div>
+      <h2 class="section__title">Четыре шага от заявки до распаковки</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <div class="step__num">01</div>
+        <h3>Заявка и расчёт</h3>
+        <p>Оставляете заявку или считаете онлайн. Менеджер уточняет детали и фиксирует цену.</p>
+      </div>
+      <div class="step">
+        <div class="step__num">02</div>
+        <h3>Замер и упаковка</h3>
+        <p>Бесплатный выезд замерщика. В день переезда упаковываем и разбираем мебель.</p>
+      </div>
+      <div class="step">
+        <div class="step__num">03</div>
+        <h3>Перевозка</h3>
+        <p>Грузим, везём по оптимальному маршруту, вы следите за машиной онлайн.</p>
+      </div>
+      <div class="step">
+        <div class="step__num">04</div>
+        <h3>Сборка на месте</h3>
+        <p>Заносим, собираем мебель и распаковываем. Мусор и коробки увозим с собой.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSURANCE -->
+<section class="section insurance" id="insurance">
+  <div class="container insurance__inner">
+    <div class="insurance__copy reveal">
+      <div class="kicker kicker--mint"><span class="kicker__dot"></span> Страхование груза</div>
+      <h2 class="section__title">Спокойствие включено<br>в стоимость</h2>
+      <p class="section__sub">Мы отвечаем за каждую коробку. Базовая страховка действует на любом тарифе бесплатно. Нужна повышенная защита для техники и антиквариата — выберите расширенный уровень.</p>
+      <ul class="ins-points">
+        <li><span class="ins-points__ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3.5 8l3 3 6-6"/></svg></span> Опись имущества и фотофиксация до погрузки</li>
+        <li><span class="ins-points__ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3.5 8l3 3 6-6"/></svg></span> Компенсация при повреждении — без споров и экспертиз</li>
+        <li><span class="ins-points__ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3.5 8l3 3 6-6"/></svg></span> Договор и официальные документы на руки</li>
+      </ul>
+    </div>
+
+    <div class="ins-cards reveal">
+      <article class="ins-card">
+        <header><h3>Базовая</h3><span class="ins-card__tag ins-card__tag--free">включено</span></header>
+        <div class="ins-card__cover">до <b>300 000 ₽</b></div>
+        <p>Покрытие на весь груз по умолчанию. Подходит для стандартного квартирного переезда.</p>
+      </article>
+      <article class="ins-card ins-card--feat">
+        <header><h3>Расширенная</h3><span class="ins-card__tag">+1,2% от суммы</span></header>
+        <div class="ins-card__cover">до <b>1 000 000 ₽</b></div>
+        <p>Для бытовой техники, мебели премиум и хрупких вещей. Индивидуальная опись.</p>
+      </article>
+      <article class="ins-card">
+        <header><h3>Полная</h3><span class="ins-card__tag">+2,5% от суммы</span></header>
+        <div class="ins-card__cover">до <b>1 500 000 ₽</b></div>
+        <p>Антиквариат, искусство, дорогая электроника. Максимальная ответственность.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section pricing" id="pricing">
+  <div class="container">
+    <div class="section__head reveal">
+      <div class="kicker"><span class="kicker__dot"></span> Тарифы</div>
+      <h2 class="section__title">Выберите свой формат переезда</h2>
+      <p class="section__sub">Прозрачные пакеты под разные задачи. Цена указана для квартиры-студии по городу; точную посчитает калькулятор.</p>
+      <div class="billing">
+        <span id="labApt" class="is-active">Квартира</span>
+        <button class="billing__switch" id="billingSwitch" role="switch" aria-checked="false" aria-label="Переключить тип"><span class="billing__knob"></span></button>
+        <span id="labOff">Офис</span>
+      </div>
+    </div>
+
+    <div class="plans reveal">
+      <article class="plan">
+        <div class="plan__head">
+          <h3>Сам соберу</h3>
+          <p>Машина и водитель. Грузите сами или со своими помощниками.</p>
+        </div>
+        <div class="plan__price"><span class="amount" data-apt="4900" data-off="7900">4 900</span> <em>₽</em></div>
+        <ul class="plan__feats">
+          <li>Подача крытого фургона</li>
+          <li>Водитель-экспедитор</li>
+          <li>1 час в адресе включён</li>
+          <li class="off">Грузчики</li>
+          <li class="off">Упаковка и сборка</li>
+        </ul>
+        <button class="btn btn--ghost btn--block plan__buy" data-plan="Тариф «Сам соберу»">Выбрать</button>
+      </article>
+
+      <article class="plan plan--feat">
+        <div class="plan__flag">Хит · экономия 15%</div>
+        <div class="plan__head">
+          <h3>Стандарт</h3>
+          <p>Оптимально для квартирного переезда «всё включено, кроме мелочей».</p>
+        </div>
+        <div class="plan__price"><span class="amount" data-apt="12900" data-off="21900">12 900</span> <em>₽</em></div>
+        <ul class="plan__feats">
+          <li>Машина + водитель</li>
+          <li>2 грузчика</li>
+          <li>Разборка и сборка мебели</li>
+          <li>Базовое страхование груза</li>
+          <li class="off">Полная упаковка вещей</li>
+        </ul>
+        <button class="btn btn--primary btn--block plan__buy" data-plan="Тариф «Стандарт»">Выбрать</button>
+      </article>
+
+      <article class="plan">
+        <div class="plan__head">
+          <h3>Под ключ</h3>
+          <p>Мы делаем всё: вы уезжаете утром, вечером пьёте чай на новом месте.</p>
+        </div>
+        <div class="plan__price"><span class="amount" data-apt="24900" data-off="39900">24 900</span> <em>₽</em></div>
+        <ul class="plan__feats">
+          <li>Машина + 3 грузчика</li>
+          <li>Полная упаковка и материалы</li>
+          <li>Разборка / сборка мебели</li>
+          <li>Расширенная страховка</li>
+          <li>Вывоз коробок и мусора</li>
+        </ul>
+        <button class="btn btn--ghost btn--block plan__buy" data-plan="Тариф «Под ключ»">Выбрать</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews" id="reviews">
+  <div class="container">
+    <div class="section__head reveal">
+      <div class="kicker"><span class="kicker__dot"></span> Отзывы</div>
+      <h2 class="section__title">Переехали — и рекомендуют</h2>
+    </div>
+    <div class="rev-grid reveal">
+      <figure class="rev">
+        <div class="rev__stars">★★★★★</div>
+        <blockquote>Переезжали из двушки на Рижскую. Приехали вовремя, всё упаковали сами, я даже чашку не подняла. Цена совпала с расчётом из калькулятора до рубля.</blockquote>
+        <figcaption><span class="rev__ava">М</span><div><b>Марина К.</b><em>2-комн. квартира</em></div></figcaption>
+      </figure>
+      <figure class="rev">
+        <div class="rev__stars">★★★★★</div>
+        <blockquote>Офис на 25 человек перевезли за ночь, утром уже работали. Технику застраховали, всё подключили. Отдельное спасибо диспетчеру за трекинг машины.</blockquote>
+        <figcaption><span class="rev__ava">Д</span><div><b>Дмитрий В.</b><em>Переезд офиса</em></div></figcaption>
+      </figure>
+      <figure class="rev">
+        <div class="rev__stars">★★★★★</div>
+        <blockquote>Боялась за пианино и сервиз бабушки — довезли идеально. Грузчики вежливые, мебель собрали лучше, чем было. Однозначно рекомендую.</blockquote>
+        <figcaption><span class="rev__ava">О</span><div><b>Ольга Р.</b><em>Переезд в загородный дом</em></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="container faq__inner">
+    <div class="section__head section__head--left reveal">
+      <div class="kicker"><span class="kicker__dot"></span> Вопросы</div>
+      <h2 class="section__title">Частые вопросы</h2>
+      <p class="section__sub">Не нашли ответ? Напишите в чат или закажите звонок.</p>
+      <br>
+      <button class="btn btn--primary magnetic" data-order="Вопрос из FAQ">Задать вопрос</button>
+    </div>
+
+    <div class="acc reveal">
+      <details class="acc__item" open>
+        <summary>Цена из калькулятора окончательная?</summary>
+        <div class="acc__body">Это точный предварительный расчёт. После бесплатного замера менеджер фиксирует итоговую сумму в договоре — на месте доплат не будет, даже если переезд затянется.</div>
+      </details>
+      <details class="acc__item">
+        <summary>Что если вещь повредится?</summary>
+        <div class="acc__body">Каждый переезд застрахован. До погрузки делаем опись и фотофиксацию, поэтому компенсация проходит без споров и экспертиз — в пределах выбранного уровня покрытия.</div>
+      </details>
+      <details class="acc__item">
+        <summary>Вы упаковываете вещи сами?</summary>
+        <div class="acc__body">Да. Привозим коробки, плёнку, скотч и упаковываем всё, включая хрупкое и технику. Коробки маркируем по комнатам, чтобы на новом месте быстро всё разобрать.</div>
+      </details>
+      <details class="acc__item">
+        <summary>Соберёте мебель на новом месте?</summary>
+        <div class="acc__body">Разбираем на старом адресе и собираем на новом: шкафы-купе, кровати, кухни, стеллажи. Услуга входит в тарифы «Стандарт» и «Под ключ».</div>
+      </details>
+      <details class="acc__item">
+        <summary>Как быстро можно заказать переезд?</summary>
+        <div class="acc__body">В день обращения, если есть свободная машина. Обычно бронируем на удобную дату за 1–2 дня. Срочный переезд — по звонку.</div>
+      </details>
+      <details class="acc__item">
+        <summary>Какие способы оплаты?</summary>
+        <div class="acc__body">Наличными, картой, переводом или по счёту для юрлиц. Предоплата не требуется — оплата по факту после переезда.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section finalcta">
+  <div class="container">
+    <div class="finalcta__box reveal">
+      <div class="finalcta__glow" aria-hidden="true"></div>
+      <div class="finalcta__content">
+        <h2>Готовы переехать<br>в точку&nbsp;<span class="hero__b">Б</span>?</h2>
+        <p>Оставьте заявку — рассчитаем стоимость, забронируем дату и приедем точно в срок.</p>
+        <div class="finalcta__actions">
+          <button class="btn btn--mint btn--lg magnetic" data-order="Заявка из финального блока">Заказать переезд</button>
+          <a href="tel:+74951234567" class="btn btn--ghost-light btn--lg">+7 495 123-45-67</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="#top" class="brand brand--footer">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="26" height="26">
+            <path d="M5 23 C 11 9, 21 9, 27 23" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="2.4 4.4"/>
+            <circle cx="5" cy="23" r="3.4" fill="currentColor"/>
+            <circle cx="27" cy="23" r="4.4" fill="var(--mint)"/>
+          </svg>
+        </span>
+        <span class="brand__name">ТОЧКА&nbsp;Б</span>
+      </a>
+      <p>Служба переездов под ключ. Перевозим квартиры, офисы и отдельные вещи по Москве и России с фиксированной ценой и страховкой.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Услуги</h4>
+      <a href="#calc">Калькулятор</a>
+      <a href="#services">Упаковка</a>
+      <a href="#services">Сборка мебели</a>
+      <a href="#insurance">Страхование</a>
+    </div>
+    <div class="footer__col">
+      <h4>Компания</h4>
+      <a href="#pricing">Тарифы</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#how">Как работаем</a>
+    </div>
+    <div class="footer__col">
+      <h4>Контакты</h4>
+      <a href="tel:+74951234567" class="footer__phone">+7 495 123-45-67</a>
+      <a href="mailto:hello@tochkab.ru">hello@tochkab.ru</a>
+      <span class="footer__addr">Москва, ежедневно 8:00–22:00</span>
+      <button class="btn btn--primary btn--sm" data-order="Заявка из футера">Заказать переезд</button>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© 2030 ТОЧКА Б · Служба переездов</span>
+    <span class="footer__made">Лендинг для портфолио · из точки А в точку Б ◆</span>
+  </div>
+</footer>
+
+<!-- ORDER MODAL -->
+<div class="modal" id="orderModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="orderTitle">
+  <div class="modal__overlay" data-close></div>
+  <div class="modal__card">
+    <button class="modal__close" data-close aria-label="Закрыть">×</button>
+
+    <form class="order" id="orderForm" novalidate>
+      <div class="order__head">
+        <div class="kicker"><span class="kicker__dot"></span> Онлайн-заказ</div>
+        <h3 id="orderTitle">Оформление переезда</h3>
+        <p class="order__src" id="orderSource">Перезвоним в течение 15 минут и подтвердим детали.</p>
+      </div>
+
+      <div class="order__grid">
+        <div class="field field--full">
+          <label for="oName">Ваше имя</label>
+          <input id="oName" type="text" placeholder="Как к вам обращаться" autocomplete="name" />
+          <span class="error"></span>
+        </div>
+        <div class="field field--full">
+          <label for="oPhone">Телефон</label>
+          <input id="oPhone" type="tel" placeholder="+7 (___) ___-__-__" inputmode="tel" autocomplete="tel" />
+          <span class="error"></span>
+        </div>
+        <div class="field">
+          <label for="oFrom">Откуда (точка А)</label>
+          <input id="oFrom" type="text" placeholder="Адрес или район" />
+          <span class="error"></span>
+        </div>
+        <div class="field">
+          <label for="oTo">Куда (точка Б)</label>
+          <input id="oTo" type="text" placeholder="Адрес или район" />
+          <span class="error"></span>
+        </div>
+        <div class="field">
+          <label for="oDate">Дата переезда</label>
+          <input id="oDate" type="date" />
+          <span class="error"></span>
+        </div>
+        <div class="field">
+          <label for="oType">Тип переезда</label>
+          <select id="oType">
+            <option value="Квартира">Квартира</option>
+            <option value="Офис">Офис</option>
+            <option value="Отдельные вещи">Отдельные вещи</option>
+            <option value="Загородный дом">Загородный дом</option>
+          </select>
+          <span class="error"></span>
+        </div>
+        <div class="field field--full">
+          <label for="oComment">Комментарий <em>(необязательно)</em></label>
+          <textarea id="oComment" rows="2" placeholder="Этаж, лифт, особые вещи, пожелания по дате…"></textarea>
+        </div>
+      </div>
+
+      <div class="order__summary" id="orderSummary" hidden>
+        <span>Предварительный расчёт</span>
+        <strong id="orderSummaryVal"></strong>
+      </div>
+
+      <label class="agree">
+        <input type="checkbox" id="oAgree" checked />
+        <span class="agree__box"></span>
+        <span>Согласен на обработку персональных данных</span>
+      </label>
+
+      <button type="submit" class="btn btn--primary btn--block btn--lg" id="orderSubmit">Отправить заявку</button>
+    </form>
+
+    <div class="order-success" id="orderSuccess" hidden>
+      <div class="order-success__check">
+        <svg viewBox="0 0 52 52" width="52" height="52"><circle cx="26" cy="26" r="24" fill="none" stroke="currentColor" stroke-width="2.5" opacity=".25"/><path d="M16 27 l7 7 l14 -15" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3>Заявка принята!</h3>
+      <p>Номер заказа <b id="orderNumber">#Б-0000</b>. Менеджер перезвонит в течение 15 минут и зафиксирует цену.</p>
+      <div class="order-success__route">
+        <span class="dot dot--a"></span>
+        <i></i>
+        <span class="dot dot--b"></span>
+      </div>
+      <button class="btn btn--ghost btn--block" data-close>Готово</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VITA — портфолио веб-разработчика</title>
+<meta name="description" content="Портфолио Vita Andreuskov. 5 коммерческих сайтов разного направления — от архитектурного бюро до службы переездов." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F2EFE8;
+  --bg-alt: #ECE8DE;
+  --ink: #161616;
+  --ink-soft: #44443E;
+  --muted: #888880;
+  --accent: #2E1FFF;
+  --accent-soft: #2E1FFF15;
+  --border: #161616;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.5;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--accent); color: var(--bg); }
+
+.serif { font-family: 'Instrument Serif', serif; font-weight: 400; letter-spacing: -0.02em; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+.container { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+
+/* === TOP BAR === */
+.topbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 20px 32px;
+  display: flex; justify-content: space-between; align-items: center;
+  background: var(--bg);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, padding 0.2s;
+}
+.topbar.scrolled { border-color: #16161620; padding: 14px 32px; }
+.topbar .logo {
+  font-family: 'Instrument Serif', serif;
+  font-size: 22px; font-style: italic;
+}
+.topbar .logo .dot { color: var(--accent); }
+.topbar .nav {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;
+  display: flex; gap: 28px;
+}
+.topbar .nav a { color: var(--ink-soft); text-decoration: none; transition: color 0.2s; }
+.topbar .nav a:hover { color: var(--accent); }
+
+/* === HERO === */
+.hero {
+  min-height: 100vh;
+  padding: 140px 0 80px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  position: relative;
+}
+
+.hero-meta {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 60px;
+}
+.hero-meta .item { display: flex; flex-direction: column; gap: 4px; }
+.hero-meta .label { color: var(--muted); }
+.hero-meta .value { color: var(--ink); font-weight: 500; }
+
+.hero-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(56px, 13vw, 200px);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-weight: 400;
+}
+.hero-title .italic { font-style: italic; color: var(--accent); }
+.hero-title .small { font-size: 0.5em; vertical-align: super; color: var(--muted); margin-left: -8px; }
+
+.hero-bottom {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end;
+  margin-top: 80px;
+}
+.hero-statement {
+  font-size: 18px; line-height: 1.4; max-width: 520px;
+  color: var(--ink-soft);
+}
+.hero-statement strong { color: var(--ink); font-weight: 600; }
+.hero-cta {
+  display: flex; gap: 12px; justify-content: flex-end; flex-wrap: wrap;
+}
+.btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;
+  padding: 16px 24px;
+  border: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex; align-items: center; gap: 10px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.btn:hover { background: var(--ink); color: var(--bg); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: white; }
+.btn.primary:hover { background: var(--ink); border-color: var(--ink); }
+.btn .arrow { display: inline-block; transition: transform 0.2s; }
+.btn:hover .arrow { transform: translateX(4px); }
+
+/* === MARQUEE === */
+.marquee {
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  overflow: hidden;
+  padding: 20px 0;
+  background: var(--bg);
+  position: relative;
+}
+.marquee-track {
+  display: flex; gap: 60px;
+  animation: scroll 30s linear infinite;
+  white-space: nowrap;
+}
+.marquee-item {
+  font-family: 'Instrument Serif', serif;
+  font-size: 32px; font-style: italic;
+}
+.marquee-item .dot { color: var(--accent); margin: 0 12px; }
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* === PROJECTS SECTION === */
+.projects-intro {
+  padding: 120px 0 60px;
+  display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: end;
+}
+.projects-intro .tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 16px;
+  display: flex; align-items: center; gap: 8px;
+}
+.projects-intro .tag::before { content: ''; width: 24px; height: 1px; background: var(--ink); }
+.projects-intro h2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(40px, 6vw, 80px); line-height: 1; letter-spacing: -0.03em;
+}
+.projects-intro h2 em { color: var(--accent); }
+.projects-intro p { font-size: 17px; line-height: 1.55; color: var(--ink-soft); }
+
+/* === PROJECT CARD === */
+.project {
+  border-top: 1px solid var(--ink);
+  padding: 60px 0;
+}
+.project-header {
+  display: grid; grid-template-columns: 80px 1fr auto; gap: 24px; align-items: baseline;
+  margin-bottom: 40px;
+}
+.project-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px; color: var(--muted);
+}
+.project-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(40px, 7vw, 96px); line-height: 1; letter-spacing: -0.03em;
+}
+.project-title em { font-style: italic; color: var(--accent); }
+.project-cat {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--muted);
+  padding: 6px 12px;
+  border: 1px solid var(--ink);
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.project-body {
+  display: grid; grid-template-columns: 80px 1fr 1fr; gap: 24px; align-items: start;
+}
+.project-meta { display: flex; flex-direction: column; gap: 16px; }
+.project-meta .row {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em;
+}
+.project-meta .row .label { color: var(--muted); display: block; margin-bottom: 4px; }
+.project-meta .row .value { color: var(--ink); }
+.project-desc {
+  font-size: 17px; line-height: 1.55; color: var(--ink-soft);
+}
+.project-desc .feats {
+  list-style: none; margin-top: 16px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.project-desc .feats li {
+  font-size: 14px; color: var(--ink); padding-left: 18px; position: relative;
+}
+.project-desc .feats li::before {
+  content: '→'; position: absolute; left: 0; color: var(--accent); font-weight: 700;
+}
+.project-actions { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+
+.project-preview {
+  margin-top: 48px;
+  margin-left: 104px;
+  border: 1px solid var(--ink);
+  background: var(--bg-alt);
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 16 / 10;
+}
+.project-preview iframe {
+  width: 100%; height: 100%; border: 0;
+  pointer-events: none;
+  transform-origin: top left;
+}
+.project-preview .browser-bar {
+  position: absolute; top: 0; left: 0; right: 0;
+  background: var(--ink); color: var(--bg);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  padding: 10px 16px;
+  display: flex; align-items: center; gap: 8px;
+  z-index: 2;
+}
+.project-preview .dots { display: flex; gap: 6px; margin-right: 8px; }
+.project-preview .dots span { width: 8px; height: 8px; border-radius: 50%; background: var(--bg-alt); opacity: 0.6; }
+.project-preview .url { opacity: 0.7; font-size: 10px; }
+.project-preview iframe { padding-top: 36px; }
+.project-preview-link {
+  position: absolute; inset: 0; z-index: 3; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--ink); color: var(--bg);
+  opacity: 0; transition: opacity 0.25s;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;
+  text-decoration: none;
+}
+.project-preview:hover .project-preview-link { opacity: 0.9; }
+
+/* === CONTACT === */
+.contact {
+  padding: 120px 0 60px;
+  border-top: 1px solid var(--ink);
+  margin-top: 60px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+.contact-left h2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(48px, 8vw, 120px); line-height: 0.95; letter-spacing: -0.03em;
+  margin-bottom: 24px;
+}
+.contact-left h2 em { color: var(--accent); }
+.contact-left p { font-size: 17px; line-height: 1.55; color: var(--ink-soft); max-width: 480px; }
+.contact-right {
+  display: flex; flex-direction: column; gap: 16px; align-items: flex-end;
+}
+.contact-card {
+  background: var(--ink); color: var(--bg);
+  padding: 40px;
+  width: 100%; max-width: 460px;
+  position: relative;
+}
+.contact-card .eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+.contact-card .tg-handle {
+  font-family: 'Instrument Serif', serif; font-style: italic;
+  font-size: 56px; line-height: 1; margin-bottom: 24px;
+  color: white;
+  letter-spacing: -0.02em;
+}
+.contact-card .tg-handle .at { color: var(--accent); }
+.contact-card p { font-size: 14px; opacity: 0.8; margin-bottom: 24px; }
+.contact-card .btn {
+  background: var(--accent); border-color: var(--accent); color: white;
+  width: 100%; justify-content: center;
+}
+.contact-card .btn:hover { background: white; color: var(--ink); border-color: white; }
+
+/* === FOOTER === */
+footer {
+  border-top: 1px solid var(--ink);
+  padding: 32px 0;
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+/* === REVEAL === */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* === MOBILE === */
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+  .topbar { padding: 16px 20px; }
+  .topbar .nav { gap: 16px; font-size: 10px; }
+  .hero { padding: 100px 0 40px; }
+  .hero-meta { grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 40px; }
+  .hero-bottom { grid-template-columns: 1fr; gap: 32px; margin-top: 40px; }
+  .hero-cta { justify-content: flex-start; }
+  .marquee-item { font-size: 22px; }
+  .projects-intro { grid-template-columns: 1fr; gap: 24px; padding: 80px 0 40px; }
+  .project { padding: 40px 0; }
+  .project-header { grid-template-columns: 50px 1fr; gap: 16px; }
+  .project-header .project-cat { grid-column: 1 / -1; margin-top: 8px; justify-self: start; }
+  .project-body { grid-template-columns: 1fr; gap: 20px; }
+  .project-meta { flex-direction: row; flex-wrap: wrap; gap: 20px; }
+  .project-preview { margin-left: 0; margin-top: 24px; }
+  .contact { grid-template-columns: 1fr; gap: 32px; padding: 80px 0 40px; }
+  .contact-card { padding: 28px; }
+  .contact-card .tg-handle { font-size: 40px; }
+  footer { flex-direction: column; gap: 12px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar" id="topbar">
+  <div class="logo">vita<span class="dot">.</span>andreuskov</div>
+  <nav class="nav">
+    <a href="#work">Работы</a>
+    <a href="#contact">Контакт</a>
+  </nav>
+</div>
+
+<!-- HERO -->
+<section class="hero container">
+  <div class="hero-meta reveal">
+    <div class="item">
+      <span class="label">Кто</span>
+      <span class="value">Веб-разработчик</span>
+    </div>
+    <div class="item">
+      <span class="label">Где</span>
+      <span class="value">В. Пышма / Remote</span>
+    </div>
+    <div class="item">
+      <span class="label">Что</span>
+      <span class="value">Лендинги, сайты под ключ</span>
+    </div>
+    <div class="item">
+      <span class="label">Статус</span>
+      <span class="value" style="color: #2E1FFF;">● Доступен</span>
+    </div>
+  </div>
+
+  <h1 class="hero-title reveal">
+    Делаю<br>
+    <span class="italic">сайты</span>,<br>
+    которые<br>
+    работают<span class="small">05</span>
+  </h1>
+
+  <div class="hero-bottom reveal">
+    <p class="hero-statement">
+      Пять коммерческих проектов — от архитектурного бюро до службы переездов.
+      <strong>Каждый сайт продуман, написан и собран мной — от первой строчки CSS до интерактивных калькуляторов.</strong>
+    </p>
+    <div class="hero-cta">
+      <a href="#work" class="btn">Смотреть работы <span class="arrow">↓</span></a>
+      <a href="https://t.me/Flukkyyyy" target="_blank" class="btn primary">Написать <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span class="marquee-item">5 коммерческих сайтов <span class="dot">●</span></span>
+    <span class="marquee-item">React <span class="dot">●</span></span>
+    <span class="marquee-item">Vanilla JS <span class="dot">●</span></span>
+    <span class="marquee-item">Адаптивная вёрстка <span class="dot">●</span></span>
+    <span class="marquee-item">Telegram Mini Apps <span class="dot">●</span></span>
+    <span class="marquee-item">Интерактивные калькуляторы <span class="dot">●</span></span>
+    <span class="marquee-item">5 коммерческих сайтов <span class="dot">●</span></span>
+    <span class="marquee-item">React <span class="dot">●</span></span>
+    <span class="marquee-item">Vanilla JS <span class="dot">●</span></span>
+    <span class="marquee-item">Адаптивная вёрстка <span class="dot">●</span></span>
+    <span class="marquee-item">Telegram Mini Apps <span class="dot">●</span></span>
+    <span class="marquee-item">Интерактивные калькуляторы <span class="dot">●</span></span>
+  </div>
+</div>
+
+<!-- PROJECTS INTRO -->
+<section class="container" id="work">
+  <div class="projects-intro reveal">
+    <div>
+      <div class="tag">Портфолио / 2026</div>
+      <h2>Пять <em>работ</em></h2>
+    </div>
+    <p>
+      Разные ниши, разные задачи. Объединяет одно — все построены вокруг конкретного бизнес-сценария: квиз, калькулятор, бронирование, конструктор. Не просто красивая страница, а инструмент, который продаёт.
+    </p>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<div class="container">
+
+  <!-- 01 ARCHITECTURE -->
+  <article class="project reveal">
+    <div class="project-header">
+      <div class="project-num">/01</div>
+      <h3 class="project-title"><em>ФОРМА</em></h3>
+      <span class="project-cat">Архитектура</span>
+    </div>
+    <div class="project-body">
+      <div class="project-meta">
+        <div class="row"><span class="label">Тип</span><span class="value">Корпоративный сайт</span></div>
+        <div class="row"><span class="label">Стек</span><span class="value">HTML / CSS / JS</span></div>
+      </div>
+      <div class="project-desc">
+        Сайт архитектурного бюро для проектирования частных домов. Спокойная типографика, фокус на портфолио и калькуляторе.
+        <ul class="feats">
+          <li>Калькулятор стоимости проектирования</li>
+          <li>Каталог типовых и индивидуальных проектов</li>
+          <li>Состав рабочей документации</li>
+        </ul>
+      </div>
+      <div class="project-actions">
+        <a href="projects/architecture/" target="_blank" class="btn primary">Открыть <span class="arrow">→</span></a>
+      </div>
+    </div>
+    <div class="project-preview">
+      <div class="browser-bar">
+        <span class="dots"><span></span><span></span><span></span></span>
+        <span class="url">forma-bureau.ru</span>
+      </div>
+      <iframe src="projects/architecture/" loading="lazy" title="ФОРМА"></iframe>
+      <a href="projects/architecture/" target="_blank" class="project-preview-link">Открыть в новой вкладке →</a>
+    </div>
+  </article>
+
+  <!-- 02 BEACH RENTAL -->
+  <article class="project reveal">
+    <div class="project-header">
+      <div class="project-num">/02</div>
+      <h3 class="project-title"><em>WAVE</em></h3>
+      <span class="project-cat">Прокат / Бали</span>
+    </div>
+    <div class="project-body">
+      <div class="project-meta">
+        <div class="row"><span class="label">Тип</span><span class="value">Сервис бронирования</span></div>
+        <div class="row"><span class="label">Стек</span><span class="value">HTML / CSS / JS</span></div>
+      </div>
+      <div class="project-desc">
+        Прокат сёрфов, гидроциклов, SUP и кайтов на Бали. Яркий, лёгкий, "пляжный" интерфейс с быстрым бронированием.
+        <ul class="feats">
+          <li>Бронирование за минуту</li>
+          <li>Карта точек выдачи</li>
+          <li>Каталог снаряжения по категориям</li>
+        </ul>
+      </div>
+      <div class="project-actions">
+        <a href="projects/beach-rental/" target="_blank" class="btn primary">Открыть <span class="arrow">→</span></a>
+      </div>
+    </div>
+    <div class="project-preview">
+      <div class="browser-bar">
+        <span class="dots"><span></span><span></span><span></span></span>
+        <span class="url">wave-bali.com</span>
+      </div>
+      <iframe src="projects/beach-rental/" loading="lazy" title="WAVE"></iframe>
+      <a href="projects/beach-rental/" target="_blank" class="project-preview-link">Открыть в новой вкладке →</a>
+    </div>
+  </article>
+
+  <!-- 03 MEAL DELIVERY -->
+  <article class="project reveal">
+    <div class="project-header">
+      <div class="project-num">/03</div>
+      <h3 class="project-title"><em>ЕМ.</em></h3>
+      <span class="project-cat">Доставка еды</span>
+    </div>
+    <div class="project-body">
+      <div class="project-meta">
+        <div class="row"><span class="label">Тип</span><span class="value">Подписочный сервис</span></div>
+        <div class="row"><span class="label">Стек</span><span class="value">HTML / CSS / JS</span></div>
+      </div>
+      <div class="project-desc">
+        Готовое питание по подписке. Пользователь собирает рацион в конструкторе, выбирает цель и получает блюда каждое утро.
+        <ul class="feats">
+          <li>Конструктор рациона под цель</li>
+          <li>Расчёт КБЖУ автоматически</li>
+          <li>Гибкий календарь доставок</li>
+        </ul>
+      </div>
+      <div class="project-actions">
+        <a href="projects/meal-delivery/" target="_blank" class="btn primary">Открыть <span class="arrow">→</span></a>
+      </div>
+    </div>
+    <div class="project-preview">
+      <div class="browser-bar">
+        <span class="dots"><span></span><span></span><span></span></span>
+        <span class="url">em-meal.ru</span>
+      </div>
+      <iframe src="projects/meal-delivery/" loading="lazy" title="ЕМ."></iframe>
+      <a href="projects/meal-delivery/" target="_blank" class="project-preview-link">Открыть в новой вкладке →</a>
+    </div>
+  </article>
+
+  <!-- 04 MELLOW -->
+  <article class="project reveal">
+    <div class="project-header">
+      <div class="project-num">/04</div>
+      <h3 class="project-title"><em>MELLOW</em></h3>
+      <span class="project-cat">Кофейня</span>
+    </div>
+    <div class="project-body">
+      <div class="project-meta">
+        <div class="row"><span class="label">Тип</span><span class="value">Бренд / витрина</span></div>
+        <div class="row"><span class="label">Стек</span><span class="value">HTML / CSS / JS</span></div>
+      </div>
+      <div class="project-desc">
+        Ламповая кофейня с собственной обжаркой. Сайт передаёт настроение места — тёплый свет, винил по вечерам, спешелти.
+        <ul class="feats">
+          <li>Каталог зёрен с доставкой</li>
+          <li>Расписание событий</li>
+          <li>История места с 1974 года</li>
+        </ul>
+      </div>
+      <div class="project-actions">
+        <a href="projects/mellow/" target="_blank" class="btn primary">Открыть <span class="arrow">→</span></a>
+      </div>
+    </div>
+    <div class="project-preview">
+      <div class="browser-bar">
+        <span class="dots"><span></span><span></span><span></span></span>
+        <span class="url">mellow-coffee.ru</span>
+      </div>
+      <iframe src="projects/mellow/" loading="lazy" title="MELLOW"></iframe>
+      <a href="projects/mellow/" target="_blank" class="project-preview-link">Открыть в новой вкладке →</a>
+    </div>
+  </article>
+
+  <!-- 05 MOVING -->
+  <article class="project reveal">
+    <div class="project-header">
+      <div class="project-num">/05</div>
+      <h3 class="project-title"><em>ТОЧКА Б</em></h3>
+      <span class="project-cat">Переезды</span>
+    </div>
+    <div class="project-body">
+      <div class="project-meta">
+        <div class="row"><span class="label">Тип</span><span class="value">Услуга с калькулятором</span></div>
+        <div class="row"><span class="label">Стек</span><span class="value">HTML / CSS / JS</span></div>
+      </div>
+      <div class="project-desc">
+        Служба переездов под ключ. Сайт убирает главный страх клиента — неизвестную цену — через прозрачный квиз-калькулятор.
+        <ul class="feats">
+          <li>Онлайн-калькулятор стоимости</li>
+          <li>Квиз по вещам и услугам</li>
+          <li>Фиксированная цена в договоре</li>
+        </ul>
+      </div>
+      <div class="project-actions">
+        <a href="projects/moving-service/" target="_blank" class="btn primary">Открыть <span class="arrow">→</span></a>
+      </div>
+    </div>
+    <div class="project-preview">
+      <div class="browser-bar">
+        <span class="dots"><span></span><span></span><span></span></span>
+        <span class="url">tochka-b.ru</span>
+      </div>
+      <iframe src="projects/moving-service/" loading="lazy" title="ТОЧКА Б"></iframe>
+      <a href="projects/moving-service/" target="_blank" class="project-preview-link">Открыть в новой вкладке →</a>
+    </div>
+  </article>
+
+</div>
+
+<!-- CONTACT -->
+<section class="container" id="contact">
+  <div class="contact">
+    <div class="contact-left">
+      <h2>Нужен <em>свой</em> сайт?</h2>
+      <p>Лендинг, корпоративный сайт, сервис с калькулятором или конструктором — обсудим задачу, сроки и стоимость. Пишите, отвечаю в течение дня.</p>
+    </div>
+    <div class="contact-right">
+      <div class="contact-card">
+        <div class="eyebrow">Telegram / самый быстрый способ</div>
+        <div class="tg-handle"><span class="at">@</span>Flukkyyyy</div>
+        <p>Расскажите, что хотите сделать — я дам обратную связь, пришлю примеры близких работ и оценю в часах/деньгах.</p>
+        <a href="https://t.me/Flukkyyyy" target="_blank" class="btn">Написать в Telegram <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="container">
+  <div>© 2026 / Vita Andreuskov</div>
+  <div>Сделано вручную ✦ Без шаблонов</div>
+</footer>
+
+<script>
+// Sticky bar shadow
+const topbar = document.getElementById('topbar');
+window.addEventListener('scroll', () => {
+  topbar.classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// Reveal on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

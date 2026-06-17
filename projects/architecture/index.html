@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ФОРМА — архитектурное бюро · проектирование частных домов (ИЖС)</title>
+<meta name="description" content="Бюро ФОРМА: типовые и индивидуальные проекты частных домов. Калькулятор стоимости проектирования, примеры планировок, полный состав рабочей документации, бесплатная консультация." />
+<meta property="og:title" content="ФОРМА — архитектурное проектирование ИЖС" />
+<meta property="og:description" content="Дом, в котором всё на своём месте: планировки, конструктив и полный комплект документации для разрешения и стройки." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Expanded:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- measurement rail -->
+<div class="rail" aria-hidden="true">
+  <span class="rail__tick">A—00</span>
+  <span class="rail__line"></span>
+  <span class="rail__tick rail__tick--rot">ФОРМА · ИЖС</span>
+</div>
+
+<!-- ░░ NAV ░░ -->
+<header class="nav" id="nav">
+  <a href="#top" class="brand" aria-label="ФОРМА — на главную">
+    <span class="brand__glyph" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="22" height="22"><path d="M2 22 L12 3 L22 22" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 22 L12 12 L17 22" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </span>
+    <span class="brand__name">ФОРМА</span>
+    <span class="brand__sub">архитектурное бюро</span>
+  </a>
+  <nav class="nav__links" aria-label="Основная навигация">
+    <a href="#tracks">Проекты</a>
+    <a href="#catalog">Типовые</a>
+    <a href="#calc">Калькулятор</a>
+    <a href="#plans">Планировки</a>
+    <a href="#docs">Документация</a>
+  </nav>
+  <a href="#consult" class="btn btn--solid nav__cta">Консультация</a>
+  <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- mobile menu -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#tracks">Проекты</a>
+  <a href="#catalog">Типовые проекты</a>
+  <a href="#calc">Калькулятор м²</a>
+  <a href="#plans">Планировки</a>
+  <a href="#docs">Состав документации</a>
+  <a href="#consult" class="btn btn--solid">Заказать консультацию</a>
+</div>
+
+<main id="top">
+
+<!-- ░░ HERO · A-01 ░░ -->
+<section class="hero" id="hero">
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <div class="hero__text reveal">
+      <p class="eyebrow"><span class="eyebrow__sq"></span> Архитектурное бюро · ИЖС · с 2009 года</p>
+      <h1 class="hero__title">
+        Архитектура дома,<br />в котором всё<br /><em>на своём месте.</em>
+      </h1>
+      <p class="hero__lead">
+        Типовые и индивидуальные проекты частных домов — с продуманными планировками, расчётным конструктивом и полным комплектом рабочей документации.
+      </p>
+      <div class="hero__cta">
+        <a href="#calc" class="btn btn--solid btn--lg">Рассчитать проект</a>
+        <a href="#consult" class="btn btn--ghost btn--lg">Бесплатная консультация</a>
+      </div>
+    </div>
+
+    <figure class="hero__media reveal">
+      <div class="img img--hero">
+        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1280&q=80"
+             alt="Современный частный дом — реализованный проект бюро ФОРМА"
+             onerror="this.closest('.img').classList.add('img--fail')" />
+      </div>
+      <figcaption class="hero__spec">
+        <span class="hero__spec-code">ОБЪЕКТ · 14</span>
+        <span class="hero__spec-val">S — 184&nbsp;м² · 2 этажа</span>
+      </figcaption>
+      <span class="dim dim--bottom" aria-hidden="true"><i></i><b>12&nbsp;400</b><i></i></span>
+      <span class="dim dim--right" aria-hidden="true"><i></i><b>9&nbsp;200</b><i></i></span>
+      <span class="corner corner--tl" aria-hidden="true"></span>
+      <span class="corner corner--br" aria-hidden="true"></span>
+    </figure>
+  </div>
+</section>
+
+<!-- signature: architectural section line -->
+<div class="section-line" aria-hidden="true">
+  <svg class="section-line__svg" viewBox="0 0 420 42" preserveAspectRatio="xMinYMid meet">
+    <path class="section-line__path" id="sectionPath"
+      d="M0 36 L60 36 L60 12 L140 12 L140 24 L160 6 L180 24 L180 12 L280 12 L280 36 L340 36 L340 20 L380 20 L380 36 L420 36" />
+    <text class="section-line__label" x="8" y="10">СЕЧЕНИЕ А—А</text>
+  </svg>
+</div>
+
+<!-- ░░ STATS ░░ -->
+<section class="stats" aria-label="Бюро в цифрах">
+  <div class="stats__inner">
+    <div class="stat reveal"><span class="stat__num" data-count="16">16</span><span class="stat__lbl">лет практики</span></div>
+    <div class="stat reveal"><span class="stat__num" data-count="240" data-suffix="+">240+</span><span class="stat__lbl">реализованных проектов</span></div>
+    <div class="stat reveal"><span class="stat__num" data-count="85" data-suffix=" 000">85 000</span><span class="stat__lbl">м² запроектировано</span></div>
+    <div class="stat reveal"><span class="stat__num stat__num--txt">1:1</span><span class="stat__lbl">авторский надзор на стройке</span></div>
+  </div>
+</section>
+
+<!-- ░░ TRACKS · A-02 — два пути ░░ -->
+<section class="section tracks" id="tracks">
+  <div class="section__head">
+    <span class="sheet">A—02</span>
+    <h2 class="section__title">Два пути к своему дому</h2>
+    <p class="section__sub">Готовое решение, проверенное стройкой, — или дом, спроектированный полностью под ваш участок и сценарий жизни.</p>
+  </div>
+
+  <div class="tracks__grid">
+    <article class="track reveal">
+      <div class="track__top">
+        <span class="track__idx">01</span>
+        <h3 class="track__title">Типовые проекты</h3>
+      </div>
+      <p class="track__desc">Каталог готовых домов с подтверждённой сметой и планировкой. Берёте проект и сразу строите — без месяцев ожидания.</p>
+      <ul class="track__list">
+        <li><span>Срок</span> от 1 дня</li>
+        <li><span>Цена</span> от 38 000 ₽ за комплект</li>
+        <li><span>Что внутри</span> АР + КР + узлы</li>
+        <li><span>Привязка</span> к участку — опционально</li>
+      </ul>
+      <a href="#catalog" class="track__link">Смотреть каталог →</a>
+    </article>
+
+    <article class="track track--accent reveal">
+      <div class="track__top">
+        <span class="track__idx">02</span>
+        <h3 class="track__title">Индивидуальное проектирование</h3>
+      </div>
+      <p class="track__desc">Дом с нуля под ваш участок, бюджет и образ жизни. Эскиз, 3D, рабочие чертежи и инженерные разделы — единый комплект.</p>
+      <ul class="track__list">
+        <li><span>Срок</span> 6–12 недель</li>
+        <li><span>Цена</span> от 1 200 ₽/м²</li>
+        <li><span>Что внутри</span> полный комплект ИОС</li>
+        <li><span>Правки</span> до утверждения концепции</li>
+      </ul>
+      <a href="#consult" class="track__link">Обсудить проект →</a>
+    </article>
+  </div>
+</section>
+
+<!-- ░░ CATALOG · A-03 — типовые проекты ░░ -->
+<section class="section catalog" id="catalog">
+  <div class="section__head section__head--row">
+    <div>
+      <span class="sheet">A—03</span>
+      <h2 class="section__title">Каталог типовых проектов</h2>
+    </div>
+    <div class="filters" id="filters" role="tablist" aria-label="Фильтр проектов">
+      <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Все</button>
+      <button class="filter" data-filter="compact" role="tab" aria-selected="false">до 120 м²</button>
+      <button class="filter" data-filter="family" role="tab" aria-selected="false">120–180 м²</button>
+      <button class="filter" data-filter="large" role="tab" aria-selected="false">от 180 м²</button>
+    </div>
+  </div>
+
+  <div class="cat__grid" id="catGrid">
+    <article class="house reveal" data-cat="compact">
+      <div class="img house__img">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=900&q=80" alt="Типовой проект — компактный одноэтажный дом" onerror="this.closest('.img').classList.add('img--fail')" />
+        <span class="house__tag">1 этаж</span>
+      </div>
+      <div class="house__body">
+        <div class="house__row"><h3 class="house__name">«Контур&nbsp;92»</h3><span class="house__price">от 42 000 ₽</span></div>
+        <ul class="house__specs">
+          <li><b>92</b> м²</li><li><b>2</b> спальни</li><li><b>9×9</b> габарит</li>
+        </ul>
+        <a href="#consult" class="house__cta">Получить проект</a>
+      </div>
+    </article>
+
+    <article class="house reveal" data-cat="family">
+      <div class="img house__img">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=900&q=80" alt="Типовой проект — семейный дом с гаражом" onerror="this.closest('.img').classList.add('img--fail')" />
+        <span class="house__tag">1 этаж + гараж</span>
+      </div>
+      <div class="house__body">
+        <div class="house__row"><h3 class="house__name">«Меридиан&nbsp;148»</h3><span class="house__price">от 58 000 ₽</span></div>
+        <ul class="house__specs">
+          <li><b>148</b> м²</li><li><b>3</b> спальни</li><li><b>11×12</b> габарит</li>
+        </ul>
+        <a href="#consult" class="house__cta">Получить проект</a>
+      </div>
+    </article>
+
+    <article class="house reveal" data-cat="large">
+      <div class="img house__img">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=80" alt="Типовой проект — двухэтажный дом" onerror="this.closest('.img').classList.add('img--fail')" />
+        <span class="house__tag">2 этажа</span>
+      </div>
+      <div class="house__body">
+        <div class="house__row"><h3 class="house__name">«Грань&nbsp;210»</h3><span class="house__price">от 74 000 ₽</span></div>
+        <ul class="house__specs">
+          <li><b>210</b> м²</li><li><b>4</b> спальни</li><li><b>12×11</b> габарит</li>
+        </ul>
+        <a href="#consult" class="house__cta">Получить проект</a>
+      </div>
+    </article>
+
+    <article class="house reveal" data-cat="compact">
+      <div class="img house__img">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=900&q=80" alt="Типовой проект — дом с мансардой" onerror="this.closest('.img').classList.add('img--fail')" />
+        <span class="house__tag">мансарда</span>
+      </div>
+      <div class="house__body">
+        <div class="house__row"><h3 class="house__name">«Сектор&nbsp;110»</h3><span class="house__price">от 49 000 ₽</span></div>
+        <ul class="house__specs">
+          <li><b>110</b> м²</li><li><b>3</b> спальни</li><li><b>8×8</b> габарит</li>
+        </ul>
+        <a href="#consult" class="house__cta">Получить проект</a>
+      </div>
+    </article>
+
+    <article class="house reveal" data-cat="family">
+      <div class="img house__img">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=80" alt="Типовой проект — одноэтажный дом с террасой" onerror="this.closest('.img').classList.add('img--fail')" />
+        <span class="house__tag">1 этаж</span>
+      </div>
+      <div class="house__body">
+        <div class="house__row"><h3 class="house__name">«Плато&nbsp;164»</h3><span class="house__price">от 61 000 ₽</span></div>
+        <ul class="house__specs">
+          <li><b>164</b> м²</li><li><b>3</b> спальни</li><li><b>14×12</b> габарит</li>
+        </ul>
+        <a href="#consult" class="house__cta">Получить проект</a>
+      </div>
+    </article>
+
+    <article class="house reveal" data-cat="large">
+      <div class="img house__img">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=900&q=80" alt="Типовой проект — большой дом для семьи" onerror="this.closest('.img').classList.add('img--fail')" />
+        <span class="house__tag">2 этажа</span>
+      </div>
+      <div class="house__body">
+        <div class="house__row"><h3 class="house__name">«Ось&nbsp;245»</h3><span class="house__price">от 86 000 ₽</span></div>
+        <ul class="house__specs">
+          <li><b>245</b> м²</li><li><b>5</b> спален</li><li><b>15×13</b> габарит</li>
+        </ul>
+        <a href="#consult" class="house__cta">Получить проект</a>
+      </div>
+    </article>
+  </div>
+  <p class="cat__empty" id="catEmpty" hidden>В этой категории пока нет проектов — посмотрите остальные или закажите индивидуальный.</p>
+</section>
+
+<!-- ░░ CALC · A-04 — калькулятор м² ░░ -->
+<section class="section calc" id="calc">
+  <div class="section__head">
+    <span class="sheet">A—04</span>
+    <h2 class="section__title">Калькулятор стоимости проектирования</h2>
+    <p class="section__sub">Подвигайте параметры — оценка стоимости, срока и состава проекта пересчитается мгновенно. Точную смету закрепим на консультации.</p>
+  </div>
+
+  <div class="calc__grid">
+    <!-- controls -->
+    <form class="calc__controls" id="calcForm" novalidate>
+      <div class="field">
+        <div class="field__top">
+          <label for="area">Площадь дома</label>
+          <output class="field__out" id="areaOut">160 м²</output>
+        </div>
+        <input type="range" id="area" min="60" max="400" step="2" value="160" />
+        <div class="field__scale"><span>60</span><span>230</span><span>400 м²</span></div>
+      </div>
+
+      <div class="field">
+        <span class="field__label">Тип проекта</span>
+        <div class="seg" id="segType" role="radiogroup" aria-label="Тип проекта">
+          <button type="button" class="seg__btn" data-type="standard" role="radio" aria-checked="false">Типовой</button>
+          <button type="button" class="seg__btn is-active" data-type="custom" role="radio" aria-checked="true">Индивидуальный</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="field__label">Этажность</span>
+        <div class="seg" id="segFloors" role="radiogroup" aria-label="Этажность">
+          <button type="button" class="seg__btn is-active" data-floors="1" data-k="1" role="radio" aria-checked="true">1 этаж</button>
+          <button type="button" class="seg__btn" data-floors="mansard" data-k="1.05" role="radio" aria-checked="false">Мансарда</button>
+          <button type="button" class="seg__btn" data-floors="2" data-k="1.1" role="radio" aria-checked="false">2 этажа</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="field__label">Класс отделки</span>
+        <div class="seg" id="segClass" role="radiogroup" aria-label="Класс отделки">
+          <button type="button" class="seg__btn is-active" data-class="standard" data-k="1" role="radio" aria-checked="true">Стандарт</button>
+          <button type="button" class="seg__btn" data-class="premium" data-k="1.3" role="radio" aria-checked="false">Премиум</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="field__label">Дополнительно</span>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" id="optEng" checked /><span class="opt__box"></span><span class="opt__txt">Инженерные разделы <i>(ВК, ОВ, ЭОМ)</i></span><span class="opt__add">+20%</span></label>
+          <label class="opt"><input type="checkbox" id="optViz" /><span class="opt__box"></span><span class="opt__txt">3D-визуализация фасадов</span><span class="opt__add">+45 000 ₽</span></label>
+          <label class="opt"><input type="checkbox" id="optSup" /><span class="opt__box"></span><span class="opt__txt">Авторский надзор на стройке</span><span class="opt__add">+8%</span></label>
+        </div>
+      </div>
+    </form>
+
+    <!-- result -->
+    <aside class="calc__result reveal" aria-live="polite">
+      <span class="sheet sheet--light">СМЕТА · предварительно</span>
+      <div class="result__main">
+        <span class="result__lbl">Стоимость проектирования</span>
+        <span class="result__price" id="rPrice">288 000 ₽</span>
+        <span class="result__rate" id="rRate">≈ 1 800 ₽/м²</span>
+      </div>
+
+      <div class="result__rows">
+        <div class="result__row"><span>Срок разработки</span><b id="rTerm">8 недель</b></div>
+        <div class="result__row"><span>Разделов в комплекте</span><b id="rDocs">6 разделов</b></div>
+        <div class="result__row"><span>Ориентир. стоимость стройки</span><b id="rBuild">8.8 — 12 млн ₽</b></div>
+      </div>
+
+      <div class="result__bar" aria-hidden="true">
+        <div class="result__bar-fill" id="rBar"></div>
+      </div>
+      <p class="result__hint" id="rHint">Оптимальный метраж для семьи 3–4 человека.</p>
+
+      <a href="#consult" class="btn btn--solid btn--block">Зафиксировать смету</a>
+      <p class="result__note">* Расчёт ориентировочный и не является публичной офертой.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ░░ PLANS · A-05 — примеры планировок ░░ -->
+<section class="section plans" id="plans">
+  <div class="section__head">
+    <span class="sheet">A—05</span>
+    <h2 class="section__title">Примеры планировок</h2>
+    <p class="section__sub">Реальные схемы из наших проектов. Переключайтесь между вариантами — каждая планировка проверена на сценарии жизни и инсоляцию.</p>
+  </div>
+
+  <div class="plans__wrap">
+    <div class="plans__tabs" id="planTabs" role="tablist" aria-label="Варианты планировок">
+      <button class="ptab is-active" data-plan="p1" role="tab" aria-selected="true">
+        <b>Компакт 9×9</b><span>92 м² · 1 этаж</span>
+      </button>
+      <button class="ptab" data-plan="p2" role="tab" aria-selected="false">
+        <b>Семья + гараж</b><span>148 м² · 1 этаж</span>
+      </button>
+      <button class="ptab" data-plan="p3" role="tab" aria-selected="false">
+        <b>Двухэтажный</b><span>184 м² · 2 этажа</span>
+      </button>
+    </div>
+
+    <div class="plans__stage">
+      <div class="plan__draw">
+        <div class="floor-sw" id="floorSw" hidden>
+          <button class="floor-btn is-active" data-floor="p3">1-й этаж</button>
+          <button class="floor-btn" data-floor="p3f2">2-й этаж</button>
+        </div>
+        <!-- PLAN 1 -->
+        <svg class="planSvg is-active" id="p1" viewBox="0 0 440 340" role="img" aria-label="Планировка Компакт 9×9, 92 м²">
+          <g class="pl-walls">
+            <rect x="40" y="40" width="360" height="240" />
+            <line x1="200" y1="40" x2="200" y2="160" />
+            <line x1="40" y1="160" x2="200" y2="160" />
+            <line x1="200" y1="170" x2="200" y2="280" />
+            <line x1="120" y1="160" x2="120" y2="280" />
+            <line x1="290" y1="160" x2="400" y2="160" />
+            <line x1="290" y1="40" x2="290" y2="160" />
+          </g>
+          <g class="pl-door">
+            <path d="M120 280 a40 40 0 0 1 40 -40" />
+            <path d="M200 100 a26 26 0 0 1 26 -26" />
+          </g>
+          <g class="pl-txt">
+            <text x="120" y="96" class="rm">Кухня-гостиная</text>
+            <text x="120" y="112" class="ar">34.0 м²</text>
+            <text x="345" y="100" class="rm">Спальня</text>
+            <text x="345" y="116" class="ar">14.2 м²</text>
+            <text x="80" y="222" class="rm">Прихожая</text>
+            <text x="80" y="238" class="ar">8.0 м²</text>
+            <text x="245" y="200" class="rm">Спальня</text>
+            <text x="245" y="216" class="ar">13.4 м²</text>
+            <text x="155" y="200" class="rm rm--sm">С/у</text>
+          </g>
+          <g class="pl-dim">
+            <line x1="40" y1="305" x2="400" y2="305" /><text x="220" y="300" class="dm">9 000</text>
+            <line x1="40" y1="40" x2="40" y2="40" />
+          </g>
+          <g class="pl-north"><circle cx="396" cy="312" r="13"/><path d="M396 304 L392 318 L396 314 L400 318 Z"/><text x="396" y="335" class="nlbl">С</text></g>
+        </svg>
+
+        <!-- PLAN 2 -->
+        <svg class="planSvg" id="p2" viewBox="0 0 440 340" role="img" aria-label="Планировка Семья с гаражом, 148 м²">
+          <g class="pl-walls">
+            <rect x="30" y="40" width="380" height="250" />
+            <line x1="300" y1="40" x2="300" y2="290" />
+            <line x1="30" y1="165" x2="300" y2="165" />
+            <line x1="150" y1="165" x2="150" y2="290" />
+            <line x1="225" y1="165" x2="225" y2="290" />
+            <line x1="150" y1="100" x2="300" y2="100" />
+          </g>
+          <g class="pl-door">
+            <path d="M150 165 a34 34 0 0 1 34 -34" />
+            <path d="M300 230 a30 30 0 0 1 -30 30" />
+          </g>
+          <g class="pl-txt">
+            <text x="90" y="106" class="rm">Кухня-</text>
+            <text x="90" y="122" class="rm">гостиная</text>
+            <text x="90" y="140" class="ar">41.0 м²</text>
+            <text x="225" y="74" class="rm">Спальня</text>
+            <text x="225" y="90" class="ar">16 м²</text>
+            <text x="225" y="132" class="rm">Гардероб</text>
+            <text x="90" y="232" class="rm">Спальня</text>
+            <text x="90" y="248" class="ar">14 м²</text>
+            <text x="187" y="232" class="rm rm--sm">С/у</text>
+            <text x="262" y="232" class="rm">Спальня</text>
+            <text x="262" y="248" class="ar">13 м²</text>
+            <text x="355" y="160" class="rm">Гараж</text>
+            <text x="355" y="176" class="ar">21 м²</text>
+            <text x="355" y="250" class="rm rm--sm">Котельная</text>
+          </g>
+          <g class="pl-dim">
+            <line x1="30" y1="312" x2="410" y2="312" /><text x="220" y="307" class="dm">11 400</text>
+          </g>
+          <g class="pl-north"><circle cx="396" cy="58" r="13"/><path d="M396 50 L392 64 L396 60 L400 64 Z"/><text x="396" y="81" class="nlbl">С</text></g>
+        </svg>
+
+        <!-- PLAN 3 -->
+        <svg class="planSvg" id="p3" viewBox="0 0 440 340" role="img" aria-label="Планировка Двухэтажный дом, 1-й этаж, 184 м²">
+          <g class="pl-walls">
+            <rect x="50" y="40" width="340" height="240" />
+            <line x1="230" y1="40" x2="230" y2="280" />
+            <line x1="230" y1="150" x2="390" y2="150" />
+            <line x1="310" y1="150" x2="310" y2="280" />
+            <line x1="50" y1="200" x2="230" y2="200" />
+          </g>
+          <g class="pl-stair">
+            <rect x="250" y="170" width="44" height="92" class="st-box"/>
+            <line x1="250" y1="184" x2="294" y2="184"/><line x1="250" y1="198" x2="294" y2="198"/>
+            <line x1="250" y1="212" x2="294" y2="212"/><line x1="250" y1="226" x2="294" y2="226"/>
+            <line x1="250" y1="240" x2="294" y2="240"/>
+          </g>
+          <g class="pl-door">
+            <path d="M50 200 a30 30 0 0 1 30 -30" />
+          </g>
+          <g class="pl-txt">
+            <text x="140" y="116" class="rm">Гостиная-</text>
+            <text x="140" y="132" class="rm">столовая</text>
+            <text x="140" y="150" class="ar">38 м²</text>
+            <text x="140" y="244" class="rm">Кухня</text>
+            <text x="140" y="260" class="ar">18 м²</text>
+            <text x="272" y="100" class="rm">Гостевая</text>
+            <text x="272" y="116" class="ar">12 м²</text>
+            <text x="272" y="160" class="rm rm--sm">Холл · лестница</text>
+            <text x="350" y="216" class="rm rm--sm">С/у</text>
+            <text x="350" y="120" class="rm rm--sm">Тамбур</text>
+          </g>
+          <g class="pl-dim">
+            <line x1="50" y1="302" x2="390" y2="302" /><text x="220" y="297" class="dm">11 000 · 1-й этаж</text>
+          </g>
+          <g class="pl-north"><circle cx="376" cy="58" r="13"/><path d="M376 50 L372 64 L376 60 L380 64 Z"/><text x="376" y="81" class="nlbl">С</text></g>
+        </svg>
+        <!-- PLAN 3 — 2nd floor -->
+        <svg class="planSvg" id="p3f2" viewBox="0 0 440 340" role="img" aria-label="Планировка Двухэтажный дом, 2-й этаж, 184 м²">
+          <g class="pl-walls">
+            <rect x="50" y="40" width="340" height="240" />
+            <line x1="230" y1="40" x2="230" y2="280" />
+            <line x1="50" y1="168" x2="230" y2="168" />
+            <line x1="310" y1="40" x2="310" y2="280" />
+            <line x1="230" y1="180" x2="310" y2="180" />
+            <line x1="310" y1="198" x2="390" y2="198" />
+          </g>
+          <g class="pl-stair">
+            <rect x="242" y="52" width="60" height="116" class="st-box"/>
+            <line x1="242" y1="66" x2="302" y2="66"/><line x1="242" y1="80" x2="302" y2="80"/>
+            <line x1="242" y1="94" x2="302" y2="94"/><line x1="242" y1="108" x2="302" y2="108"/>
+            <line x1="242" y1="122" x2="302" y2="122"/><line x1="242" y1="136" x2="302" y2="136"/>
+            <line x1="242" y1="150" x2="302" y2="150"/>
+          </g>
+          <g class="pl-door">
+            <path d="M160 168 a32 32 0 0 0 32 -32" />
+            <path d="M80 280 a28 28 0 0 0 28 -28" />
+            <path d="M310 94 a26 26 0 0 0 26 26" />
+            <path d="M310 224 a22 22 0 0 0 22 -22" />
+          </g>
+          <g class="pl-txt">
+            <text x="140" y="100" class="rm">Спальня</text>
+            <text x="140" y="116" class="rm">главная</text>
+            <text x="140" y="134" class="ar">21 м²</text>
+            <text x="140" y="238" class="rm">Спальня</text>
+            <text x="140" y="254" class="ar">16 м²</text>
+            <text x="272" y="165" class="rm rm--sm">Холл · коридор</text>
+            <text x="272" y="240" class="rm rm--sm">Гардероб</text>
+            <text x="350" y="110" class="rm">Спальня</text>
+            <text x="350" y="126" class="ar">14 м²</text>
+            <text x="350" y="244" class="rm rm--sm">Санузел</text>
+          </g>
+          <g class="pl-dim">
+            <line x1="50" y1="302" x2="390" y2="302" /><text x="220" y="297" class="dm">11 000 · 2-й этаж</text>
+          </g>
+          <g class="pl-north"><circle cx="376" cy="58" r="13"/><path d="M376 50 L372 64 L376 60 L380 64 Z"/><text x="376" y="81" class="nlbl">С</text></g>
+        </svg>
+      </div>
+
+      <aside class="plan__info" id="planInfo">
+        <div class="plan__legend" id="planLegend"></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ DOCS · A-06 — состав документации ░░ -->
+<section class="section docs" id="docs">
+  <div class="section__head section__head--row">
+    <div>
+      <span class="sheet">A—06</span>
+      <h2 class="section__title">Состав документации</h2>
+      <p class="section__sub">Полный комплект, по которому строят без «додумывания». Откройте раздел — внутри состав листов.</p>
+    </div>
+    <div class="docs__meta">
+      <span class="docs__count" id="docCount">6 разделов</span>
+      <span class="docs__hint">всё в одном комплекте</span>
+    </div>
+  </div>
+
+  <div class="acc" id="acc">
+    <div class="acc__item is-open">
+      <button class="acc__head" aria-expanded="true">
+        <span class="acc__code">АР</span>
+        <span class="acc__name">Архитектурные решения</span>
+        <span class="acc__sign" aria-hidden="true"></span>
+      </button>
+      <div class="acc__body"><div class="acc__inner">
+        Поэтажные планы с размерами и экспликацией, фасады в цвете, разрезы, план кровли, ведомость отделки, спецификация окон и дверей.
+      </div></div>
+    </div>
+    <div class="acc__item">
+      <button class="acc__head" aria-expanded="false">
+        <span class="acc__code">КР</span>
+        <span class="acc__name">Конструктивные решения</span>
+        <span class="acc__sign" aria-hidden="true"></span>
+      </button>
+      <div class="acc__body"><div class="acc__inner">
+        План фундамента, схемы перекрытий и стропильной системы, узлы и сечения, спецификация металла и пиломатериала, расчёт нагрузок.
+      </div></div>
+    </div>
+    <div class="acc__item">
+      <button class="acc__head" aria-expanded="false">
+        <span class="acc__code">ВК</span>
+        <span class="acc__name">Водоснабжение и канализация</span>
+        <span class="acc__sign" aria-hidden="true"></span>
+      </button>
+      <div class="acc__body"><div class="acc__inner">
+        Разводка водопровода и канализации, точки подключения сантехники, аксонометрия, спецификация труб и оборудования.
+      </div></div>
+    </div>
+    <div class="acc__item">
+      <button class="acc__head" aria-expanded="false">
+        <span class="acc__code">ОВ</span>
+        <span class="acc__name">Отопление и вентиляция</span>
+        <span class="acc__sign" aria-hidden="true"></span>
+      </button>
+      <div class="acc__body"><div class="acc__inner">
+        Схема отопления, расстановка радиаторов / тёплых полов, теплотехнический расчёт, приточно-вытяжная вентиляция, подбор котла.
+      </div></div>
+    </div>
+    <div class="acc__item">
+      <button class="acc__head" aria-expanded="false">
+        <span class="acc__code">ЭОМ</span>
+        <span class="acc__name">Электроснабжение</span>
+        <span class="acc__sign" aria-hidden="true"></span>
+      </button>
+      <div class="acc__body"><div class="acc__inner">
+        План розеток и освещения, групповые щиты, кабельные трассы, расчёт мощности, схема заземления и молниезащиты.
+      </div></div>
+    </div>
+    <div class="acc__item">
+      <button class="acc__head" aria-expanded="false">
+        <span class="acc__code">ПЗ</span>
+        <span class="acc__name">Паспорт проекта и пояснительная записка</span>
+        <span class="acc__sign" aria-hidden="true"></span>
+      </button>
+      <div class="acc__body"><div class="acc__inner">
+        Общие данные, ТЭП, паспорт фасадов, 3D-визуализация (опционально) и пояснительная записка — пакет для согласования и разрешения.
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ PROCESS · A-07 ░░ -->
+<section class="section process" id="process">
+  <div class="section__head">
+    <span class="sheet">A—07</span>
+    <h2 class="section__title">Как идёт работа</h2>
+  </div>
+  <ol class="steps">
+    <li class="step reveal"><span class="step__n">01</span><h3>Консультация и ТЗ</h3><p>Разбираем участок, бюджет и сценарий жизни. Фиксируем задачу.</p></li>
+    <li class="step reveal"><span class="step__n">02</span><h3>Эскиз и планировки</h3><p>Объёмно-планировочное решение, фасады, 3D. Утверждаем концепцию.</p></li>
+    <li class="step reveal"><span class="step__n">03</span><h3>Рабочий проект</h3><p>Конструктив и инженерные разделы. Полный комплект чертежей.</p></li>
+    <li class="step reveal"><span class="step__n">04</span><h3>Авторский надзор</h3><p>Сопровождаем стройку, чтобы дом совпал с проектом 1:1.</p></li>
+  </ol>
+</section>
+
+<!-- ░░ CONSULT · A-08 — консультация ░░ -->
+<section class="section consult" id="consult">
+  <div class="consult__grid">
+    <div class="consult__intro reveal">
+      <span class="sheet">A—08</span>
+      <h2 class="section__title">Бесплатная консультация</h2>
+      <p class="section__sub">Расскажите про участок и идею — за 30 минут предложим подходящий проект и сориентируем по бюджету и срокам. Без обязательств.</p>
+      <ul class="consult__pts">
+        <li>Подберём типовой проект или оценим индивидуальный</li>
+        <li>Проверим посадку дома на ваш участок</li>
+        <li>Дадим ориентир по стоимости стройки «под ключ»</li>
+      </ul>
+      <div class="consult__contacts">
+        <a href="tel:+74950000000" class="cc"><span>Телефон</span><b>+7 495 000-00-00</b></a>
+        <a href="mailto:studio@forma.arch" class="cc"><span>Почта</span><b>studio@forma.arch</b></a>
+      </div>
+    </div>
+
+    <form class="consult__form reveal" id="leadForm" novalidate>
+      <div class="cf">
+        <label for="lname">Как к вам обращаться</label>
+        <input type="text" id="lname" name="name" placeholder="Имя" autocomplete="name" />
+        <span class="cf__err" data-for="lname">Введите имя</span>
+      </div>
+      <div class="cf">
+        <label for="lphone">Телефон</label>
+        <input type="tel" id="lphone" name="phone" placeholder="+7 (___) ___-__-__" inputmode="tel" autocomplete="tel" />
+        <span class="cf__err" data-for="lphone">Введите телефон в формате +7 (XXX) XXX-XX-XX</span>
+      </div>
+      <div class="cf">
+        <label for="ltype">Что планируете</label>
+        <div class="select">
+          <select id="ltype" name="type">
+            <option value="" disabled selected>Выберите вариант</option>
+            <option>Типовой проект из каталога</option>
+            <option>Индивидуальное проектирование</option>
+            <option>Пока выбираю / нужна консультация</option>
+          </select>
+        </div>
+      </div>
+      <div class="cf">
+        <label for="lmsg">Комментарий <i>(необязательно)</i></label>
+        <textarea id="lmsg" name="msg" rows="3" placeholder="Площадь, участок, пожелания…"></textarea>
+      </div>
+      <button type="submit" class="btn btn--solid btn--block btn--lg">Записаться на консультацию</button>
+      <p class="cf__policy">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+
+      <div class="cf__ok" id="leadOk" hidden>
+        <span class="cf__ok-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 12.5 L10 18 L20 6" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>
+        </span>
+        <b>Заявка принята</b>
+        <span>Свяжемся с вами в течение рабочего дня.</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ░░ FOOTER ░░ -->
+<footer class="foot">
+  <div class="foot__inner">
+    <div class="foot__brand">
+      <span class="brand__name">ФОРМА</span>
+      <p>Архитектурное бюро · проектирование частных домов и ИЖС. Москва и область, выезд на участок.</p>
+    </div>
+    <nav class="foot__nav" aria-label="Footer">
+      <a href="#tracks">Проекты</a>
+      <a href="#calc">Калькулятор</a>
+      <a href="#plans">Планировки</a>
+      <a href="#docs">Документация</a>
+      <a href="#consult">Консультация</a>
+    </nav>
+    <div class="foot__meta">
+      <span>© 2026 Бюро ФОРМА</span>
+      <a href="../index.html">← ко всем проектам</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WAVE — прокат пляжного снаряжения · Бали, Улувату</title>
+<meta name="description" content="WAVE — прокат сёрфов, гидроциклов, SUP и кайтов на Бали. Забронируй за минуту, забери на пирсе через час.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Clash+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="curveGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c5cff"/>
+      <stop offset="100%" stop-color="#2bd2ff"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div class="aurora aurora--fixed" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <svg class="curve" viewBox="0 0 600 800" preserveAspectRatio="none">
+    <path class="curve-path" d="M0,0 C 220,180 260,520 0,760 L0,800 L0,0 Z" fill="url(#curveGrad)"/>
+  </svg>
+</div>
+
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo" aria-label="WAVE — на главную">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M2 14c2.5 0 2.5-3 5-3s2.5 3 5 3 2.5-3 5-3 2.5 3 5 3" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M2 18c2.5 0 2.5-3 5-3s2.5 3 5 3 2.5-3 5-3 2.5 3 5 3" stroke="#fff" stroke-width="2.2" stroke-linecap="round" opacity=".55"/></svg>
+      </span>
+      <span class="logo-text">wave<em>.</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Каталог</a></li>
+      <li><a href="#how">Как это работает</a></li>
+      <li><a href="#prices">Цены</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+6281955504040" class="phone">+62 819 555 04 04</a>
+      <button class="btn-ghost" data-open-book>Забронировать</button>
+    </div>
+  </div>
+</nav>
+
+<main class="deck" id="deck">
+<div class="deck-track" id="deckTrack">
+
+<section class="hero slide" id="top" data-tab="hero">
+  <div class="hero-grid">
+    <section class="hero-left">
+      <span class="eyebrow"><span class="eyebrow-dot"></span>сезон 2026 · Бали · Улувату</span>
+      <h1 class="hero-title">
+        Поймай свою <br>
+        <span class="title-accent" data-text-rotate>
+          <span class="rot active" data-key="surf">волну</span>
+          <span class="rot" data-key="jet">скорость</span>
+          <span class="rot" data-key="sup">тишину</span>
+          <span class="rot" data-key="kite">ветер</span>
+        </span>
+      </h1>
+      <p class="hero-lead">
+        Прокат, обучение и сопровождение на воде. Доски, гидроциклы, SUP и кайты — забронируй за минуту, забери на пирсе через час.
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn-primary" data-open-book>
+          <span>Забронировать</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="btn-link">
+          <span class="play"><svg width="10" height="12" viewBox="0 0 10 12" fill="none"><path d="M0 0l10 6L0 12V0z" fill="currentColor"/></svg></span>
+          Смотреть, как это
+        </button>
+      </div>
+
+      <ul class="hero-meta">
+        <li><b>12+</b> видов снаряжения</li>
+        <li><b>4.9</b> рейтинг на Google Maps</li>
+        <li><b>5 мин</b> до Padang Padang</li>
+      </ul>
+    </section>
+
+    <section class="hero-right">
+      <div class="mini-card mini-stats">
+        <div class="mini-row">
+          <span class="dot"></span>
+          <span class="mini-label">сейчас на воде</span>
+        </div>
+        <div class="mini-value"><b>27</b><span>°C</span></div>
+        <div class="mini-bars">
+          <i style="--h:32%"></i><i style="--h:54%"></i><i style="--h:42%"></i>
+          <i style="--h:68%"></i><i style="--h:80%"></i><i style="--h:58%"></i>
+          <i style="--h:44%"></i>
+        </div>
+      </div>
+
+      <!-- LEFT vertical switcher rail + product card -->
+      <div class="stage">
+        <div class="switcher" role="tablist" aria-label="Выбор снаряжения" aria-orientation="vertical">
+          <button class="sw active" data-key="surf" role="tab" aria-selected="true" aria-label="Сёрф">
+            <span class="sw-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M3 21c4-1 9-6 12-10s8-8 8-8-4 5-8 8-9 9-12 10z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="sw-label">Сёрф</span>
+          </button>
+          <button class="sw" data-key="jet" role="tab" aria-selected="false" aria-label="Гидроцикл">
+            <span class="sw-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M2 16c2 0 3-1 5-1s3 1 5 1 3-1 5-1 3 1 5 1M4 13l4-5 4 1 4-2 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="sw-label">Гидро</span>
+          </button>
+          <button class="sw" data-key="sup" role="tab" aria-selected="false" aria-label="SUP">
+            <span class="sw-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="17" rx="9" ry="2.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V3M8 6l4-3 4 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="sw-label">SUP</span>
+          </button>
+          <button class="sw" data-key="kite" role="tab" aria-selected="false" aria-label="Кайт">
+            <span class="sw-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 8c5-3 11-3 16 0-2 4-7 5-8 5s-6-1-8-5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 9l6 11M18 9l-6 11" stroke="currentColor" stroke-width="1.4"/></svg>
+            </span>
+            <span class="sw-label">Кайт</span>
+          </button>
+        </div>
+
+        <article class="product-card" id="productCard">
+          <header class="pc-head">
+            <span class="pc-badge"><span class="pulse"></span> доступно сейчас</span>
+            <button class="pc-fav" aria-label="В избранное" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-9C.84 8.36 3.2 4 7 4c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.8 0 6.16 4.36 4.5 8-2.5 4.65-9.5 9-9.5 9z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </button>
+          </header>
+
+          <div class="pc-visual" id="pcVisual">
+            <div class="gear-layer active" data-key="surf">
+<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" class="gear-svg" data-key="surf">
+  <defs>
+    <linearGradient id="sf-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff4e6"/><stop offset="1" stop-color="#ffe0c2"/>
+    </linearGradient>
+    <linearGradient id="sf-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5fe0ff"/><stop offset="1" stop-color="#2bb8ff"/>
+    </linearGradient>
+    <linearGradient id="sf-board" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd166"/><stop offset="1" stop-color="#ef476f"/>
+    </linearGradient>
+    <clipPath id="sf-clip"><rect width="400" height="300" rx="0"/></clipPath>
+  </defs>
+  <g clip-path="url(#sf-clip)">
+    <rect width="400" height="300" fill="url(#sf-sky)"/>
+    <circle cx="312" cy="78" r="46" fill="#ffb878" opacity=".55"/>
+    <circle cx="312" cy="78" r="30" fill="#ffd9a0"/>
+    <!-- water -->
+    <path d="M0 196 q60 -26 120 -6 t120 -2 t160 -8 V300 H0 Z" fill="url(#sf-water)"/>
+    <path d="M0 214 q70 22 150 6 t170 6 t-0 0 V300 H0 Z" fill="#1aa8f0" opacity=".55"/>
+    <!-- foam crests -->
+    <path d="M40 198 q14 -10 28 0 q-14 6 -28 0Z" fill="#fff" opacity=".7"/>
+    <path d="M250 192 q16 -10 30 0 q-15 7 -30 0Z" fill="#fff" opacity=".6"/>
+    <!-- board shadow -->
+    <ellipse cx="200" cy="246" rx="78" ry="11" fill="#0b3a5e" opacity=".16"/>
+    <!-- surfboard, standing, tilted -->
+    <g transform="translate(200 132) rotate(16)">
+      <rect x="-30" y="-118" width="60" height="236" rx="30" fill="url(#sf-board)"/>
+      <rect x="-30" y="-118" width="22" height="236" rx="11" fill="#fff" opacity=".18"/>
+      <line x1="0" y1="-104" x2="0" y2="104" stroke="#fff" stroke-width="3" opacity=".55" stroke-linecap="round"/>
+      <circle cx="0" cy="0" r="7" fill="#fff" opacity=".7"/>
+    </g>
+    <!-- little splash dots -->
+    <circle cx="150" cy="206" r="4" fill="#fff" opacity=".8"/>
+    <circle cx="262" cy="214" r="3" fill="#fff" opacity=".7"/>
+  </g>
+</svg>
+            </div>
+            <div class="gear-layer" data-key="jet">
+<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" class="gear-svg" data-key="jet">
+  <defs>
+    <linearGradient id="jt-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8f7ff"/><stop offset="1" stop-color="#c2ecff"/>
+    </linearGradient>
+    <linearGradient id="jt-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#36c6ff"/><stop offset="1" stop-color="#1166ff"/>
+    </linearGradient>
+    <linearGradient id="jt-body" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2bd2ff"/><stop offset="1" stop-color="#1166ff"/>
+    </linearGradient>
+    <clipPath id="jt-clip"><rect width="400" height="300"/></clipPath>
+  </defs>
+  <g clip-path="url(#jt-clip)">
+    <rect width="400" height="300" fill="url(#jt-sky)"/>
+    <circle cx="90" cy="70" r="38" fill="#fff" opacity=".5"/>
+    <!-- water -->
+    <path d="M0 180 q80 -16 160 0 t240 -4 V300 H0Z" fill="url(#jt-water)"/>
+    <path d="M0 206 q100 18 200 4 t200 8 V300 H0Z" fill="#0d4fd0" opacity=".5"/>
+    <!-- spray behind -->
+    <g fill="#fff" opacity=".85">
+      <path d="M70 168 q-30 -6 -52 8 q26 4 52 -8Z"/>
+      <circle cx="40" cy="160" r="6"/><circle cx="26" cy="172" r="4"/><circle cx="58" cy="150" r="5"/>
+    </g>
+    <!-- shadow -->
+    <ellipse cx="216" cy="214" rx="120" ry="13" fill="#06245e" opacity=".18"/>
+    <!-- jet ski body -->
+    <g transform="translate(210 168)">
+      <path d="M-130 12 q34 -46 104 -46 q66 0 128 26 q-18 34 -120 34 q-86 0 -112 -14Z" fill="url(#jt-body)"/>
+      <path d="M-130 12 q34 -46 104 -46 q30 0 56 6 q-60 6 -96 30 q-40 -6 -64 -22Z" fill="#fff" opacity=".18"/>
+      <!-- handlebar/console -->
+      <path d="M-30 -34 q22 -30 60 -20 l-12 30 q-26 -6 -48 -10Z" fill="#0d3b8a"/>
+      <rect x="6" y="-58" width="9" height="22" rx="4" transform="rotate(20 10 -48)" fill="#0d3b8a"/>
+      <circle cx="36" cy="-12" r="7" fill="#fff"/>
+      <!-- seat highlight -->
+      <ellipse cx="-44" cy="-6" rx="40" ry="10" fill="#fff" opacity=".22"/>
+    </g>
+    <!-- front spray -->
+    <g fill="#fff" opacity=".9">
+      <circle cx="350" cy="176" r="6"/><circle cx="366" cy="166" r="4"/><circle cx="358" cy="188" r="3"/>
+    </g>
+  </g>
+</svg>
+            </div>
+            <div class="gear-layer" data-key="sup">
+<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" class="gear-svg" data-key="sup">
+  <defs>
+    <linearGradient id="sp-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff0e8"/><stop offset="1" stop-color="#ffe2d0"/>
+    </linearGradient>
+    <linearGradient id="sp-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9ff0c4"/><stop offset="1" stop-color="#33c9e6"/>
+    </linearGradient>
+    <linearGradient id="sp-board" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a4f3a4"/><stop offset="1" stop-color="#2bd2ff"/>
+    </linearGradient>
+    <clipPath id="sp-clip"><rect width="400" height="300"/></clipPath>
+  </defs>
+  <g clip-path="url(#sp-clip)">
+    <rect width="400" height="300" fill="url(#sp-sky)"/>
+    <!-- big calm sunset sun -->
+    <circle cx="200" cy="116" r="60" fill="#ffcf8f" opacity=".5"/>
+    <circle cx="200" cy="116" r="40" fill="#ffe2b0"/>
+    <!-- water -->
+    <path d="M0 188 q100 -12 200 0 t200 -2 V300 H0Z" fill="url(#sp-water)"/>
+    <!-- gentle ripples -->
+    <path d="M60 210 q26 -8 52 0" stroke="#fff" stroke-width="3" fill="none" opacity=".5" stroke-linecap="round"/>
+    <path d="M250 224 q26 -8 52 0" stroke="#fff" stroke-width="3" fill="none" opacity=".45" stroke-linecap="round"/>
+    <path d="M150 240 q30 -8 60 0" stroke="#fff" stroke-width="3" fill="none" opacity=".4" stroke-linecap="round"/>
+    <!-- board shadow -->
+    <ellipse cx="200" cy="214" rx="120" ry="12" fill="#0a5a55" opacity=".16"/>
+    <!-- SUP board floating, perspective ellipse -->
+    <g transform="translate(200 196)">
+      <ellipse cx="0" cy="0" rx="128" ry="26" fill="url(#sp-board)"/>
+      <ellipse cx="0" cy="-5" rx="128" ry="20" fill="#fff" opacity=".22"/>
+      <ellipse cx="0" cy="0" rx="92" ry="13" fill="#fff" opacity=".25"/>
+      <!-- traction pad -->
+      <ellipse cx="-20" cy="-2" rx="44" ry="9" fill="#0a5a55" opacity=".15"/>
+    </g>
+    <!-- paddle -->
+    <g transform="translate(286 70) rotate(18)">
+      <rect x="-3" y="0" width="6" height="150" rx="3" fill="#7c5cff"/>
+      <path d="M-16 150 q16 26 32 0 q-16 10 -32 0Z" fill="#7c5cff"/>
+      <circle cx="0" cy="-2" r="9" fill="#7c5cff"/>
+      <rect x="-14" y="-6" width="28" height="8" rx="4" fill="#6a4cf0"/>
+    </g>
+  </g>
+</svg>
+            </div>
+            <div class="gear-layer" data-key="kite">
+<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" class="gear-svg" data-key="kite">
+  <defs>
+    <linearGradient id="kt-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3e8ff"/><stop offset="1" stop-color="#ffd9f3"/>
+    </linearGradient>
+    <linearGradient id="kt-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7c8cff"/><stop offset="1" stop-color="#2bd2ff"/>
+    </linearGradient>
+    <linearGradient id="kt-kite" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff6ad5"/><stop offset="1" stop-color="#7c5cff"/>
+    </linearGradient>
+    <clipPath id="kt-clip"><rect width="400" height="300"/></clipPath>
+  </defs>
+  <g clip-path="url(#kt-clip)">
+    <rect width="400" height="300" fill="url(#kt-sky)"/>
+    <circle cx="320" cy="60" r="34" fill="#fff" opacity=".45"/>
+    <!-- water -->
+    <path d="M0 214 q90 -14 190 0 t210 -2 V300 H0Z" fill="url(#kt-water)"/>
+    <path d="M0 236 q100 16 200 4 t200 6 V300 H0Z" fill="#3a55e0" opacity=".4"/>
+    <!-- big arcing kite top-left -->
+    <g transform="translate(120 78) rotate(-12)">
+      <path d="M-92 6 q92 -58 184 0 q-26 30 -92 30 q-66 0 -92 -30Z" fill="url(#kt-kite)"/>
+      <path d="M-92 6 q92 -58 184 0 q-14 16 -40 24 q-52 -16 -104 -8 q-26 -8 -40 -16Z" fill="#fff" opacity=".2"/>
+      <!-- ribs -->
+      <path d="M-46 -22 v52" stroke="#fff" stroke-width="2" opacity=".4"/>
+      <path d="M0 -30 v62" stroke="#fff" stroke-width="2" opacity=".4"/>
+      <path d="M46 -22 v52" stroke="#fff" stroke-width="2" opacity=".4"/>
+    </g>
+    <!-- lines down to board -->
+    <line x1="64" y1="104" x2="232" y2="222" stroke="#0f1226" stroke-width="1.5" opacity=".5"/>
+    <line x1="188" y1="104" x2="246" y2="222" stroke="#0f1226" stroke-width="1.5" opacity=".5"/>
+    <!-- board shadow -->
+    <ellipse cx="240" cy="238" rx="56" ry="8" fill="#1a2a8e" opacity=".18"/>
+    <!-- twintip board -->
+    <g transform="translate(240 224) rotate(-8)">
+      <rect x="-54" y="-9" width="108" height="18" rx="9" fill="#ffd166"/>
+      <rect x="-54" y="-9" width="108" height="7" rx="3.5" fill="#fff" opacity=".4"/>
+      <circle cx="-26" cy="0" r="3" fill="#0f1226" opacity=".5"/>
+      <circle cx="26" cy="0" r="3" fill="#0f1226" opacity=".5"/>
+    </g>
+  </g>
+</svg>
+            </div>
+            <div class="splash s1"></div>
+            <div class="splash s2"></div>
+            <div class="splash s3"></div>
+          </div>
+
+          <div class="pc-body">
+            <div class="pc-title-row">
+              <h3 class="pc-title" id="pcTitle">Сёрф-доска Pro 6'2"</h3>
+              <span class="pc-tag" id="pcTag">surf</span>
+            </div>
+            <p class="pc-desc" id="pcDesc">Лёгкий шортборд для уверенных линий. Идёт с лишем и воском в подарок.</p>
+
+            <div class="pc-feats">
+              <span class="feat" id="feat1">188 см</span>
+              <span class="feat" id="feat2">3.4 кг</span>
+              <span class="feat" id="feat3">FCS II</span>
+            </div>
+
+            <div class="pc-foot">
+              <div class="pc-price">
+                <span class="price-old" id="priceOld">1 200 ₽</span>
+                <span class="price-now" id="priceNow">900 ₽<em>/час</em></span>
+              </div>
+              <button class="btn-primary sm" data-open-book>
+                Взять
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>Bali · Uluwatu beach</span><span>·</span>
+      <span>тёплая вода 28°</span><span>·</span>
+      <span>работаем 06:00 — 21:00</span><span>·</span>
+      <span>инструкторы ISA-сертификат</span><span>·</span>
+      <span>трансфер из Чангу за 30 мин</span><span>·</span>
+      <span>Bali · Uluwatu beach</span><span>·</span>
+      <span>тёплая вода 28°</span><span>·</span>
+      <span>работаем 06:00 — 21:00</span><span>·</span>
+      <span>инструкторы ISA-сертификат</span><span>·</span>
+      <span>трансфер из Чангу за 30 мин</span><span>·</span>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░░░░ HOW IT WORKS ░░░░░░ -->
+<section class="section slide how" id="how" data-tab="how">
+  <div class="section-wrap">
+    <header class="section-head">
+      <span class="eyebrow"><span class="eyebrow-dot"></span>02 · процесс</span>
+      <h2 class="section-h">За четыре шага — <em data-text-rotate-h><span class="rh active" data-key="surf">на волне</span><span class="rh" data-key="jet">в драйве</span><span class="rh" data-key="sup">в бухте</span><span class="rh" data-key="kite">в небе</span></em></h2>
+      <p class="section-lead">От брони до старта — минимум движений. Снаряжение меняется в один клик, шаги подстраиваются под него.</p>
+    </header>
+
+    <div class="how-stage">
+      <div class="steps" id="stepsGrid">
+        <!-- injected by JS -->
+      </div>
+
+      <div class="switcher switcher--right" role="tablist" aria-label="Выбор снаряжения" data-rail="how">
+        <button class="sw active" data-key="surf" role="tab" aria-selected="true" aria-label="Сёрф">
+          <span class="sw-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 21c4-1 9-6 12-10s8-8 8-8-4 5-8 8-9 9-12 10z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="sw-label">Сёрф</span>
+        </button>
+        <button class="sw" data-key="jet" role="tab" aria-selected="false" aria-label="Гидроцикл">
+          <span class="sw-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M2 16c2 0 3-1 5-1s3 1 5 1 3-1 5-1 3 1 5 1M4 13l4-5 4 1 4-2 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="sw-label">Гидро</span>
+        </button>
+        <button class="sw" data-key="sup" role="tab" aria-selected="false" aria-label="SUP">
+          <span class="sw-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="17" rx="9" ry="2.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V3M8 6l4-3 4 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="sw-label">SUP</span>
+        </button>
+        <button class="sw" data-key="kite" role="tab" aria-selected="false" aria-label="Кайт">
+          <span class="sw-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 8c5-3 11-3 16 0-2 4-7 5-8 5s-6-1-8-5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 9l6 11M18 9l-6 11" stroke="currentColor" stroke-width="1.4"/></svg>
+          </span>
+          <span class="sw-label">Кайт</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░░░░ PRICES ░░░░░░ -->
+<section class="section slide prices" id="prices" data-tab="prices">
+  <div class="section-wrap">
+    <header class="section-head section-head--center">
+      <span class="eyebrow"><span class="eyebrow-dot"></span>03 · цены</span>
+      <h2 class="section-h">Прозрачные цены — <em>без сюрпризов</em></h2>
+      <p class="section-lead">Оплачиваешь только то, чем катаешься. Депозит — на пирсе, возвращается при возврате снаряжения.</p>
+    </header>
+
+    <!-- horizontal pill-tabs as switcher for this section -->
+      <div class="switcher switcher--tabs" role="tablist" aria-label="Выбор снаряжения" data-rail="prices">
+        <button class="sw active" data-key="surf" role="tab" aria-selected="true" aria-label="Сёрф">
+          <span class="sw-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 21c4-1 9-6 12-10s8-8 8-8-4 5-8 8-9 9-12 10z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="sw-label">Сёрф</span>
+        </button>
+        <button class="sw" data-key="jet" role="tab" aria-selected="false" aria-label="Гидроцикл">
+          <span class="sw-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M2 16c2 0 3-1 5-1s3 1 5 1 3-1 5-1 3 1 5 1M4 13l4-5 4 1 4-2 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="sw-label">Гидро</span>
+        </button>
+        <button class="sw" data-key="sup" role="tab" aria-selected="false" aria-label="SUP">
+          <span class="sw-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="17" rx="9" ry="2.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V3M8 6l4-3 4 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="sw-label">SUP</span>
+        </button>
+        <button class="sw" data-key="kite" role="tab" aria-selected="false" aria-label="Кайт">
+          <span class="sw-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 8c5-3 11-3 16 0-2 4-7 5-8 5s-6-1-8-5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 9l6 11M18 9l-6 11" stroke="currentColor" stroke-width="1.4"/></svg>
+          </span>
+          <span class="sw-label">Кайт</span>
+        </button>
+      </div>
+
+    <div class="price-grid" id="priceGrid">
+      <!-- injected by JS -->
+    </div>
+
+    <p class="price-foot">
+      Цены указаны в рублях по курсу пирса. Все наборы включают спасжилет и инструктаж по безопасности.
+      Скидка <b>−10%</b> при бронировании от 3 человек.
+    </p>
+  </div>
+</section>
+
+<!-- ░░░░░░ CONTACT ░░░░░░ -->
+<section class="section slide contact" id="contact" data-tab="contact">
+  <div class="section-wrap">
+    <header class="section-head">
+      <span class="eyebrow"><span class="eyebrow-dot"></span>04 · связь</span>
+      <h2 class="section-h">Найди нас <em>на Улувату</em></h2>
+      <p class="section-lead">Все каналы открыты — отвечаем за 10 минут. Подъехал на пирс — забирай через час, либо забронируй заранее.</p>
+    </header>
+
+    <div class="contact-grid">
+      <!-- LEFT: methods -->
+      <div class="contact-methods">
+        <a href="https://t.me/wave_bali" class="contact-card contact-card--tg" target="_blank" rel="noopener">
+          <span class="cc-ico">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.24 3.64 11.94c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+          </span>
+          <div class="cc-text">
+            <span class="cc-label">Telegram · быстрая бронь</span>
+            <b class="cc-value">@wave_bali</b>
+          </div>
+          <span class="cc-arrow">↗</span>
+        </a>
+
+        <a href="https://wa.me/6281955504040" class="contact-card contact-card--wa" target="_blank" rel="noopener">
+          <span class="cc-ico">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.48 2 12c0 1.94.56 3.74 1.5 5.27L2 22l4.86-1.43A9.93 9.93 0 0012 22c5.5 0 10-4.48 10-10S17.5 2 12 2zm5.7 14.27c-.24.67-1.4 1.27-1.94 1.34-.5.07-1.13.1-1.83-.11-.42-.13-.95-.31-1.64-.61-2.88-1.24-4.76-4.13-4.9-4.32-.14-.19-1.18-1.57-1.18-2.99 0-1.42.74-2.12 1-2.41.27-.29.58-.36.78-.36l.55.01c.18.01.42-.07.66.5.24.6.83 2.06.9 2.21.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.17-.32.38-.46.51-.15.15-.31.31-.13.61.18.3.81 1.33 1.74 2.16 1.2 1.07 2.21 1.4 2.51 1.55.3.15.48.13.66-.07.18-.2.76-.88.96-1.18.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.58.35.07.13.07.74-.17 1.41z"/></svg>
+          </span>
+          <div class="cc-text">
+            <span class="cc-label">WhatsApp</span>
+            <b class="cc-value">+62 819 555 04 04</b>
+          </div>
+          <span class="cc-arrow">↗</span>
+        </a>
+
+        <a href="tel:+6281955504040" class="contact-card contact-card--phone">
+          <span class="cc-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.12.9.34 1.78.66 2.63a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.45-1.45a2 2 0 012.11-.45c.85.32 1.73.54 2.63.66A2 2 0 0122 16.92z"/></svg>
+          </span>
+          <div class="cc-text">
+            <span class="cc-label">Звонок · 06:00 — 21:00</span>
+            <b class="cc-value">+62 819 555 04 04</b>
+          </div>
+          <span class="cc-arrow">↗</span>
+        </a>
+
+        <a href="mailto:hello@wave-bali.com" class="contact-card contact-card--mail">
+          <span class="cc-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M3 7l9 6.5L21 7"/></svg>
+          </span>
+          <div class="cc-text">
+            <span class="cc-label">Email · договоры и партнёрство</span>
+            <b class="cc-value">hello@wave-bali.com</b>
+          </div>
+          <span class="cc-arrow">↗</span>
+        </a>
+      </div>
+
+      <!-- RIGHT: location + quick book -->
+      <aside class="contact-location">
+        <div class="loc-map">
+<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" class="map-svg">
+  <defs>
+    <linearGradient id="mp-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dbe5ff"/><stop offset="1" stop-color="#bdd6ff"/>
+    </linearGradient>
+    <linearGradient id="mp-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#36a8ff"/><stop offset="1" stop-color="#1166ff"/>
+    </linearGradient>
+    <linearGradient id="mp-land" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7ad17a"/><stop offset="1" stop-color="#3a9956"/>
+    </linearGradient>
+    <linearGradient id="mp-sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff0d0"/><stop offset="1" stop-color="#ffd99a"/>
+    </linearGradient>
+    <clipPath id="mp-clip"><rect width="400" height="300"/></clipPath>
+  </defs>
+  <g clip-path="url(#mp-clip)">
+    <rect width="400" height="300" fill="url(#mp-water)"/>
+    <!-- subtle wave lines on water -->
+    <path d="M0 60 q40 -6 80 0 t80 0 t80 0 t80 0 t80 0" stroke="#fff" stroke-width="1.4" fill="none" opacity=".35"/>
+    <path d="M0 100 q40 -6 80 0 t80 0 t80 0 t80 0 t80 0" stroke="#fff" stroke-width="1.4" fill="none" opacity=".25"/>
+    <path d="M0 250 q40 -6 80 0 t80 0 t80 0 t80 0 t80 0" stroke="#fff" stroke-width="1.4" fill="none" opacity=".3"/>
+    <!-- bali island shape (stylized) -->
+    <path d="M60 180 q-20 -50 30 -90 q40 -30 110 -32 q90 -2 140 30 q40 28 50 60 q20 60 -30 80 q-50 22 -130 16 q-100 -8 -170 -64z"
+          fill="url(#mp-land)" />
+    <!-- sandy beach edge on the south -->
+    <path d="M70 198 q40 -10 100 -10 q100 0 160 6 q-30 22 -110 22 q-90 0 -150 -18z"
+          fill="url(#mp-sand)" opacity=".75"/>
+    <!-- darker green hills detail -->
+    <path d="M120 120 q30 -20 60 0 q-30 6 -60 0z" fill="#2c8043" opacity=".5"/>
+    <path d="M210 110 q40 -28 80 -10 q-40 14 -80 10z" fill="#2c8043" opacity=".5"/>
+    <!-- tiny palm-tree dots -->
+    <circle cx="100" cy="170" r="3" fill="#1a5b2e"/>
+    <circle cx="135" cy="180" r="3" fill="#1a5b2e"/>
+    <circle cx="295" cy="170" r="3" fill="#1a5b2e"/>
+    <circle cx="330" cy="160" r="3" fill="#1a5b2e"/>
+    <!-- pin at Uluwatu (south-west tip) -->
+    <g transform="translate(124 186)">
+      <!-- pin shadow -->
+      <ellipse cx="0" cy="14" rx="14" ry="3" fill="#000" opacity=".25"/>
+      <!-- pin body -->
+      <path d="M0 -38 a18 18 0 0 1 18 18 c0 14 -18 32 -18 32 s-18 -18 -18 -32 a18 18 0 0 1 18 -18z"
+            fill="#ff6a3d"/>
+      <path d="M0 -38 a18 18 0 0 1 18 18 c0 7 -5 14 -10 20 c-12 -4 -22 -16 -22 -28 a18 18 0 0 1 14 -10z"
+            fill="#ff8a5e" opacity=".7"/>
+      <circle cx="0" cy="-18" r="6.5" fill="#fff"/>
+      <!-- pulsing ring -->
+      <circle cx="0" cy="14" r="20" fill="none" stroke="#ff6a3d" stroke-width="1.6" opacity=".55">
+        <animate attributeName="r" values="6;22;6" dur="2.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".7;0;.7" dur="2.4s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <!-- "Uluwatu" label -->
+    <g transform="translate(165 215)">
+      <rect x="-2" y="-12" width="78" height="20" rx="10" fill="#fff" opacity=".92"/>
+      <text x="36" y="2" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="700" font-size="11" fill="#0f1226">Uluwatu</text>
+    </g>
+    <!-- compass rose top-right -->
+    <g transform="translate(346 50)" opacity=".7">
+      <circle r="18" fill="none" stroke="#fff" stroke-width="1.4"/>
+      <path d="M0 -16 L4 0 L0 16 L-4 0z" fill="#fff"/>
+      <text y="-22" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="700" font-size="10" fill="#fff">N</text>
+    </g>
+  </g>
+</svg>
+        </div>
+
+        <div class="loc-info">
+          <div class="loc-row">
+            <span class="loc-k">Адрес</span>
+            <span class="loc-v">Jl. Pantai Suluban, Pecatu · Uluwatu</span>
+          </div>
+          <div class="loc-row">
+            <span class="loc-k">Часы</span>
+            <span class="loc-v"><span class="loc-pulse"></span>06:00 — 21:00 · открыто сейчас</span>
+          </div>
+          <div class="loc-row">
+            <span class="loc-k">До Padang Padang</span>
+            <span class="loc-v">5 минут пешком · 1 минута на байке</span>
+          </div>
+          <div class="loc-row">
+            <span class="loc-k">Трансфер</span>
+            <span class="loc-v">Чангу — 30 мин · Семиньяк — 45 мин</span>
+          </div>
+        </div>
+
+        <div class="quick-book">
+          <div class="qb-head">Что хочешь забронировать?</div>
+      <div class="switcher switcher--chips" role="tablist" aria-label="Выбор снаряжения" data-rail="contact">
+        <button class="sw active" data-key="surf" role="tab" aria-selected="true" aria-label="Сёрф">
+          <span class="sw-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 21c4-1 9-6 12-10s8-8 8-8-4 5-8 8-9 9-12 10z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="sw-label">Сёрф</span>
+        </button>
+        <button class="sw" data-key="jet" role="tab" aria-selected="false" aria-label="Гидроцикл">
+          <span class="sw-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M2 16c2 0 3-1 5-1s3 1 5 1 3-1 5-1 3 1 5 1M4 13l4-5 4 1 4-2 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="sw-label">Гидро</span>
+        </button>
+        <button class="sw" data-key="sup" role="tab" aria-selected="false" aria-label="SUP">
+          <span class="sw-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="17" rx="9" ry="2.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V3M8 6l4-3 4 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="sw-label">SUP</span>
+        </button>
+        <button class="sw" data-key="kite" role="tab" aria-selected="false" aria-label="Кайт">
+          <span class="sw-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 8c5-3 11-3 16 0-2 4-7 5-8 5s-6-1-8-5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 9l6 11M18 9l-6 11" stroke="currentColor" stroke-width="1.4"/></svg>
+          </span>
+          <span class="sw-label">Кайт</span>
+        </button>
+      </div>
+          <button class="btn-primary qb-cta" data-open-book>
+            <span>Забронировать <em id="qbGearName">Сёрф</em></span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+
+
+</div>
+</main>
+
+<!-- Slide indicator dots -->
+<div class="deck-dots" role="tablist" aria-label="Слайды">
+  <button class="dd active" data-slide="0" aria-label="Каталог" aria-selected="true"><span></span></button>
+  <button class="dd" data-slide="1" aria-label="Как это работает" aria-selected="false"><span></span></button>
+  <button class="dd" data-slide="2" aria-label="Цены" aria-selected="false"><span></span></button>
+  <button class="dd" data-slide="3" aria-label="Контакты" aria-selected="false"><span></span></button>
+</div>
+
+<!-- Side arrows -->
+<button class="deck-arrow deck-arrow--prev" id="deckPrev" aria-label="Предыдущий слайд" hidden>
+  <svg viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<button class="deck-arrow deck-arrow--next" id="deckNext" aria-label="Следующий слайд">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+
+
+<!-- BOOKING MODAL -->
+<div class="modal" id="bookModal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bookTitle">
+  <div class="modal-backdrop" data-close-book></div>
+  <div class="modal-card" role="document">
+    <button class="modal-close" data-close-book aria-label="Закрыть">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+
+    <div class="modal-grid">
+      <aside class="modal-side">
+        <span class="modal-eyebrow">бронь · Bali · Uluwatu</span>
+        <h2 class="modal-h" id="bookTitle">Поймай <em>свою</em> волну</h2>
+        <p class="modal-sub">Подтверждаем за 10 минут в Telegram. Без предоплаты — оплачиваешь на пирсе.</p>
+
+        <div class="modal-illo" id="modalIllo" aria-hidden="true">
+<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" class="gear-svg" data-key="surf">
+  <defs>
+    <linearGradient id="sf-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff4e6"/><stop offset="1" stop-color="#ffe0c2"/>
+    </linearGradient>
+    <linearGradient id="sf-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5fe0ff"/><stop offset="1" stop-color="#2bb8ff"/>
+    </linearGradient>
+    <linearGradient id="sf-board" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd166"/><stop offset="1" stop-color="#ef476f"/>
+    </linearGradient>
+    <clipPath id="sf-clip"><rect width="400" height="300" rx="0"/></clipPath>
+  </defs>
+  <g clip-path="url(#sf-clip)">
+    <rect width="400" height="300" fill="url(#sf-sky)"/>
+    <circle cx="312" cy="78" r="46" fill="#ffb878" opacity=".55"/>
+    <circle cx="312" cy="78" r="30" fill="#ffd9a0"/>
+    <!-- water -->
+    <path d="M0 196 q60 -26 120 -6 t120 -2 t160 -8 V300 H0 Z" fill="url(#sf-water)"/>
+    <path d="M0 214 q70 22 150 6 t170 6 t-0 0 V300 H0 Z" fill="#1aa8f0" opacity=".55"/>
+    <!-- foam crests -->
+    <path d="M40 198 q14 -10 28 0 q-14 6 -28 0Z" fill="#fff" opacity=".7"/>
+    <path d="M250 192 q16 -10 30 0 q-15 7 -30 0Z" fill="#fff" opacity=".6"/>
+    <!-- board shadow -->
+    <ellipse cx="200" cy="246" rx="78" ry="11" fill="#0b3a5e" opacity=".16"/>
+    <!-- surfboard, standing, tilted -->
+    <g transform="translate(200 132) rotate(16)">
+      <rect x="-30" y="-118" width="60" height="236" rx="30" fill="url(#sf-board)"/>
+      <rect x="-30" y="-118" width="22" height="236" rx="11" fill="#fff" opacity=".18"/>
+      <line x1="0" y1="-104" x2="0" y2="104" stroke="#fff" stroke-width="3" opacity=".55" stroke-linecap="round"/>
+      <circle cx="0" cy="0" r="7" fill="#fff" opacity=".7"/>
+    </g>
+    <!-- little splash dots -->
+    <circle cx="150" cy="206" r="4" fill="#fff" opacity=".8"/>
+    <circle cx="262" cy="214" r="3" fill="#fff" opacity=".7"/>
+  </g>
+</svg>
+        </div>
+
+        <ul class="modal-feats">
+          <li><span class="mf-ico">✓</span><span>Снаряжение под твой рост и уровень</span></li>
+          <li><span class="mf-ico">✓</span><span>Инструктор по запросу — +500 ₽</span></li>
+          <li><span class="mf-ico">✓</span><span>Перенос или отмена за 2 часа</span></li>
+        </ul>
+      </aside>
+
+      <form class="modal-form" id="bookForm" novalidate>
+        <div class="field">
+          <label for="f-name">Как тебя зовут</label>
+          <input id="f-name" type="text" name="name" placeholder="Андрей" required autocomplete="name">
+          <small class="field-err" data-err="name"></small>
+        </div>
+
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" type="email" name="email" placeholder="you@mail.com" required autocomplete="email">
+          <small class="field-err" data-err="email"></small>
+        </div>
+
+        <div class="field">
+          <label for="f-phone">Телефон / Telegram</label>
+          <input id="f-phone" type="tel" name="phone" placeholder="+62 819 555 04 04" required autocomplete="tel">
+          <small class="field-err" data-err="phone"></small>
+        </div>
+
+        <div class="field">
+          <label>Что хочешь взять</label>
+          <div class="chip-row">
+            <label class="chip"><input type="radio" name="kind" value="surf" checked><span>Сёрф</span></label>
+            <label class="chip"><input type="radio" name="kind" value="jet"><span>Гидроцикл</span></label>
+            <label class="chip"><input type="radio" name="kind" value="sup"><span>SUP</span></label>
+            <label class="chip"><input type="radio" name="kind" value="kite"><span>Кайт</span></label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-when">Когда</label>
+          <input id="f-when" type="date" name="when" required>
+          <small class="field-err" data-err="when"></small>
+        </div>
+
+        <button type="submit" class="btn-primary modal-submit">
+          Забронировать
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <p class="modal-foot">Отправляя форму, ты соглашаешься с обработкой персональных данных.</p>
+      </form>
+
+      <div class="modal-done" id="modalDone" hidden>
+        <div class="done-ico">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Готово, ждём!</h3>
+        <p id="doneMsg">Открыли твою почту с готовым письмом — отправь его, и мы свяжемся в Telegram за 10 минут.</p>
+        <button class="btn-ghost" data-close-book>Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
